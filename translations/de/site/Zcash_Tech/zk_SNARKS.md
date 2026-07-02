@@ -77,7 +77,7 @@ PSPACE  - Beweis einer Abfolge unterschiedlicher Aussagen
 
 Was ein Verifier nach einer Interaktion berechnen kann, ist identisch mit dem, was er schon vorher beweisen konnte. Die Interaktion über mehrere Runden zwischen Prover und Verifier hat die Rechenleistung des Verifiers nicht erhöht.
 
-**Das Simulationsparadigma**
+**Das Simulationsparadigma (Simulation Paradigm)**
 
 Dieses Experiment ist in der gesamten Kryptographie präsent. Es stellt eine „Real View“ und eine „Simulated View“ gegenüber. 
 

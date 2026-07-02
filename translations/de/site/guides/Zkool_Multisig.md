@@ -8,7 +8,7 @@ Diese Anleitung bietet eine Schritt-für-Schritt-Einführung dazu, wie man Multi
   <iframe
     className="w-full h-full"
     src="https://www.youtube.com/embed/eagkCIv3BlQ"
-    title="Zkool-Demo | Der Nachfolger von YWallet"
+    title="Zkool-Demo | Der Nachfolger von Ywallet"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     allowFullScreen
     loading="lazy"
