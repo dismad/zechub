@@ -77,7 +77,7 @@ PSPACE  - Provar uma alternância de diferentes afirmações
 
 O que um verificador pode computar após uma interação é idêntico ao que ele poderia provar antes. A interação ao longo de várias rodadas entre o provador e o verificador não aumentou o poder computacional do verificador.
 
-**O Paradigma da Simulação**
+**O Paradigma da Simulação (Simulation Paradigm)**
 
 Esse experimento existe em toda a criptografia. Ele apresenta uma "Visão Real" e uma "Visão Simulada". 
 

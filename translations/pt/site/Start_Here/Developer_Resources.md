@@ -25,7 +25,7 @@ Visão geral ampla de como Blockchains e Zcash funcionam:
 
 Construindo o entendimento de como as dependências são revisadas e mantidas pelas equipes:
 
-[Lista de ZIPs](https://zips.z.cash)
+[Lista de ZIP](https://zips.z.cash)
 
 [Codificação de Endereços](https://zips.z.cash/protocol/protocol.pdf#5.6%20Encodings%20of%20Addresses%20and%20Keys)
 

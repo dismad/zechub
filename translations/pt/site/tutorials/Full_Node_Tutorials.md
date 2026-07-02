@@ -4,7 +4,7 @@
 
 # Tutoriais de Full Node
 
-Os Full Nodes de Zcash validam transações transparentes e shielded na Rede. Ao executar um full node, você contribui para a resiliência e a estabilidade da rede. Além disso, operar um full node oferece garantias aprimoradas de segurança e proteção ao usuário. Abaixo estão guias em vídeo para configurar/atualizar Full Nodes Zcashd ou Zebra.
+Os Full Nodes de Zcash validam transações transparentes e shielded na Rede. Ao executar um full node, você contribui para a resiliência e a estabilidade da rede. Além disso, operar um full node oferece garantias aprimoradas de segurança e proteção ao usuário. Abaixo estão guias em vídeo para configurar/atualizar Full Nodes Zcashd ou zebrad.
 
 Leia nossos [guias](/site/Guides/Full_Nodes) para mais informações.
 
