@@ -20,7 +20,7 @@ ____
 
 ____ 
 
-- Armazenamento Frio do YWallet
+- Armazenamento Frio do Ywallet
 
 [![Miniatura do Vídeo](https://img.youtube.com/vi/hJaAccp-77k/hqdefault.jpg)](https://www.youtube.com/watch?v=hJaAccp-77k)
 

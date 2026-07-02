@@ -13,7 +13,7 @@ Visão geral ampla de como Blockchains e Zcash funcionam:
 
 [Mastering Bitcoin: Programando A Blockchain Aberta](https://www.amazon.com/Mastering-Bitcoin-Programming-Open-Blockchain-ebook/dp/B071K7FCD4)
 
-[RPCs do zcashd](https://zcash.github.io/rpc/)
+[RPCs do Zcashd](https://zcash.github.io/rpc/)
 
 [O Livro do zcashd](https://zcash.github.io/zcash/)
 

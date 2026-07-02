@@ -229,7 +229,7 @@ BazaarSwap leva ZEC ao DeFi Web3 por meio de uma DEX nativa da Zcash. Integra Wa
 
 ## Zkool
 
-Zkool é o sucessor do YWallet, oferecendo suporte aos recursos mais recentes do protocolo Zcash, incluindo transações shielded Orchard.
+Zkool é o sucessor do Ywallet, oferecendo suporte aos recursos mais recentes do protocolo Zcash, incluindo transações shielded Orchard.
 
 [Thread no Fórum](https://forum.zcashcommunity.com/t/zkool-the-successor-to-ywallet/51139)
 
