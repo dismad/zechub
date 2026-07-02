@@ -2,61 +2,91 @@
   <img src="https://img.shields.io/badge/Edit-blue" alt="Seite bearbeiten"/>
 </a>
 
-# Synchronisierung von Zcash Wallets
+# Zcash Wallet-Synchronisierung
+
+## TL;DR
+
+* Da abgeschirmte Zcash-Transaktionen ihre Details verbergen, kann ein Server nicht einfach den Kontostand einer Wallet nachschlagen, wie er es bei transparenten Coins wie Bitcoin oder Ethereum kann.
+* Light Wallets laden kleine „kompakte Blöcke“ von einem spezialisierten Server (`lightwalletd`) herunter und entschlüsseln die relevanten Daten selbst mit ihren privaten Schlüsseln.
+* Das Entschlüsseln und Verarbeiten dieser Blöcke braucht Zeit, daher verwenden Wallets schnellere Synchronisierungsmethoden, damit du dein Guthaben früher nutzen kannst.
+* Bemerkenswerte Ansätze: Warp Sync (YWallet), Spend-before-sync (Zcash Mobile Wallet SDK V2), Blaze Sync (Zecwallet) und das vorgeschlagene DAGSync.
+* Diese Methoden tauschen im Allgemeinen zusätzlichen Speicherbedarf oder Rechenleistung gegen eine schnellere Synchronisierung ein.
+
+## Kernerklärung
 
 ### Wie die Zcash-Synchronisierung funktioniert
 
-Um zu verstehen, wie Warp Sync funktioniert, lassen Sie mich etwas mehr über Zcash erklären. Es ist eine auf Privatsphäre ausgerichtete Kryptowährung, die eine Technologie namens Zero-Knowledge-Proofs verwendet, um die Details von Transaktionen vor allen zu verbergen, die nicht berechtigt sind, sie zu sehen. Das bedeutet, dass die auf der Blockchain aufgezeichneten Transaktionen verschlüsselt oder verborgen sind, und nur der Sender und der Empfänger sie mit ihren privaten Schlüsseln entschlüsseln können.
+Zcash verwendet Zero-Knowledge-Proofs, um Transaktionsdetails vor unbefugten Parteien abzuschirmen. Diese Privatsphäre erschwert die Synchronisierung für Light Wallets, weil sie die vollständige Blockchain nicht lokal speichern und stattdessen auf einen Server für die notwendigen Informationen angewiesen sind. Bei Bitcoin oder Ethereum können Server die Blockchain indizieren und Kontodaten schnell zurückgeben. Bei Zcash kann der Server jedoch die Transaktionsdetails nicht sehen. Wie kann also eine Light Wallet ihren Kontostand und Verlauf synchronisieren, ohne selbst die gesamte Blockchain herunterzuladen und zu entschlüsseln?
 
-Dies stellt jedoch auch eine Herausforderung für Light Wallets dar, also Anwendungen, die nicht die gesamten Blockchain-Daten auf dem Gerät speichern, sondern sich auf einen Server verlassen, der ihnen die notwendigen Informationen bereitstellt. Bei Coins ohne Datenschutzfunktionen wie Bitcoin oder Ethereum kann der Server die Blockchain leicht indexieren und eine Datenbank für jedes Konto führen. Wenn eine Light Wallet nach ihren spezifischen Kontodaten fragt, kann der Server diese schnell zurückgeben.
+Zcash löst dieses Problem durch die Kombination mehrerer Ansätze. Es gibt einen spezialisierten Server, `lightwalletd`, der Daten von einem Full Node filtert und nur das behält, was für die Identifizierung von Transaktionen benötigt wird. Diese Daten werden als kompakte Blöcke bezeichnet und sind viel kleiner als die ursprünglichen Blöcke. Light Wallets laden diese kompakten Blöcke zunächst vom `lightwalletd`-Server herunter und entschlüsseln sie dann mit ihren privaten Schlüsseln.
 
-Aber bei  Zcash kann der Server das nicht tun, weil er die Details der Transaktionen nicht sehen kann. Wie kann also eine Light Wallet ihren Kontostand und ihre Transaktionshistorie synchronisieren, ohne die gesamten Blockchain-Daten selbst herunterzuladen und zu entschlüsseln?
+Selbst das Entschlüsseln und Verarbeiten dieser kompakten Blöcke kann erheblich Zeit in Anspruch nehmen, besonders wenn es viele Transaktionen pro Block gibt. Deshalb verwenden Wallets verschiedene Methoden, um die Synchronisierung zu beschleunigen und dir zu ermöglichen, deine Mittel so schnell wie möglich zu verwenden.
 
-Zcash löst dieses Problem mit einem gemischten Ansatz. Es gibt einen spezialisierten Server namens lightwalletd, der die Daten eines Full Nodes filtert und nur die für die Transaktionsidentifikation benötigten Daten behält. Diese Daten werden Compact Blocks genannt und sind viel kleiner als die ursprünglichen Blöcke. Light Wallets müssen nur diese Compact Blocks vom lightwalletd-Server herunterladen und sie dann selbst mit ihren privaten Schlüsseln entschlüsseln.
+## Visuell / Analogie
 
-Allerdings kann selbst das Entschlüsseln und Verarbeiten dieser Compact Blocks erhebliche Zeit in Anspruch nehmen, besonders wenn sich in jedem Block viele Transaktionen befinden. Deshalb hat jedes Wallet seine eigene alternative Methode, um den Synchronisierungsprozess zu beschleunigen, damit Sie Ihre Mittel so schnell wie möglich nutzen können.
+Stell dir die Blockchain als einen riesigen Postraum voller verschlossener Kisten vor. Bei einer transparenten Coin kann der Angestellte im Postraum die Etiketten lesen und dir sofort sagen, welche Kisten dir gehören. Bei Zcash sind die Etiketten verborgen — daher muss deine Wallet ihre Schlüssel nehmen und die Kisten selbst unauffällig prüfen, um diejenigen zu finden, die sie öffnen kann. Die folgenden Synchronisierungsmethoden sind unterschiedliche Strategien, um diese Kisten schneller zu prüfen.
+
+## Detaillierte Betrachtung
 
 ### Warp Sync
-Warp Sync ist eine Funktion von YWallet, die es ermöglicht, die Zwischenschritte des Entschlüsselns und Verarbeitens jedes Compact Blocks zu überspringen und stattdessen direkt zum Endergebnis zu springen.
 
-Dazu nutzt es clevere Mathematik und Kryptographie, um das Endergebnis zu berechnen, ohne jeden einzelnen Schritt durchlaufen zu müssen. 
+Warp Sync ist eine Funktion von YWallet, die die Zwischenschritte des Entschlüsselns und Verarbeitens jedes kompakten Blocks überspringt und direkt zum Endergebnis springt.
 
-Warp Sync kann Tausende von Blöcken pro Sekunde verarbeiten, also viel schneller als die übliche Synchronisierungsmethode. Das bedeutet, dass YWallet-Nutzer eine schnelle und reibungslose Leistung genießen können, selbst bei Hunderttausenden von Transaktionen und empfangenen Notes in ihren Konten.
+Dazu nutzt es Mathematik und Kryptografie, um das Endergebnis zu berechnen, ohne jeden einzelnen Schritt zu durchlaufen.
 
-Abgesehen von dieser Technik des **Überspringens von Schritten** ist YWallet auch in der Lage, verschiedene Blöcke gleichzeitig zu verarbeiten und die Last auf die verfügbare Hardware zu verteilen, wodurch der Prozess noch schneller wird.
+Warp Sync kann Tausende von Blöcken pro Sekunde verarbeiten, viel schneller als die übliche Synchronisierungsmethode. Das bedeutet, dass YWallet-Nutzer eine schnelle und reibungslose Leistung genießen können, selbst bei Hunderttausenden von Transaktionen und empfangenen Notes in ihren Konten.
 
-Lesen Sie mehr über [Warp Sync](https://ywallet.app/warp/)
+Abgesehen von dieser Technik zum Überspringen von Schritten kann YWallet mehrere Blöcke gleichzeitig verarbeiten und die Last auf die verfügbare Hardware verteilen, um den Prozess noch schneller zu machen.
+
+Lies mehr über [Warp Sync](https://ywallet.app/warp/)
 
 ### Spend-before-sync
-Spend-before-sync ist eine neue Funktion, die im Zcash Mobile Wallet SDK V2 implementiert wurde und es Nutzern ermöglicht, Gelder sofort nach dem Öffnen ihres Wallets auszugeben, ohne auf eine vollständige Wallet-Synchronisierung warten zu müssen. Diese Funktion beschleunigt die Ermittlung des ausgabefähigen Wallet-Guthabens und verbessert die Nutzererfahrung.
 
-Spend-before-sync funktioniert mit einem Synchronisierungsalgorithmus für Compact Blocks, der Blöcke vom lightwalletd-Server in nichtlinearer Reihenfolge verarbeitet. Das bedeutet, dass Wallets jetzt etwas mehr Speicher und Rechenleistung nutzen können, um verschiedene Abschnitte der Blockchain zu scannen, anstatt darauf zu warten, dass ein Block verarbeitet wird, bevor zum nächsten übergegangen wird. Üblicherweise scannt es in unterschiedlichen Bereichen und sucht nach neueren Transaktionen, während gleichzeitig ältere Blöcke heruntergeladen und verarbeitet werden. Wenn eine aktuelle, nicht ausgegebene Note entdeckt wird, wird sie sofort verfügbar gemacht.
+Spend-before-sync ist eine neue Funktion im Zcash Mobile Wallet SDK V2, die es Nutzern ermöglicht, Mittel sofort nach dem Öffnen ihrer Wallet auszugeben, ohne auf die vollständige Wallet-Synchronisierung zu warten. Diese Funktion beschleunigt die Ermittlung des ausgabefähigen Kontostands der Wallet und verbessert die Nutzererfahrung.
+
+Spend-before-sync funktioniert mithilfe eines Synchronisierungsalgorithmus für kompakte Blöcke, der Blöcke vom `lightwalletd`-Server in nichtlinearer Reihenfolge verarbeitet. Das bedeutet, dass Wallets, anstatt zu warten, bis ein Block vollständig verarbeitet wurde, bevor sie weitermachen, etwas mehr Speicher und Rechenleistung nutzen können, um verschiedene Abschnitte der Blockchain zu scannen. Üblicherweise scannt es verschiedene Bereiche und sucht nach neueren Transaktionen, während die älteren Blöcke heruntergeladen und verarbeitet werden. Wenn eine aktuelle, nicht ausgegebene Note entdeckt wird, wird sie sofort verfügbar gemacht.
 
 <a href="">
     <img src="https://github.com/ZecHub/zechub/assets/9355622/363d08df-b7b7-461b-a386-251d9ad702ca" alt="" width="140" height="150"/>
 </a>
 
 ### Blaze Sync
-Blaze Sync wurde vom Zecwallet-Team entwickelt und ist ein Synchronisierungsalgorithmus für Light Wallets, der die Blockchain „rückwärts“ scannt, also beim höchsten, neuesten Block beginnt und sich von dort aus zurückarbeitet.
 
-Dadurch kann das Wallet ausgegebene Notes vor empfangenen finden und zugleich die bereits nicht ausgegebenen verfügbar machen, ohne darauf warten zu müssen, dass der vollständige Synchronisierungsprozess abgeschlossen ist.
+Blaze Sync wurde vom Zecwallet-Team entwickelt und ist ein Synchronisierungsalgorithmus für Light Wallets, der die Blockchain rückwärts scannt, beginnend mit dem höchsten, neuesten Block und dann rückwärts weiterarbeitet.
 
-Außerdem verwendet es Out of Order Sync, indem es „die Komponenten der Synchronisierung voneinander entkoppelt - das Herunterladen von Blöcken, das Durchführen von Trial Decryptions, das Aktualisieren von Witnesses“, und sie parallel verarbeitet. Das benötigt etwas mehr Speicher- und CPU-Ressourcen, erhöht aber die Synchronisierungsgeschwindigkeit um das Fünffache.
+Dadurch kann die Wallet ausgegebene Notes vor empfangenen finden und gleichzeitig zuvor nicht ausgegebene Notes verfügbar machen, ohne darauf zu warten, dass der vollständige Synchronisierungsvorgang abgeschlossen ist.
 
+Darüber hinaus verwendet es Out-of-Order Sync, indem es die Komponenten der Synchronisierung voneinander entkoppelt — das Herunterladen von Blöcken, das Durchführen von Probe-Entschlüsselungen und das Aktualisieren von Witnesses — und sie parallel verarbeitet. Das benötigt mehr Speicher- und CPU-Ressourcen, erhöht aber die Synchronisierungsgeschwindigkeit um das Fünffache.
 ### DAGSync
 
-DAGSync ist ein vorgeschlagener Synchronisierungsalgorithmus, der darauf abzielt, die Nutzererfahrung von abgeschirmten Zcash Wallets zu verbessern, indem die Synchronisierung beschleunigt wird.
+DAGSync ist ein vorgeschlagener Synchronisierungsalgorithmus, der darauf abzielt, die Benutzererfahrung von abgeschirmten Zcash-Wallets zu verbessern, indem die Synchronisierung beschleunigt wird.
 
-Er basiert auf [der Idee, einen gerichteten azyklischen Graphen zu verwenden](https://words.str4d.xyz/dagsync-graph-aware-zcash-wallets/) (DAG), um die Abhängigkeiten zwischen Notes, Witnesses und Nullifiers in einem Zcash Wallet darzustellen. 
+Er verwendet einen [Directed Acyclic Graph (DAG)](https://words.str4d.xyz/dagsync-graph-aware-zcash-wallets/), um die Abhängigkeiten zwischen Notes, Witnesses und Nullifiers in einer Zcash-Wallet darzustellen.
 
-Ein DAG ist eine Datenstruktur, die aus Knoten und Kanten besteht, wobei jede Kante eine Richtung hat, die eine Beziehung zwischen zwei Knoten angibt. Ein DAG hat keine Zyklen, was bedeutet, dass es keine Möglichkeit gibt, von einem Knoten aus zu starten und den Kanten zurück zu demselben Knoten zu folgen.
+Ein DAG ist eine Datenstruktur, die aus Knoten und Kanten besteht, wobei jede Kante eine Richtung hat, die eine Beziehung zwischen zwei Knoten anzeigt. Ein DAG hat keine Zyklen, was bedeutet, dass es keine Möglichkeit gibt, von einem Knoten ausgehend den Kanten zu folgen und wieder zum selben Knoten zurückzukehren.
 
 <a href="">
     <img src="https://github.com/ZecHub/zechub/assets/9355622/eee7e08d-5c98-4c88-a48e-12f7a92a195f" alt="" width="110" height="230"/>
 </a>
 
----
+## Praktische Auswirkungen
 
-Interessanterweise versuchen all diese Mechanismen, die von Zcash Security in seinem Beitrag über [skalierbares privates Messaging](https://zecsec.com/posts/scalable-private-money-needs-scalable-private-messaging/) und dessen Beziehung zu privaten Zahlungssystemen aufgeworfenen Fragen zu lösen. Einige gehen sogar noch einen Schritt weiter und laden alle Memo-Daten von Servern herunter, mit Ausnahme derjenigen, die ausschließlich zu einer Adresse gehören, wodurch die Privatsphäre auf Kosten eines kleinen zusätzlichen Ressourcenaufwands erhöht wird.
+Interessanterweise zielen all diese Mechanismen darauf ab, die Fragen zu beantworten, die von Zcash Security in seinem Beitrag über [Scalable Private Messaging](https://zecsec.com/posts/scalable-private-money-needs-scalable-private-messaging/) und dessen Beziehung zu privaten Zahlungssystemen aufgeworfen wurden. Einige gehen sogar noch einen Schritt weiter und laden alle Memo-Daten von Servern herunter, mit Ausnahme von Daten, die exklusiv zu einer Adresse gehören, wodurch die Privatsphäre auf Kosten eines kleinen zusätzlichen Ressourcenaufwands erhöht wird.
 
-Auch die Zcash Foundation hat sich andere Alternativen angesehen, um die Leistung von Light Wallets zu verbessern. Das ist der Fall bei [Oblivious Message Retrieval (OMR](https://zfnd.org/oblivious-message-retrieval/)), einer Konstruktion, die die Foundation untersucht hat, „um festzustellen, ob sie eine mögliche Lösung für die jüngsten Leistungsprobleme bietet, die Zcash-Wallet-Nutzer betroffen haben“
+Außerdem hat sich die Zcash Foundation mit anderen Alternativen beschäftigt, um die Leistung von Light Wallets zu verbessern. Das ist der Fall bei [Oblivious Message Retrieval (OMR)](https://zfnd.org/oblivious-message-retrieval/), einer Konstruktion, die die Stiftung untersucht hat, „um festzustellen, ob sie eine mögliche Lösung für die jüngsten Leistungsprobleme bietet, von denen Zcash-Wallet-Nutzer betroffen waren.“
+
+## Häufige Fehler
+
+**Anzunehmen, dass der lightwalletd-Server deinen Kontostand kennt.** Der Server liefert nur kompakte Blöcke; deine Wallet entschlüsselt und interpretiert sie lokal mit deinen eigenen Schlüsseln.
+
+**Die Synchronisierung zu früh zu stoppen.** Einige Methoden machen kürzlich empfangene ausgabefähige Mittel verfügbar, bevor eine vollständige Synchronisierung abgeschlossen ist, aber ältere Historie und Notes können noch immer in Bearbeitung sein.
+
+**Die Zcash-Synchronisierung direkt mit der Synchronisierung einer transparenten Chain zu vergleichen.** Ein langsamerer Ablauf kann der Preis für den Schutz der Privatsphäre sein und kein Fehler — die Wallet erledigt Arbeit, die ein Public-Coin-Server andernfalls übernehmen würde, indem er dein Konto offen ausliest.
+
+
+## Verwandte Seiten
+
+- [Lightwallet-Knoten](/zcash-tech/lightwallet-nodes) — die lightwalletd-Infrastruktur, auf die Light Wallets angewiesen sind.
+- [Viewing Keys](/zcash-tech/viewing-keys) — die Schlüssel, die Wallets verwenden, um ihre eigenen Notes zu erkennen und zu entschlüsseln.
+- [Pepper Sync](/zcash-tech/pepper-sync) — ein weiterer Ansatz zur Synchronisierung von Zcash-Wallets.
+- [FROST](/zcash-tech/frost) — verteilte Signaturautorität für abgeschirmte ZEC.
