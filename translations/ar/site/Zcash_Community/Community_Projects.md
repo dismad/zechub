@@ -229,7 +229,7 @@ BazaarSwap تجلب ZEC إلى Web3 DeFi من خلال DEX أصلي لـ Zcash. 
 
 ## Zkool
 
-Zkool هو الخليفة لـ YWallet، ويدعم أحدث ميزات بروتوكول Zcash بما في ذلك معاملات Orchard المحمية.
+Zkool هو الخليفة لـ Ywallet، ويدعم أحدث ميزات بروتوكول Zcash بما في ذلك معاملات Orchard المحمية.
 
 [نقاش المنتدى](https://forum.zcashcommunity.com/t/zkool-the-successor-to-ywallet/51139)
 

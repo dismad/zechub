@@ -20,7 +20,7 @@ ____
 
 ____ 
 
-- التخزين البارد في YWallet
+- التخزين البارد في Ywallet
 
 [![صورة مصغّرة للفيديو](https://img.youtube.com/vi/hJaAccp-77k/hqdefault.jpg)](https://www.youtube.com/watch?v=hJaAccp-77k)
 
