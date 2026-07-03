@@ -55,7 +55,7 @@ ZecHub 是一个社区驱动的项目，旨在为 Zcash 用户和开发者提供
   <iframe
     className="w-full h-full"
     src="https://www.youtube.com/embed/qz4KzDjkqu8"
-    title="WSL 安装 + zcashd 编译/交易教程"
+    title="WSL 安装 + Zcashd 编译/交易教程"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     allowFullScreen
     loading="lazy"
