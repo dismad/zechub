@@ -92,7 +92,8 @@ Use these merged newsletter pull requests as examples of accepted submissions:
 - [Zcash Ecosystem Digest | March 28th](https://github.com/ZecHub/zechub/pull/1544)
 - [Zcash Ecosystem Digest | February 14th](https://github.com/ZecHub/zechub/pull/1474)
 
-![Merged ZecWeekly newsletter pull request example](assets/zecweekly-example-pr.png)
+
+![Merged ZecWeekly newsletter pull request example](https://github.com/user-attachments/assets/9230d68d-6406-4c8a-992c-df84e0d318d8)
 
 When comparing your work with an example, focus on the file location, title format, section order, link descriptions, and whether the pull request connects back to the correct task.
 
