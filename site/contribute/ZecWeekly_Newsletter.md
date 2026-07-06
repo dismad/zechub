@@ -4,11 +4,7 @@
 
 # ZecWeekly Newsletter
 
-ZecWeekly is a newsletter that goes out every Friday morning. It includes all the news that happened during the week in the Zcash ecosystem.
-
-The news is curated weekly by community members and all relevant links are added to the newsletter.
-
-Please subscribe to the newsletter [here](https://zechub.substack.com/).
+ZecWeekly is a newsletter that goes out every Sunday morning. It includes all the news that happened during the week in the Zcash ecosystem. The news is curated weekly by community members and all relevant links are added to the newsletter. Please subscribe to the newsletter [here](https://zechub.substack.com/).
 
 ## Contribute
 
@@ -18,13 +14,12 @@ Newsletter contributions work best when one contributor prepares the edition for
 
 Before you start writing:
 
-- Check the [ZecHub GitHub issues](https://github.com/ZecHub/zechub/issues) and [Dework](https://app.dework.xyz/zechub-2424) for the current newsletter task.
-- Use the date in the issue title or task description as the source of truth.
-- Open the issue and check whether another contributor has already commented, been assigned, or opened a linked pull request.
-- Search open pull requests for the issue number and the edition date before starting. For example, search `is:pr is:open "May 30th" repo:ZecHub/zechub`.
-- If the task is unclear, ask in the issue, the ZecHub Discord, or by messaging [ZecHub on Twitter](https://twitter.com/ZecHub) before preparing the full edition.
+- Check [ZEC Bounties ](https://bounties.zechub.wiki/) for the current newsletter task.
+- Wait to be assigned
 
-![Open GitHub issues filtered for current ZecWeekly newsletter tasks](assets/zecweekly-current-task-search.png)
+![ss](https://github.com/user-attachments/assets/149a802c-b64f-4969-ad89-e83ffecf568e)
+
+
 
 ### 2. Fork the repository
 
