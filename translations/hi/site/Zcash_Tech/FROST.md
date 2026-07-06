@@ -1,124 +1,154 @@
+---
 <a href="https://github.com/zechub/zechub/edit/main/site/Zcash_Tech/FROST.md" target="_blank">
   <img src="https://img.shields.io/badge/Edit-blue" alt="Edit Page"/>
 </a>
+# FROST
 
-# FROST 
 
-## स्चनॉर डिजिटल हस्ताक्षर क्या है?
+## संक्षेप में
 
-एक स्चनॉर डिजिटल हस्ताक्षर, एक एल्गोरिथम के सेट है: (KeyGen, Sign, Verify).
+* FROST (Flexible Round-Optimised Schnorr Threshold Signatures) एक threshold signature और distributed key generation protocol है: कई signers एक साझा private key का एक share रखते हैं, और एक signature बनाने के लिए उनमें से threshold संख्या को सहयोग करना होता है।
+* क्योंकि परिणाम एक single Schnorr signature होता है, इस तरह किया गया transaction नेटवर्क पर एक सामान्य transaction जैसा दिखाई देता है।
+* इसमें communication के न्यूनतम rounds की आवश्यकता होती है, यह parallel में चल सकता है, और यह किसी गलत व्यवहार करने वाले participant की पहचान कर उसे बाहर कर सकता है।
+* Zcash के लिए, इसका अर्थ है कि FROST कई भौगोलिक रूप से अलग-अलग parties को shielded ZEC की spend authority नियंत्रित करने में सक्षम बनाता है — जो custody, escrow, non-custodial services, और Zcash Shielded Assets (ZSA) के लिए उपयोगी है।
+* इसे Chelsea Komlo (University of Waterloo, Zcash Foundation) और Ian Goldberg (University of Waterloo) ने बनाया था।
 
-स्चनॉर हस्ताक्षर में कई लाभ हैं। एक प्रमुख लाभ यह है कि जब कई कुंजियों के समूह एक ही संदेश के लिए हस्ताक्षर करते हैं, तो परिणामी हस्ताक्षर एकल हस्ताक्षर में संयोजित किया जा सकता है। इसे बहु-स्वामित्व भुगतान और अन्य बहु-स्वामित्व संबंधी लेनदेन के आकार में उल्लेखनीय कमी ला सकता है।
+## मुख्य व्याख्या
 
-## FROST क्या है?
+### Schnorr signature क्या है?
 
-**Flexible Round-Optimized Schnorr Threshold Signatures** -  
-*चेल्सी कोम्लो (वाटरलु, Zcash Foundation) और आइएन गोल्डबर्ग (वाटरलु) द्वारा बनाया गया।*
+एक Schnorr digital signature algorithms का एक set है: (KeyGen, Sign, Verify).
 
-FROST एक थ्रेशहोल्ड हस्ताक्षर और वितरित कुंजी पैदा करने का प्रोटोकॉल है, जो संचार में न्यूनतम चक्र प्रदान करता है और समानांतर में सुरक्षित रूप से चलाने के लिए सुरक्षित है। FROST प्रोटोकॉल, स्चनॉर हस्ताक्षर योजना की थ्रेशहोल्ड संस्करण है।
+Schnorr signatures के कई फायदे हैं। एक मुख्य लाभ यह है कि जब एक ही message पर sign करने के लिए कई keys का उपयोग किया जाता है, तो resulting signatures को मिलाकर एक single signature बनाया जा सकता है। इससे multisig payments और multisig-संबंधित अन्य transactions का आकार काफी कम हो सकता है।
 
-एकल-पक्ष समाधान में हस्ताक्षर के विपरीत, थ्रेशहोल्ड हस्ताक्षर में एक थ्रेशहोल्ड संख्या में हस्ताक्षरकर्ताओं के सहयोग की आवश्यकता होती है, जिनमें प्रत्येक एक सामान्य गुप्त कुंजी के शेयर के संग्रहण में होता है।
+### FROST क्या है?
 
-[थ्रेशहोल्ड हस्ताक्षर क्या है? चेल्सी कोम्लो - Zcon3](https://youtu.be/cAfTTfblzoU?t=110)
+**Flexible Round-Optimised Schnorr Threshold Signatures** -
+*Chelsea Komlo (University of Waterloo, Zcash Foundation) और Ian Goldberg (University of Waterloo) द्वारा निर्मित।*
 
-इस प्रकार, थ्रेशहोल्ड सेटिंग में हस्ताक्षर उत्पन्न करना एक बड़ी भारी ले जाता है, क्योंकि हस्ताक्षरकर्ताओं में नेटवर्क चक्र के कारण अतिरिक्त भुगतान होता है, जब सच्चे शेयर नेटवर्क-सीमित उपकरणों पर भंडारित किए गए होते हैं या अनिश्चित नेटवर्क में समन्वय किया जाता है।
+FROST एक threshold signature और distributed key generation protocol है, जिसे communication के न्यूनतम rounds की आवश्यकता होती है और जिसे parallel में चलाया जा सकता है। FROST protocol, Schnorr signature scheme का एक threshold version है।
 
-हस्ताक्षर प्रक्रियाओं के दौरान नेटवर्क भार को कम करने के लिए, अन्य योजनाओं के लिए धोखा हमलों के खिलाफ सुरक्षा के लिए एक नए तकनीक का उपयोग किया जाता है।
+Single-party setting में signatures के विपरीत, threshold signatures में threshold संख्या के signers के बीच सहयोग आवश्यक होता है, जहाँ प्रत्येक signer एक साझा private key का एक share रखता है।
 
-FROST थ्रेशहोल्ड हस्ताक्षर प्रोटोकॉल के सुधार के रूप में काम करता है, क्योंकि असीमित संख्या में हस्ताक्षर प्रक्रियाओं को सुरक्षित रूप से समानांतर में (सहयोग) किया जा सकता है।
+[Threshold Signatures क्या हैं? Chelsea Komlo - Zcon3](https://youtu.be/cAfTTfblzoU?t=110)
 
-इसका उपयोग एक 2-चक्र प्रोटोकॉल के रूप में किया जा सकता है, जहाँ हस्ताक्षरकर्ता अपने द्वारा 2 संदेशों को भेजते और प्राप्त करते हैं, या एकल-चक्र हस्ताक्षर प्रोटोकॉल में अनुकूलित किया जा सकता है, जहाँ एक प्रीप्रोसेसिंग चरण होता है।
+इसके परिणामस्वरूप, threshold setting में signatures बनाते समय signers के बीच network rounds के कारण अतिरिक्त overhead आता है, जिससे यह महँगा हो जाता है जब secret shares network-limited devices पर संग्रहीत हों या coordination अविश्वसनीय networks पर हो रहा हो।
 
-FROST अपने द्वारा दक्षता में सुधार के लिए भाग लेने वाले प्रतिभागी के उपस्थिति में (जो फिर से ऑपरेशन में बाहर कर दिया जाएगा) प्रोटोकॉल को छोड़ देने की अनुमति देता है।
+Signing operations के दौरान network overhead को एक नई technique का उपयोग करके कम किया जाता है, जो forgery attacks से सुरक्षा देती है और अन्य schemes पर भी लागू होती है।
 
-सुरक्षा के सबूत, जो दिखाते हैं कि FROST चुने गए-संदेश हमलों के खिलाफ सुरक्षित है, मानते हुए कि विस्थापन समस्या कठिन है और प्रतिद्वंदी कम से कम थ्रेशहोल्ड से अधिक भागीदारों के नियंत्रण में है, [यहाँ](https://eprint.iacr.org/2020/852.pdf#page=16) प्रदान करते हैं।
+FROST threshold signature protocols को बेहतर बनाता है, क्योंकि यह unlimited संख्या में signature operations को सुरक्षित रूप से parallel (concurrency) में करने की अनुमति देता है।
 
-## FROST कैसे काम करता है?
+इसे या तो 2-round protocol के रूप में उपयोग किया जा सकता है, जहाँ signers कुल 2 messages भेजते और प्राप्त करते हैं, या preprocessing stage के साथ एक optimised single-round signing protocol के रूप में।
 
-FROST प्रोटोकॉल में दो महत्वपूर्ण घटक हैं:
+FROST अपनी efficiency improvements आंशिक रूप से इस प्रकार हासिल करता है कि protocol गलत व्यवहार करने वाले participant की मौजूदगी में abort कर सकता है, जिसके बाद उस participant की पहचान कर उसे भविष्य की operations से बाहर किया जाता है।
 
-पहले, n सदस्य *वितरित कुंजी उत्पादन (DKG) प्रोटोकॉल* चलाते हैं एक सामान्य सत्यापन कुंजी बनाने के लिए; अंत में, प्रत्येक सदस्य एक गोपनीय रहस्य शेयर और एक सामान्य सत्यापन कुंजी शेयर प्राप्त करता है। 
+यह प्रमाण कि FROST chosen-message attacks के विरुद्ध सुरक्षित है, बशर्ते discrete logarithm problem कठिन हो और adversary threshold से कम participants को नियंत्रित करता हो, [यहाँ](https://eprint.iacr.org/2020/852.pdf#page=16) दिए गए हैं।
 
-इसके बाद, कोई भी t-में-n सदस्य *थ्रेशहोल्ड हस्ताक्षर प्रोटोकॉल* चला सकता है जिससे संयुक्त रूप से एक वैध स्चनॉर हस्ताक्षर बनाया जा सके। 
+### FROST कैसे काम करता है?
+
+FROST protocol में दो महत्वपूर्ण components होते हैं:
+
+पहले, n participants एक distributed key generation (DKG) protocol चलाते हैं ताकि एक common verification key उत्पन्न की जा सके। अंत में, प्रत्येक participant को एक private secret key share और एक public verification key share प्राप्त होता है।
+
+इसके बाद, कोई भी t-out-of-n participants threshold signing protocol चला सकते हैं ताकि मिलकर एक valid Schnorr signature बनाया जा सके।
 
 <a href="">
     <img src="https://static.cryptohopper.com/images/news/uploads/1634081807-frost-flexible-round-optimized-schnorr-threshold-signatures-1.jpg" alt="" width="400" height="300"/>
 </a>
 
-**वितरित कुंजी उत्पादन (DKG)**
+## दृश्य / उपमा
 
-इस चरण का लक्ष्य लंबे समय तक जीवित रहने वाले गोपनीय कुंजी शेयर और एक संयुक्त सत्यापन कुंजी बनाना है। इस चरण को n सदस्यों द्वारा चलाया जाता है। 
+FROST को एक safe-deposit box की तरह समझिए जो तभी खुलता है जब कई अधिकृत keyholders अपनी चाबियाँ एक साथ घुमाते हैं — लेकिन हर keyholder का होना ज़रूरी नहीं; केवल एक निश्चित संख्या चाहिए (उदाहरण के लिए, 5 में से कोई भी 3)। एक बार box खुल जाने पर, बाहर से देखने वाला यह नहीं बता सकता कि कौन-कौन से keyholders आए थे, या यहाँ तक कि एक से अधिक लोग शामिल थे। इसी तरह, एक समूह मिलकर Zcash transaction को अधिकृत कर सकता है, जबकि नेटवर्क को केवल एक सामान्य signature दिखाई देती है।
 
-FROST अपने उत्पादन चरण को [Pedersen DKG (GJKR03)](https://blog.gtank.cc/notes-on-threshold-signatures/) पर आधारित करता है, जहां वह शमिर सच्चे बंटवाने और फेल्डमैन सत्यापित गोपनीय बंटवाने के योजना के उपक्रमों का उपयोग करता है। इसके अलावा, प्रत्येक सदस्य को अपने गोपनीय के ज्ञान के बारे में प्रमाण देखने के लिए आवश्यक है, जो अन्य सदस्यों को एक शून्य ज्ञान प्रमाण के रूप में भेजता है, जो खुद एक स्चनॉर हस्ताक्षर है। इस अतिरिक्त चरण के द्वारा t ≥ n/2 के सेटिंग में झूठी-कुंजी हमलों के खिलाफ सुरक्षा प्रदान की जाती है।
+## गहराई से समझें
 
-DKG प्रोटोकॉल के अंत में, एक संयुक्त सत्यापन कुंजी vk बना लिया जाता है। इसके अलावा, प्रत्येक सदस्य P ᵢ में (i, sk ᵢ ) के मान होते हैं, जो उनके लंबे समय तक जीवित रहने वाले गोपनीय शेयर और एक सत्यापन कुंजी शेयर vk ᵢ = sk ᵢ *G है। सदस्य P ᵢ का सत्यापन कुंजी शेयर vk ᵢ, अन्य सदस्यों द्वारा उपयोग किया जाता है, जिसके द्वारा P ᵢ के हस्ताक्षर शेयर की सहीता की पुष्टि की जाए। इसके अलावा, सत्यापन कुंजी vk बाहरी पक्षों द्वारा उपयोग किया जाता है, जिसके द्वारा समूह द्वारा जारी किए गए हस्ताक्षर की पुष्टि की जाए।
+**Distributed key generation (DKG)**
 
-**थ्रेशहोल्ड हस्ताक्षर**
+इस phase का उद्देश्य long-lived secret key shares और एक joint verification key उत्पन्न करना है। यह phase n participants द्वारा चलाया जाता है।
 
-यह चरण ज्ञात तकनीकों पर आधारित है, जो योग के सच्चे बंटवाने और शेयर अपरिवर्तनीय बनाने का उपयोग करते हैं, जिसके द्वारा प्रत्येक हस्ताक्षर के लिए एल्प्टिक कर्व (EC) बिंदुओं की अपरिवर्तनीय उत्पादन के लिए प्रक्रिया में शामिल हो सकता है। इस चरण में, बंधक तकनीकों का उपयोग ज्ञात धोखा हमलों के खिलाफ रोकथाम के लिए किया जाता है, बिना सहयोग की सीमा को सीमित किए।
+FROST अपना key generation phase Pedersen's DKG (GJKR03) पर बनाता है, जो Shamir's secret sharing और Feldman's verifiable secret sharing schemes दोनों को subroutines के रूप में उपयोग करता है। इसके अतिरिक्त, प्रत्येक participant को अन्य participants को zero-knowledge proof भेजकर अपने secret की जानकारी प्रदर्शित करनी होती है, जो स्वयं एक Schnorr signature होती है। यह अतिरिक्त step t ≥ n/2 होने पर rogue-key attacks से सुरक्षा देता है।
 
-प्रीप्रोसेसिंग: प्रीप्रोसेसिंग चरण में, प्रत्येक सदस्य आगे के उपयोग के लिए एक निश्चित संख्या में एल्प्टिक कर्व (EC) बिंदु जोड़ियों की तैयारी करते हैं, जो एकल बार में कई थ्रेशहोल्ड हस्ताक्षर चरणों के लिए चलाया जाता है।
+DKG protocol के अंत में, एक joint verification key vk उत्पन्न होती है। प्रत्येक participant Pᵢ के पास एक value (i, skᵢ ) होती है, जो उसका long-lived secret share है, और एक verification key share vkᵢ = skᵢ *G होती है। Participant Pᵢ की verification key share vkᵢ का उपयोग अन्य participants signing phase के दौरान Pᵢ के signature shares की शुद्धता सत्यापित करने के लिए करते हैं, जबकि verification key vk का उपयोग बाहरी parties समूह द्वारा जारी signatures को सत्यापित करने के लिए करते हैं।
+
+**Threshold Signing**
+
+यह phase उन ज्ञात techniques पर आधारित है जो additive secret sharing और share conversion का उपयोग करके प्रत्येक signature के लिए nonce को non-interactively उत्पन्न करती हैं। यह concurrency को सीमित किए बिना ज्ञात forgery attacks से बचने के लिए binding techniques का भी उपयोग करता है।
+
+Preprocessing stage में, प्रत्येक participant बाद में उपयोग के लिए Elliptic Curve (EC) points की pairs की एक निश्चित संख्या तैयार करता है। यह stage कई threshold signing phases में एक बार चलती है।
 
 <a href="">
     <img src="https://i.ibb.co/nQD1c3n/preprocess.png" alt="" width="400" height="300"/>
 </a>
 
-हस्ताक्षर चरण 1: प्रत्येक सदस्य Pᵢ के द्वारा, एकल गोपनीय जोड़ियों (dᵢ, eᵢ) और संगत EC बिंदुओं (Dᵢ, Eᵢ) के उत्पादन के साथ शुरू होता है, जो अन्य सभी सदस्यों को बिंदुओं के जोड़ियों के वितरण के लिए प्रसारित करता है। प्रत्येक सदस्य इन EC बिंदुओं के जोड़ियों को भविष्य में उपयोग के लिए संग्रहीत करता है। हस्ताक्षर चरण 2 और 3 वास्तविक संचालन हैं, जहां t-में-n सदस्यों के सहयोग से एक वैध स्चनॉर हस्ताक्षर बनाना होता है।
+Signing Round 1: प्रत्येक participant Pᵢ एक single private nonce pair (dᵢ, eᵢ) और उससे संबंधित EC points की pair (Dᵢ, Eᵢ) उत्पन्न करके शुरू करता है, फिर points की इस pair को अन्य सभी participants को broadcast करता है। प्रत्येक participant बाद में उपयोग के लिए इन EC points की pairs को store करता है। Signing rounds 2 और 3 वास्तविक operations हैं जिनमें t-out-of-n participants मिलकर एक valid Schnorr signature बनाते हैं।
 
-हस्ताक्षर चरण 2: एक वैध स्चनॉर हस्ताक्षर बनाने के लिए, कोई भी t सदस्य मिलकर इस चरण का अनुष्ठान करते हैं। इस चरण के पीछे की मुख्य तकनीक t-में-t योग सच्चे बंटवाने है।
+Signing Round 2: Participants मिलकर एक valid Schnorr signature बनाते हैं। इस round के पीछे की मुख्य technique t-out-of-t additive secret sharing है।
 
-यह चरण धोखा हमलों के रोकथाम के लिए उत्पन्न होता है, क्योंकि हमलावर अलग-अलग हस्ताक्षर प्रक्रियाओं में हस्ताक्षर शेयरों के संयोजन, या प्रत्येक हस्ताक्षरकर्ता के लिए घोषित बिंदुओं के समूह के परिवर्तन के खिलाफ नहीं कर सकते हैं। 
+यह step forgery attacks को रोकता है क्योंकि attackers अलग-अलग signing operations के बीच signature shares को combine नहीं कर सकते, न ही signers के set या प्रत्येक signer के लिए प्रकाशित points को permute कर सकते हैं।
 
 <a href="">
     <img src="https://i.ibb.co/b5rJbXx/sign.png" alt="" width="400" height="300"/>
 </a>
 
-चुनौति c की गणना करने के बाद, प्रत्येक सदस्य zᵢ को चुनौति के उत्तर की गणना कर सकता है, जिसमें एकल-उपयोग नॉन्स और लंबे समय तक रहने वाले शेयर, जो समूह के लंबे समय तक रहने वाले कुंजी के t-में-n (डिग्री t-1) शमिर गोपनीय शेयर हैं। हस्ताक्षर चरण 2 के अंत में, प्रत्येक सदस्य zᵢ को अन्य सदस्यों को प्रसारित करता है।
+Challenge c की गणना हो जाने के बाद, प्रत्येक participant single-use nonces और long-term secret shares का उपयोग करके response zᵢ की गणना कर सकता है, जो समूह की long-lived key के t-out-of-n (degree t-1) Shamir secret shares होते हैं। Signing round 2 के अंत में, प्रत्येक participant zᵢ को अन्य participants को broadcast करता है।
 
-[पूरा पेपर पढ़े](https://eprint.iacr.org/2020/852.pdf)
+[पूरा paper पढ़ें](https://eprint.iacr.org/2020/852.pdf)
 
-## Zcash के लिए यह लाभदायक है?
-
-बिल्कुल हाँ। FROST का Zcash में प्रवेश अलग-अलग स्थानों में बर्खास्त गए व्यक्तियों के लिए छिपे हुए ZEC के खर्च प्राधिकरण के नियंत्रण की अनुमति देगा। एक लाभ इस बात में है कि इस हस्ताक्षर योजना के साथ प्रसारित लेनदेन अन्य लेनदेनों से अलग नहीं होते, जो भुगतान के ट्रैकिंग में मजबूत प्रतिरोध बनाए रखता है और विश्लेषण के लिए उपलब्ध ब्लॉकचेन डेटा की मात्रा को सीमित करता है। 
-
-व्यावहार में, इसके द्वारा एक पूरा जोड़ा नए अनुप्रयोगों के निर्माण की अनुमति देता है, जैसे कि सुरक्षित भुगतान प्रदाताओं या अन्य गैर-प्रबंधकीय सेवाओं। 
-
-FROST आगे बढ़ कर Zcash Shielded Assets (ZSA) के सुरक्षित प्रस्फोटन और प्रबंधन में एक अपूर्व घटक बन जाएगा, जो विकास संगठनों और ZEC के धन की रखवाली करने वालों जैसे बाजार में भी भरोसा बांटते हुए सुरक्षित प्रबंधन के अवसर को Zcash उपयोगकर्ताओं के लिए भी प्रदान करता है।
-
-
-## FROST का व्यापक एकोसिस्टम में उपयोग
+### व्यापक ecosystem में FROST का उपयोग
 
 **[Coinbase](https://github.com/coinbase/kryptology/tree/master/pkg/dkg/frost) में FROST**
 
-ताकि Coinbase थ्रेशहोल्ड-हस्ताक्षर प्रणाली के दक्षता को सुधार सके, उन्होंने FROST के एक संस्करण का विकास किया। Coinbase के प्रयोजन में मूल FROST ड्राफ्ट से कुछ हद तक बदलाव किए गए हैं।
+Coinbase के threshold-signing systems की efficiency सुधारने के लिए, उन्होंने FROST का एक version विकसित किया। Coinbase implementation में मूल FROST draft की तुलना में कुछ छोटे बदलाव किए गए हैं।
 
-उन्होंने हस्ताक्षर एजेंट की भूमिका के उपयोग से इनकार कर दिया है। बजाय, प्रत्येक भागीदार एक हस्ताक्षर एजेंट है। यह डिज़ाइन अधिक सुरक्षित है: प्रोटोकॉल के सभी भागीदार अपने द्वारा गणना किए गए चीजों की पुष्टि करते हैं, ताकि उच्च सुरक्षा और जोखिम कम कर सकें। (एकल-बार) प्रीप्रोसेसिंग चरण भी हटा दिया गया है, ताकि कार्यान्वयन के त्वरित कर सके, जिसमें एक तीसरा हस्ताक्षर चरण होता है।
+उन्होंने signature aggregator role का उपयोग न करने का निर्णय लिया। इसके बजाय, प्रत्येक participant एक signature aggregator है। यह design अधिक सुरक्षित है: protocol में सभी participants दूसरों की computations को verify करते हैं, जिससे उच्च स्तर की security मिलती है और risk कम होता है। Implementation को तेज़ करने के लिए one-time preprocessing stage को भी हटा दिया गया, और उसकी जगह तीसरा signing round इस्तेमाल किया गया।
 
-___
+---
 
-**[ROAST](https://eprint.iacr.org/2022/550.pdf) Blockstream द्वारा**
+**Blockstream द्वारा [ROAST](https://eprint.iacr.org/2022/550.pdf)**
 
-FROST पर आधारित एक अनुप्रयोग विशेष सुधार, [Blockstream Liquid Sidechain](https://blog.blockstream.com/roast-robust-asynchronous-schnorr-threshold-signatures/) के लिए Bitcoin के उपयोग के लिए प्रस्तावित किया गया है।
+FROST पर एक application-specific improvement Bitcoin के लिए [Blockstream Liquid Sidechain](https://blog.blockstream.com/roast-robust-asynchronous-schnorr-threshold-signatures/) पर उपयोग हेतु प्रस्तावित की गई है।
 
-"ROAST, FROST जैसी थ्रेशहोल्ड हस्ताक्षर योजनाओं के एक सरल विन्यास है। इसकी गारंटी है कि एक अधिकतम सच्चे हस्ताक्षरकर्ता, उदाहरण के लिए, Liquid कार्यकर्मी, नेटवर्क कनेक्शन में अत्यधिक लंबे समय के बैंडविड्थ के उपस्थिति में भी हमलावरों के उपस्थिति के बावजूद एक वैध हस्ताक्षर प्राप्त कर सकता है।"
+“ROAST threshold signature schemes जैसे FROST के ऊपर एक सरल wrapper है। यह सुनिश्चित करता है कि honest signers का एक quorum, जैसे Liquid functionaries, disruptive signers की मौजूदगी में भी हमेशा एक valid signature प्राप्त कर सके, भले ही network connections में मनमानी रूप से उच्च latency हो।”
 
-___
+---
 
 **IETF में FROST**
 
-इंटरनेट इंजीनियरिंग कार्य समूह, 1986 में स्थापित, इंटरनेट के प्रमुख मानक विकास संगठन है। IETF उपयोगकर्ता, नेटवर्क संचालकों और उपकरण आपूर्तिकर्ताओं द्वारा अक्सर अपनाए गए अनिवार्य मानक बनाता है, इसलिए इसके द्वारा इंटरनेट के विकास की प्रगति को आकार देने में सहायता प्रदान करता है।
+Internet Engineering Task Force, जिसकी स्थापना 1986 में हुई थी, Internet के लिए standards development की प्रमुख organisation है। IETF ऐसे voluntary standards विकसित करता है जिन्हें अक्सर Internet users, network operators, और equipment vendors अपनाते हैं, और इस तरह Internet की दिशा को आकार देने में मदद मिलती है।
 
-FROST के 11वें संस्करण (दो-चरण विकल्प) को [IRTFF के समर्पित कर दिया गया है](https://datatracker.ietf.org/doc/draft-irtf-cfrg-frost/11/)। 
-
-FROST के पूर्ण मूल्यांकन और अगले वर्षों में इंटरनेट, हार्डवेयर उपकरणों और अन्य सेवाओं के लिए एक नए थ्रेशहोल्ड हस्ताक्षर योजना मानक के रूप में उपयोग के लिए इस चरण के लिए महत्वपूर्ण है। 
-___
+FROST version 11 (two-round variant) को [IRTF में submit किया गया है](https://datatracker.ietf.org/doc/draft-irtf-cfrg-frost/11/). यह Internet भर में, hardware devices में, और आने वाले वर्षों में अन्य services के लिए एक नए threshold signature scheme standard के रूप में FROST के पूर्ण मूल्यांकन की दिशा में एक महत्वपूर्ण कदम है।
 
 
-अधिक सीखें:
+## व्यावहारिक निहितार्थ
 
-[Coinbase आर्टिकल - Threshold Signatures](https://www.coinbase.com/blog/threshold-digital-signatures)
+बिलकुल हाँ। Zcash में FROST के आने से कई parties, जो भौगोलिक रूप से अलग-अलग हों, shielded ZEC की spend authority को नियंत्रित कर सकेंगी। इस signature scheme का उपयोग करके broadcast किए गए transactions नेटवर्क पर अन्य transactions से अलग नहीं दिखेंगे, जिससे payment tracking के विरुद्ध मजबूत resistance बना रहेगा और analysis के लिए उपलब्ध blockchain data की मात्रा सीमित रहेगी।
 
-[Shamir Secret Sharing - Explainer & Example](https://www.geeksforgeeks.org/shamirs-secret-sharing-algorithm-cryptography/)
+व्यवहार में, इससे नेटवर्क पर applications की एक विस्तृत श्रृंखला बनाई जा सकेगी, जिनमें escrow providers से लेकर अन्य non-custodial services तक शामिल हैं।
+
+FROST, Zcash Shielded Assets (ZSA) के सुरक्षित issuance और management में भी एक आवश्यक component बन जाएगा, जिससे development orgs और exchanges जैसे ZEC custodians के भीतर spend authority का अधिक सुरक्षित प्रबंधन संभव होगा, और साथ ही यह क्षमता Zcash users को भी मिलेगी।
+
+## आम गलतियाँ
+
+**FROST को पारंपरिक on-chain multisig समझ लेना**। पारंपरिक multisig on-chain कई signers या कई signatures को प्रकट कर सकता है। FROST एक single aggregated Schnorr signature बनाता है, इसलिए transaction एक single-signature transaction से अलग नहीं पहचाना जा सकता।
+
+**यह मान लेना कि threshold से कम लोग sign कर सकते हैं**। केवल threshold संख्या (t-out-of-n) के participants, जो साथ मिलकर कार्य करें, एक valid signature बना सकते हैं; इससे छोटा कोई भी group ऐसा नहीं कर सकता।
+
+**यह मान लेना कि FROST off-chain सब कुछ छिपा देता है**। FROST on-chain signature की रक्षा करता है, लेकिन signers के बीच coordination फिर भी off-chain होता है और उसके लिए अपनी अलग privacy और security controls की आवश्यकता होती है।
+
+
+## संबंधित पृष्ठ
+
+- [Halo](/zcash-tech/halo) — Zcash के Orchard pool में प्रयुक्त trustless, recursive proof system।
+- [Viewing Keys](/zcash-tech/viewing-keys) — shielded transactions के लिए selective disclosure।
+- [Zcash Shielded Assets](/zcash-tech/zcash-shielded-assets) — जहाँ FROST spend/issuance authority के प्रबंधन में मदद करता है।
+- [Zcash Wallet Syncing](/zcash-tech/zcash-wallet-syncing) — Zcash privacy infrastructure का एक और मुख्य हिस्सा।
+
+
+## आगे सीखें
+
+[Coinbase लेख - Threshold Signatures](https://www.coinbase.com/blog/threshold-digital-signatures)
+
+[Shamir Secret Sharing - व्याख्या और उदाहरण](https://www.geeksforgeeks.org/shamirs-secret-sharing-algorithm-cryptography/)
 
 [Schnorr Digital Signatures पर छोटा वीडियो](https://youtu.be/r9hJiDrtukI?t=19)
 
