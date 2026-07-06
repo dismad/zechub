@@ -83,7 +83,7 @@ ZL;DR, Zcash ile ilgili her şeyi video formatında vurgulayan bir programdır. 
 - 19:18 – Veri toplamanın tarihsel dersi
 - 23:25 – Mikro hedefleme / Psikografik
 - 27:44 – Sıfır bilgi & Zcash
-- 32:10 – CBDC’ler /no_think
+- 32:10 – CBDC’ler
 - 37:00 – Yargı Kurumları ve Gizlilik Artıran Teknoloji
 - 39:30 – Politika Tek Baştan Çözümü Sağlayamaz
 - 44:00 – Sifreli Aktivist Bildirisi ve Filecoin
