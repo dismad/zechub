@@ -1,42 +1,41 @@
----
 <a href="https://github.com/zechub/zechub/edit/main/site/contribute/ZecWeekly_Newsletter.md" target="_blank">
-  <img src="https://img.shields.io/badge/Edit-blue" alt="편집 페이지"/>
+  <img src="https://img.shields.io/badge/Edit-blue" alt="Edit Page"/>
 </a>
 
 # ZecWeekly 뉴스레터
 
-ZecWeekly는 매주 금요일 아침에 발송되는 뉴스레터입니다. 이 뉴스레터에는 한 주간 Zcash 생태계에서 일어난 모든 소식이 포함되어 있습니다.
+ZecWeekly는 매주 금요일 아침에 발행되는 뉴스레터입니다. Zcash 생태계에서 한 주 동안 일어난 모든 소식을 담고 있습니다.
 
-뉴스는 커뮤니티 멤버들이 매주 정리하고, 관련 링크들은 모두 뉴스레터에 추가됩니다.
+이 뉴스는 커뮤니티 구성원들이 매주 선별하며, 관련된 모든 링크가 뉴스레터에 추가됩니다.
 
-뉴스레터를 구독하려면 [여기](https://zechub.substack.com/)에서 구독해 주세요.
+뉴스레터 구독은 [여기](https://zechub.substack.com/)에서 해주세요.
 
 ## 기여하기
 
-뉴스레터 기여는 한 명의 기여자가 올바른 주에 대한 판을 준비하고, 현재 보상 또는 협업 스레드를 따르며, 주간 링크가 준비된 후에 pull request를 제출하는 것이 가장 효과적입니다. ZecHub가 해당 판의 날짜를 게시하거나 확인하기 전에는 미래의 판을 제출하지 마세요. 조기 pull request는 종종 한 주 마지막 업데이트를 놓치거나, 지정된 큐레이터와 충돌하거나, 잘못된 마감일을 사용할 수 있습니다.
+뉴스레터 기여는 한 명의 기여자가 해당 주차의 에디션을 준비하고, 현재 바운티 또는 조율 스레드를 따르며, 주간 링크가 준비된 뒤 pull request를 제출할 때 가장 원활하게 이루어집니다. ZecHub가 해당 에디션의 날짜를 게시하거나 확인하기 전에 미래 주차의 에디션을 제출하지 마세요. 너무 이른 pull request는 종종 주 후반의 업데이트를 놓치고, 이미 지정된 큐레이터와 충돌하거나, 잘못된 마감일을 사용할 수 있습니다.
 
-### 1. 현재 판 확인하기
+### 1. 현재 에디션 확인하기
 
-작성 시작 전에:
+작성하기 전에:
 
-- [ZecHub GitHub 이슈](https://github.com/ZecHub/zechub/issues) 및 [Dework](https://app.dework.xyz/zechub-2424)에서 현재 뉴스레터 작업을 확인하세요.
-- 이슈 제목 또는 작업 설명에 있는 날짜를 진실의 출처로 사용하세요.
-- 이슈를 열고, 다른 기여자가 이미 댓글을 달았거나 할당되었거나 연결된 pull request를 열었는지 확인하세요.
-- 작업 시작 전에 해당 이슈 번호와 판 날짜에 대한 open pull requests를 검색하세요. 예: `is:pr is:open "5월 30일" repo:ZecHub/zechub`로 검색합니다.
-- 작업이 불분명하다면, 전체 판을 준비하기 전에 이슈, ZecHub Discord 또는 [Twitter에서 ZecHub에게 메시지](https://twitter.com/ZecHub)를 보내어 질문하세요.
+- 현재 뉴스레터 작업을 [ZecHub GitHub issues](https://github.com/ZecHub/zechub/issues)와 [Dework](https://app.dework.xyz/zechub-2424)에서 확인하세요.
+- 이슈 제목이나 작업 설명에 있는 날짜를 기준 정보로 사용하세요.
+- 이슈를 열어 다른 기여자가 이미 댓글을 남겼는지, 할당되었는지, 또는 연결된 pull request를 열었는지 확인하세요.
+- 시작하기 전에 열린 pull request에서 이슈 번호와 에디션 날짜를 검색하세요. 예를 들어, `is:pr is:open "May 30th" repo:ZecHub/zechub`로 검색할 수 있습니다.
+- 작업이 불분명하다면 전체 에디션을 준비하기 전에 이슈, ZecHub Discord 또는 [ZecHub on Twitter](https://twitter.com/ZecHub)로 메시지를 보내 문의하세요.
 
-![현재 ZecWeekly 뉴스레터 작업을 위한 필터링된 GitHub 오픈 이슈](assets/zecweekly-current-task-search.png)
+![현재 ZecWeekly 뉴스레터 작업으로 필터링된 열린 GitHub 이슈](assets/zecweekly-current-task-search.png)
 
 ### 2. 저장소 포크하기
 
-GitHub에 익숙하지 않다면, 다음 워크플로를 사용하세요:
+GitHub가 익숙하지 않다면, 다음 워크플로를 사용하세요:
 
-1. [ZecHub 저장소](https://github.com/ZecHub/zechub)를 열고,
-2. **Fork** 버튼을 클릭하여 GitHub 계정 아래에 포크를 생성합니다.
-3. 포크에서 해당 판을 위한 새 브랜치를 만듭니다. 명확한 이름의 브랜치가 도움이 됩니다, 예: `digest-may-30-2026`.
-4. pull request가 기반 저장소로 `ZecHub/zechub`와 기반 브랜치로 `main`을 대상으로 하도록 확인하세요.
+1. [ZecHub repository](https://github.com/ZecHub/zechub)를 엽니다.
+2. **Fork**를 클릭하고 자신의 GitHub 계정 아래에 포크를 생성합니다.
+3. 자신의 포크에서 해당 에디션용 새 브랜치를 만듭니다. 예를 들어 `digest-may-30-2026`처럼 명확한 브랜치 이름이 좋습니다.
+4. pull request의 대상이 기본 저장소 `ZecHub/zechub`이고 기본 브랜치가 `main`인지 확인하세요.
 
-명령줄을 사용하는 경우, 같은 워크플로는 다음과 같습니다:
+명령줄을 사용한다면, 같은 워크플로는 다음과 같습니다:
 
 ```bash
 git clone https://github.com/YOUR-USERNAME/zechub.git
@@ -44,87 +43,87 @@ cd zechub
 git checkout -b digest-month-day-year
 ```
 
-### 3. 뉴스레터 파일 생성하기
+### 3. 뉴스레터 파일 만들기
 
-[뉴스레터 템플릿](https://github.com/ZecHub/zechub/blob/main/newsletter/newslettertemplate.md)을 시작점으로 사용하세요. 뉴스레터 판은 [`newsletter`](https://github.com/ZecHub/zechub/tree/main/newsletter) 폴더에 있어야 합니다.
+시작점으로 [newsletter template](https://github.com/ZecHub/zechub/blob/main/newsletter/newslettertemplate.md)을 사용하세요. 뉴스레터 에디션은 [`newsletter`](https://github.com/ZecHub/zechub/tree/main/newsletter) 폴더에 있어야 합니다.
 
-파일 생성 시:
+파일을 만들 때는:
 
-- 이슈에서 요청한 파일 이름 형식 또는 최근 승인된 판에서 사용한 형식을 따르세요.
-- 템플릿의 섹션 순서를 유지하세요. 작업이 다른 형식을 요구하는 경우에만 변경하세요.
-- 해당 주에 관련된 링크만 추가하세요.
-- 각 링크에 대해 짧고 명확한 설명을 작성하여 독자가 왜 중요한지 이해하도록 하세요.
-- 필요할 때 영어가 아닌 출처를 영어로 번역하거나 요약하세요.
+- 이슈에서 요청한 파일명 형식이나 최근에 승인된 에디션에서 사용된 형식과 일치시키세요.
+- 작업에서 다른 형식을 요구하지 않는 한 템플릿과 같은 섹션 순서를 유지하세요.
+- 해당 주의 관련 링크만 추가하세요.
+- 독자가 왜 중요한지 이해할 수 있도록 각 링크에 짧고 명확한 설명을 작성하세요.
+- 필요하다면 영어가 아닌 자료는 영어로 번역하거나 요약하세요.
 - pull request를 열기 전에 모든 링크를 확인하세요.
 
-### 4. 적절한 시기에 링크 수집하기
+### 4. 적절한 시점에 링크 수집하기
 
-ZecWeekly는 일반적으로 현재 주의 Zcash 생태계 활동을 다루며, 주말 끝에 게시됩니다. 가장 안전한 타이밍은 다음과 같습니다:
+ZecWeekly는 일반적으로 해당 주의 Zcash 생태계 활동을 다루며, 주 후반에 게시됩니다. 가장 안전한 타이밍은 다음과 같습니다:
 
-- 현재 뉴스레터 이슈 또는 작업이 게시된 후 링크를 수집하기 시작하세요.
-- 해당 주가 진행 중일 때 초안을 유지하세요.
-- 요청된 제출 날짜에 가까운 시점에 pull request를 제출하세요. 한 주 마지막 업데이트를 확인한 후에요.
-- 해당 날짜의 작업이 존재하거나 ZecHub가 해당 판을 준비하도록 승인하기 전에는 미래 주의 뉴스레터를 제출하지 마세요.
+- 현재 뉴스레터 이슈 또는 작업이 게시된 후에 링크 수집을 시작하세요.
+- 그 주가 아직 진행 중일 때는 초안을 유지하세요.
+- 주 후반 업데이트를 확인한 뒤, 요청된 제출 날짜에 가깝게 pull request를 제출하세요.
+- 해당 날짜의 작업이 존재하기 전이나 ZecHub가 준비해도 된다고 확인하기 전에는 미래 주차의 뉴스레터를 제출하지 마세요.
 
-이슈에서 특정 날짜까지 제출하라고 명시했다면 그 날짜를 따르세요. 이 페이지와 현재 이슈 사이에 충돌이 있다면, 현재 이슈를 따르세요.
+특정 날짜까지 제출하라는 이슈가 있다면 그 날짜를 따르세요. 이 페이지와 현재 이슈 사이에 충돌이 있다면 현재 이슈를 따르세요.
 
-### 5. pull request 열기
+### 5. Pull request 열기
 
 뉴스레터 파일이 준비되면:
 
-1. 변경사항을 포크에 커밋하세요.
-2. `ZecHub/zechub`의 `main` 브랜치로 pull request를 열어주세요.
-3. 판과 일치하는 제목을 사용하세요, 예: `Zcash 생태계 요약 | 5월 30일`.
-4. pull request 본문에서 이슈를 연결하여 리뷰어가 작업을 해당 작업에 연결할 수 있도록 하세요.
+1. 변경 사항을 자신의 포크에 커밋하세요.
+2. `main` 브랜치의 `ZecHub/zechub`로 pull request를 여세요.
+3. `Zcash Ecosystem Digest | May 30th`처럼 에디션에 맞는 제목을 사용하세요.
+4. 리뷰어가 작업을 과제와 연결할 수 있도록 pull request 본문에 이슈를 링크하세요.
 
 예시 pull request 본문:
 
 ```md
 Closes #ISSUE_NUMBER
 
-요약:
-- 5월 30일의 Zcash 생태계 요약 추가.
-- 뉴스레터 템플릿과 현재 이슈 마감일 사용.
-- 요청된 주에 대한 링크와 설명 확인.
+Summary:
+- Adds the Zcash Ecosystem Digest for Month Day.
+- Uses the newsletter template and the current issue deadline.
+- Checks links and descriptions for the requested week.
 ```
 
-pull request가 열린 후, 리뷰 댓글을 주시하세요. ZecHub가 수정을 요청하면, 동일한 브랜치를 업데이트하여 두 번째 pull request를 열지 마세요.
+pull request를 연 뒤에는 리뷰 댓글을 확인하세요. ZecHub가 수정을 요청하면 같은 에디션에 대해 두 번째 pull request를 여는 대신 동일한 브랜치를 업데이트하세요.
 
 ### 실제 예시
 
-이러한 합쳐진 뉴스레터 pull requests는 승인된 제출물의 예시로 사용하세요:
+승인된 제출물의 예시로 다음 병합된 뉴스레터 pull request를 참고하세요:
 
-- [Zcash 생태계 요약 | 4월 11일](https://github.com/ZecHub/zechub/pull/1551)
-- [Zcash 생태계 요약 | 3월 28일](https://github.com/ZecHub/zechub/pull/1544)
-- [Zcash 생태계 요약 | 2월 14일](https://github.com/ZecHub/zechub/pull/1474)
+- [Zcash Ecosystem Digest | April 11th](https://github.com/ZecHub/zechub/pull/1551)
+- [Zcash Ecosystem Digest | March 28th](https://github.com/ZecHub/zechub/pull/1544)
+- [Zcash Ecosystem Digest | February 14th](https://github.com/ZecHub/zechub/pull/1474)
 
-![합쳐진 ZecWeekly 뉴스레터 pull request 예시](assets/zecweekly-example-pr.png)
+![병합된 ZecWeekly 뉴스레터 pull request 예시](assets/zecweekly-example-pr.png)
 
-예시와 비교할 때, 파일 위치, 제목 형식, 섹션 순서, 링크 설명 및 pull request가 올바른 작업에 연결되는지 주의하세요.
+예시와 자신의 작업을 비교할 때는 파일 위치, 제목 형식, 섹션 순서, 링크 설명, 그리고 pull request가 올바른 작업으로 다시 연결되는지를 중점적으로 확인하세요.
 
 ### 피해야 할 일반적인 실수
 
-- 판 날짜 또는 작업이 확인되기 전에 pull request를 열기.
-- 이미 연결된 pull request가 있는 이슈에 작업하기.
-- `ZecHub/zechub` 대신 자신의 fork로 pull request 제출하기.
-- 잘못된 파일 이름 사용하거나 `newsletter` 폴더 외부에 파일 배치하기.
-- 날짜, 링크 및 설명을 업데이트하지 않은 이전 판 복사하기.
-- 잘못된 주의 링크 추가하기.
-- 손상된 링크, 중복 링크 또는 템플릿에서 가져온 플레이스홀더 텍스트 남기기.
-- 리뷰 댓글 후 새로운 pull request 열기 대신 원래 브랜치 업데이트 하지 않기.
+- 에디션 날짜나 작업이 확인되기 전에 pull request를 여는 것.
+- 이미 연결된 pull request가 있는 이슈를 작업하는 것.
+- `ZecHub/zechub`가 아니라 자신의 포크로 pull request를 제출하는 것.
+- 잘못된 파일 이름을 사용하거나 `newsletter` 폴더 밖에 파일을 두는 것.
+- 오래된 에디션을 복사한 뒤 모든 날짜, 링크, 설명을 갱신하지 않는 것.
+- 잘못된 주의 링크를 추가하는 것.
+- 깨진 링크, 중복 링크 또는 템플릿의 자리표시자 텍스트를 남겨두는 것.
+- 리뷰 댓글 후 원래 브랜치를 업데이트하는 대신 새 pull request를 여는 것.
 
-### 최종 확인 목록
+### 최종 체크리스트
 
-리뷰 요청 전에 다음을 확인하세요:
+리뷰를 요청하기 전에 다음을 확인하세요:
 
-- 이슈 또는 작업 날짜가 뉴스레터 파일과 일치하는지.
-- 동일한 이슈 또는 판에 대한 다른 open pull request가 없는지.
-- 파일이 `newsletter` 폴더에 있는지.
-- 템플릿 섹션이 완료되어 있는지.
-- 모든 링크가 작동하고 유용한 설명을 포함하는지.
-- pull request 본문에서 올바른 이슈를 연결했는지.
-- 리뷰어가 수정 요청 시 변경 사항을 적용할 수 있도록 가용성이 있는지.
+- 이슈 또는 작업 날짜가 뉴스레터 파일과 일치한다.
+- 같은 이슈나 에디션을 이미 다루고 있는 다른 열린 pull request가 없다.
+- 파일이 `newsletter` 폴더에 있다.
+- 템플릿 섹션이 모두 완성되었다.
+- 모든 링크가 작동하고 유용한 설명이 있다.
+- pull request 본문이 올바른 이슈를 링크한다.
+- 리뷰어가 변경을 요청할 경우 수정할 수 있다.
 
-## 과거 판
+## 지난 에디션
 
 [ZecWeekly 아카이브](https://zechub.substack.com/p/archive)
