@@ -1,14 +1,15 @@
+---
 <a href="https://github.com/zechub/zechub/edit/main/site/contribute/Help_build_ZecHub.md" target="_blank">
   <img src="https://img.shields.io/badge/Edit-blue" alt="Редактировать страницу"/>
 </a>
 
 # Помогите развивать ZecHub 
 
-Если вы участник сообщества Zcash и хотите внести вклад в развитие ZecHub, есть несколько особенно полезных способов помочь.
+Если вы являетесь участником сообщества Zcash и хотите внести вклад в развитие ZecHub, есть несколько особенно полезных способов помочь.
 
-Подбирайте ссылки для новостной рассылки и добавляйте их на GitHub-страницу рассылки: -> [Нажмите здесь для инструкций](https://github.com/ZecHub/zechub/blob/main/site/contribute/ZecWeekly_Newsletter.md)
+Отбирайте ссылки для новостной рассылки и добавляйте их на GitHub-страницу рассылки: -> [Нажмите здесь, чтобы увидеть инструкции](https://github.com/ZecHub/zechub/blob/main/site/contribute/ZecWeekly_Newsletter.md)
 
-Проверяйте факты в документации вики, предлагайте правки и новые страницы в Github
+Проверяйте факты в документации wiki, предлагайте правки и новые страницы в Github
 
 Создавайте видеоконтент в следующих категориях:
 ```
@@ -19,34 +20,35 @@
 
 Создавайте дизайн-материалы, такие как постеры/графика/анимации, для экосистемы Zcash и Privacy 
 
-Переводите любые существующие страницы вики.
+Переводите любые из существующих страниц wiki.
 
 Сообщайте об ошибках
 
-#### Подробности о размерах баунти смотрите на нашей странице для участников -> [здесь](https://zechub.wiki/contribute/contributing-guide#content).
+#### Подробную информацию о размерах вознаграждений читайте на нашей странице для участников -> [здесь](https://zechub.wiki/contribute/contributing-guide#content).
 
-Мы публикуем issues для задач, по которым у нас сейчас открыты баунти. В основном их можно найти здесь:
+Каждый понедельник мы публикуем задачи, по которым в настоящее время открыты вознаграждения. Вы также можете предлагать свои bounty! В основном они размещаются на ZEC Bounties.
 
-<img width="2768" height="838" alt="Скриншот_2025-11-01_11-13-39" src="https://github.com/user-attachments/assets/dd7dc989-3449-4a12-a919-9333a31cbb5a" />
-
-
-[Dework](https://app.dework.xyz/zechub-2424)
-
-[Issues GitHub ZecHub](https://github.com/ZecHub/zechub/issues)
-
-[Issues GitHub ZecHub-Wiki](https://github.com/ZecHub/zechub-wiki/issues)
-
-[Issues GitHub ZecHub-Namada](https://app.dework.xyz/zechub-2424)
+![zecbounties](https://github.com/user-attachments/assets/0e4f5109-c0c9-4a0a-8d71-8172e36b9726)
 
 
 
-Если есть и другие способы, которыми вы хотели бы помочь, пожалуйста, напишите ZecHub ([@ZecHub](https://twitter.com/zechub)) в Twitter или присоединяйтесь к нашему [Discord](https://discord.gg/zcash).
+[ZEC Bounties](https://bounties.zechub.wiki/)
+
+[Github Issues ZecHub](https://github.com/ZecHub/zechub/issues)
+
+[Github Issues ZecHub-Wiki](https://github.com/ZecHub/zechub-wiki/issues)
+
+[Github Issues ZecHub-Namada](https://app.dework.xyz/zechub-2424)
+
+
+
+Если вы хотите помочь другими способами, напишите ZecHub ([@ZecHub](https://twitter.com/zechub)) в Twitter или присоединяйтесь к нашему [Discord](https://discord.gg/zcash).
 
 ____
 
-**Чтобы осуществлять выплаты, ZecHub требует, чтобы все участники заполнили форму декларации со своим именем и Shielded:**
+**Для осуществления выплат ZecHub требует, чтобы все участники заполнили форму декларации, указав своё имя и Shielded:**
 
-**( Zcash | Namada | Penumbra | Ycash ) address**
+**( Zcash | Namada | Penumbra | Ycash ) адрес**
 
 ____
 
