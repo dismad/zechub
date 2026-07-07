@@ -1,14 +1,15 @@
+---
 <a href="https://github.com/zechub/zechub/edit/main/site/contribute/Help_build_ZecHub.md" target="_blank">
-  <img src="https://img.shields.io/badge/Edit-blue" alt="Edit Page"/>
+  <img src="https://img.shields.io/badge/Edit-blue" alt="Modifica pagina"/>
 </a>
 
-# Aiuta a costruire ZecHub 
+# Aiuta a costruire ZecHub
 
-Se sei un membro della comunità Zcash e vuoi contribuire a costruire ZecHub, ci sono alcune cose che sono molto utili.
+Se fai parte della community di Zcash e vuoi contribuire alla costruzione di ZecHub, ci sono alcune cose che sono estremamente utili.
 
-Cura i link per la newsletter e aggiungili alla pagina GitHub della newsletter: -> [Clicca qui per le istruzioni](https://github.com/ZecHub/zechub/blob/main/site/contribute/ZecWeekly_Newsletter.md)
+Seleziona link per la newsletter e aggiungili alla pagina GitHub della newsletter: -> [Clicca qui per le istruzioni](https://github.com/ZecHub/zechub/blob/main/site/contribute/ZecWeekly_Newsletter.md)
 
-Verifica i fatti dei documenti della wiki, suggerisci modifiche e proponi nuove pagine su Github
+Verifica i fatti nei documenti del wiki, suggerisci modifiche e proponi nuove pagine su Github
 
 Crea contenuti video nelle seguenti categorie:
 ```
@@ -17,38 +18,37 @@ Crea contenuti video nelle seguenti categorie:
 * Third-party application demos
 ```
 
-Produci design come poster/grafiche/animazioni per l'ecosistema Zcash & Privacy 
+Realizza design come poster/grafiche/animazioni per l'ecosistema Zcash & Privacy
 
-Traduci una qualsiasi delle pagine esistenti della wiki.
+Traduci una qualsiasi delle pagine wiki esistenti.
 
-Segnala bug
+Segnalazione di bug
 
-#### Per i dettagli sugli importi delle taglie, leggi la nostra pagina dei contributi -> [qui](https://zechub.wiki/contribute/contributing-guide#content).
+#### Per i dettagli sugli importi delle bounty, leggi la nostra pagina dedicata ai contributi -> [qui](https://zechub.wiki/contribute/contributing-guide#content).
 
-Pubblichiamo issue per i task per i quali abbiamo attualmente delle taglie aperte. Principalmente si trovano come
+Pubblichiamo ogni lunedì issue per i task per cui al momento abbiamo bounty aperte. Puoi anche suggerire delle bounty! Principalmente si trovano su ZEC Bounties.
 
-<img width="2768" height="838" alt="Screenshot_2025-11-01_11-13-39" src="https://github.com/user-attachments/assets/dd7dc989-3449-4a12-a919-9333a31cbb5a" />
-
-
-[Dework](https://app.dework.xyz/zechub-2424)
-
-[Issue GitHub di ZecHub](https://github.com/ZecHub/zechub/issues)
-
-[Issue GitHub di ZecHub-Wiki](https://github.com/ZecHub/zechub-wiki/issues)
-
-[Issue GitHub di ZecHub-Namada](https://app.dework.xyz/zechub-2424)
+![zecbounties](https://github.com/user-attachments/assets/0e4f5109-c0c9-4a0a-8d71-8172e36b9726)
 
 
 
-Se ci sono altri modi in cui vorresti contribuire, scrivi a ZecHub ([@ZecHub](https://twitter.com/zechub)) su Twitter oppure unisciti al nostro [Discord](https://discord.gg/zcash).
+[ZEC Bounties](https://bounties.zechub.wiki/)
+
+[Issue Github di ZecHub](https://github.com/ZecHub/zechub/issues)
+
+[Issue Github di ZecHub-Wiki](https://github.com/ZecHub/zechub-wiki/issues)
+
+[Issue Github di ZecHub-Namada](https://app.dework.xyz/zechub-2424)
+
+
+
+Se ci sono altri modi in cui vorresti contribuire, invia un messaggio a ZecHub ([@ZecHub](https://twitter.com/zechub)) su Twitter oppure unisciti al nostro [Discord](https://discord.gg/zcash).
 
 ____
 
-**Per poter effettuare i pagamenti, ZecHub richiede a tutti i contributori di compilare un modulo di dichiarazione con il proprio nome e indirizzo schermato:**
+**Per poter effettuare i pagamenti, ZecHub richiede a tutti i collaboratori di compilare un modulo di dichiarazione con il proprio Nome e indirizzo Shielded:**
 
 **( Zcash | Namada | Penumbra | Ycash )**
-
-
 
 ____
 
