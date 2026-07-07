@@ -1,37 +1,37 @@
----
 <a href="https://github.com/zechub/zechub/edit/main/site/contribute/Help_build_ZecHub.md" target="_blank">
-  <img src="https://img.shields.io/badge/Edit-blue" alt="Edit Page"/>
+  <img src="https://img.shields.io/badge/Edit-blue" alt="Sayfayı Düzenle"/>
 </a>
 
-# ZecHub Oluşturmaya Yardım Edin
+# ZecHub Oluşturmaya Yardım Edin 
 
 Eğer Zcash topluluğunun bir üyesiyseniz ve ZecHub’ın oluşturulmasına katkıda bulunmak istiyorsanız, çok faydalı olabilecek birkaç şey var.
 
-Bülten için bağlantıları derleyin ve bunları bültenin GitHub sayfasına ekleyin: -> [Talimatlar için buraya tıklayın](https://github.com/ZecHub/zechub/blob/main/site/contribute/ZecWeekly_Newsletter.md)
+Bülten için bağlantıları derleyin ve bültenin GitHub sayfasına ekleyin: -> [Talimatlar için buraya tıklayın](https://github.com/ZecHub/zechub/blob/main/site/contribute/ZecWeekly_Newsletter.md)
 
 Wiki belgelerindeki bilgileri doğrulayın, düzenleme önerilerinde bulunun ve Github üzerinde yeni sayfalar önerin
 
 Aşağıdaki kategorilerde video içerikleri oluşturun:
 ```
-* Zcash explainer videos
-* Zcash wallet guide/tutorials
-* Third-party application demos
+* Zcash açıklayıcı videoları
+* Zcash cüzdan rehberi/eğitimleri
+* Üçüncü taraf uygulama demoları
 ```
 
-Zcash ve Gizlilik ekosistemi için posterler/grafikler/animasyonlar gibi tasarımlar üretin
+Zcash ve Privacy ekosistemi için posterler/grafikler/animasyonlar gibi tasarımlar üretin 
 
 Mevcut wiki sayfalarından herhangi birini çevirin.
 
 Hata bildirin
 
-#### Ödül tutarlarıyla ilgili ayrıntılar için lütfen katkı sayfamızı okuyun -> [buradan](https://zechub.wiki/contribute/contributing-guide#content).
+#### Ödül miktarlarıyla ilgili ayrıntılar için lütfen katkı sayfamızı okuyun -> [buradan](https://zechub.wiki/contribute/contributing-guide#content).
 
-Şu anda ödül açık olan görevler için issue paylaşıyoruz. Bunlar başlıca şu adreslerde bulunur:
+Şu anda ödülü açık olan görevler için issue’ları her Pazartesi paylaşıyoruz. Siz de ödül önerebilirsiniz! Bunlar ağırlıklı olarak ZEC Bounties üzerinde bulunur.
 
-<img width="2768" height="838" alt="Screenshot_2025-11-01_11-13-39" src="https://github.com/user-attachments/assets/dd7dc989-3449-4a12-a919-9333a31cbb5a" />
+![zecbounties](https://github.com/user-attachments/assets/0e4f5109-c0c9-4a0a-8d71-8172e36b9726)
 
 
-[Dework](https://app.dework.xyz/zechub-2424)
+
+[ZEC Bounties](https://bounties.zechub.wiki/)
 
 [ZecHub Github Issue’ları](https://github.com/ZecHub/zechub/issues)
 
@@ -41,11 +41,11 @@ Hata bildirin
 
 
 
-Katkıda bulunmak istediğiniz başka yollar varsa, lütfen Twitter üzerinden ZecHub’a ([@ZecHub](https://twitter.com/zechub)) mesaj gönderin veya [Discord](https://discord.gg/zcash) kanalımıza katılın.
+Katkıda bulunmak istediğiniz başka yollar varsa, lütfen Twitter’da ZecHub’a ([@ZecHub](https://twitter.com/zechub)) mesaj gönderin veya [Discord](https://discord.gg/zcash) sunucumuza katılın.
 
 ____
 
-**Ödeme yapabilmek için ZecHub, tüm katkıda bulunanların Adları ve Shielded adresleriyle bir beyan formu doldurmasını gerektirir:**
+**Ödeme yapabilmek için ZecHub, tüm katkıda bulunanların İsimlerini ve Shielded bilgilerini içeren bir beyan formu doldurmasını zorunlu kılar:**
 
 **( Zcash | Namada | Penumbra | Ycash ) adresi**
 
