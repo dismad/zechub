@@ -25,12 +25,13 @@ Ripoti ya mende
 
 #### Kwa maelezo juu ya kiasi cha zawadi, tafadhali soma ukurasa wetu wa kuchangia -> [hapa](https://zechub.wiki/contribute/contributing-guide#content).
 
-Sisi kuchapisha masuala kwa ajili ya kazi kwamba sisi sasa na zawadi wazi.
+Sisi kuchapisha masuala kwa ajili ya kazi ambayo sisi sasa kuwa na zawadi wazi kila Jumatatu. Unaweza kupendekeza zawadi pia! Hasa hizi zinapatikana katika ZEC Bounties.
 
-<img width="2768" height="838" alt="Screenshot_2025-11-01_11-13-39" src="https://github.com/user-attachments/assets/dd7dc989-3449-4a12-a919-9333a31cbb5a" />
+[Zekbounties]](https://github.com/user-attachments/assets/0e4f5109-c0c9-4a0a-8d71-8172e36b9726)
 
 
-[Kazi](https://app.dework.xyz/zechub-2424)
+
+[ZEC Bounties](https://bounties.zechub.wiki/)
 
 [ZecHub Github Masuala](https://github.com/ZecHub/zechub/issues)
 

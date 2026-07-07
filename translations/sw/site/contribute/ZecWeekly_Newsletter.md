@@ -4,11 +4,7 @@
 
 # ZecWeekly jarida
 
-ZecWeekly ni jarida ambalo hutoka kila Ijumaa asubuhi. Inajumuisha habari zote zilizotokea wakati wa wiki katika mfumo wa ikolojia wa Zcash.
-
-Habari ni curated kila wiki na wanachama wa jamii na viungo wote husika ni aliongeza kwa jarida.
-
-Tafadhali jiandikishe kwa jarida [hapa](https://zechub.substack.com/).
+ZecWeekly ni jarida ambalo hutoka kila Jumapili asubuhi. Inajumuisha habari zote zilizotokea wakati wa wiki katika mazingira ya Zcash. Habari huhifadhiwa kila wiki na wanajamii na viungo vyote muhimu vinaongezwa kwenye jarida. Tafadhali jiandikishe kwa jarida [hapa](https://zechub.substack.com/).
 
 ## Kuchangia
 
@@ -18,13 +14,12 @@ Newsletter contributions work best when one contributor prepares the edition for
 
 Kabla ya kuanza kuandika:
 
-- Angalia [ZecHub GitHub masuala](https://github.com/ZecHub/zechub/issues) na [Dework](https://app.dework.xyz/zechub-2424) kwa ajili ya sasa jarida kazi.
-- Kutumia tarehe katika suala kichwa au kazi maelezo kama chanzo cha ukweli.
-- Fungua suala na kuangalia kama mchangiaji mwingine tayari alitoa maoni, amepewa, au kufunguliwa kuunganishwa kuvuta ombi.
-- Tafuta wazi kuvuta maombi kwa ajili ya idadi suala na toleo tarehe kabla ya kuanza. Kwa mfano, kutafuta `is:pr is:open "May 30th" repo:ZecHub/zechub`.
-- Kama kazi ni wazi, kuuliza katika suala hilo, ZecHub Discord, au kwa ujumbe [ZecHub juu ya Twitter](https://twitter.com/ZecHub) kabla ya kutayarisha toleo kamili.
+- Angalia [ZEC Bounties ](https://bounties.zechub.wiki/) kwa ajili ya sasa jarida kazi.
+- Kusubiri kwa kupewa
 
-![Fungua masuala GitHub filtered kwa sasa ZecWeekly jarida kazi](assets/zecweekly-current-task-search.png)
+![ss](https://github.com/user-attachments/assets/149a802c-b64f-4969-ad89-e83ffecf568e)
+
+
 
 ### 2. Fork hifadhi
 
@@ -97,7 +92,8 @@ Tumia maombi haya ya kuunganishwa kwa jarida kama mifano ya mawasilisho yaliyoku
 - [Zcash Ecosystem Digest] Machi 28](https://github.com/ZecHub/zechub/pull/1544)
 - [Zcash Ecosystem Digest] Februari 14](https://github.com/ZecHub/zechub/pull/1474)
 
-![Kuunganishwa ZecWeekly jarida kuvuta ombi mfano](assets/zecweekly-example-pr.png)
+
+![Kuunganishwa ZecWeekly jarida kuvuta ombi mfano](https://github.com/user-attachments/assets/9230d68d-6406-4c8a-992c-df84e0d318d8)
 
 Wakati kulinganisha kazi yako na mfano, kuzingatia faili eneo, kichwa format, sehemu ya utaratibu, viungo maelezo, na kama kuvuta ombi unajumuisha nyuma kwa kazi sahihi.
 
