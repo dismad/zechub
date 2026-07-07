@@ -4,11 +4,7 @@
 
 # Akwụkwọ akụkọ ZecWeekly
 
-ZecWeekly bụ akwụkwọ akụkọ nke na-apụta kwa ụtụtụ Fraịde. Ọ na-agụnye akụkọ niile mere n'izu na gburugburu ebe obibi Zcash.
-
-A na-edozi akụkọ ahụ kwa izu site n'aka ndị otu obodo ma tinye njikọ niile dị mkpa na akwụkwọ akụkọ.
-
-Biko denye aha na akwụkwọ akụkọ [ebe a](https://zechub.substack.com/).
+ZecWeekly is a newsletter that goes out every Sunday morning. It includes all the news that happened during the week in the Zcash ecosystem. The news is curated weekly by community members and all relevant links are added to the newsletter. Please subscribe to the newsletter [here](https://zechub.substack.com/).
 
 ## Na-enye aka
 
@@ -18,13 +14,12 @@ Newsletter contributions work best when one contributor prepares the edition for
 
 Tupu ị malite ide ihe:
 
-- Lelee [ZecHub GitHub nsogbu](https://github.com/ZecHub/zechub/issues) na [Dework](https://app.dework.xyz/zechub-2424) maka ọrụ akwụkwọ akụkọ dị ugbu a.
-- Jiri ụbọchị dị na aha mbipụta ma ọ bụ nkọwa ọrụ dị ka isi iyi nke eziokwu.
-- Mepee mbipụta ahụ ma lelee ma onye ọzọ na-enye aka ekwuola, ekenyela, ma ọ bụ mepee arịrịọ njikọ jikọtara.
-- Chọọ na-emeghe ịdọrọ arịrịọ maka mbipụta nọmba na mbipụta ụbọchị tupu ịmalite. `is:pr is:open "May 30th" repo:ZecHub/zechub`.
-- If the task is unclear, ask in the issue, the ZecHub Discord, or by messaging [ZecHub on Twitter](https://twitter.com/ZecHub) tupu ha akwadebe mbipụta zuru ezu.
+- Lelee [ZEC Bounties ](https://bounties.zechub.wiki/) maka ọrụ akwụkwọ akụkọ dị ugbu a.
+- Chere ka e kenye gị ọrụ
 
-![Mepee mbipụta GitHub nke a na-enyocha maka ọrụ akwụkwọ akụkọ ZecWeekly ugbu a](assets/zecweekly-current-task-search.png)
+![ss](https://github.com/user-attachments/assets/149a802c-b64f-4969-ad89-e83ffecf568e)
+
+
 
 ### 2. Gbanwee ebe nchekwa
 
@@ -97,7 +92,8 @@ Jiri arịrịọ ndị a na-adọta akwụkwọ akụkọ dị ka ihe atụ nke
 - [Zcash Ecosystem Digest] Machị 28](https://github.com/ZecHub/zechub/pull/1544)
 - [Zcash Ecosystem Digest] Febụwarị 14](https://github.com/ZecHub/zechub/pull/1474)
 
-![Merged ZecWeekly akwụkwọ akụkọ na-adọta arịrịọ ihe atụ](assets/zecweekly-example-pr.png)
+
+![Merged ZecWeekly akwụkwọ akụkọ na-adọta arịrịọ ihe atụ](https://github.com/user-attachments/assets/9230d68d-6406-4c8a-992c-df84e0d318d8)
 
 When comparing your work with an example, focus on the file location, title format, section order, link descriptions, and whether the pull request connects back to the correct task.
 
