@@ -25,12 +25,13 @@ Mfomso ahorow a wɔbɔ ho amanneɛ
 
 #### Sɛ wopɛ bounty amounts ho nsɛm a, yɛsrɛ wo kenkan yɛn ntoboa krataafa -> [ha](https://zechub.wiki/contribute/contributing-guide#content).
 
-Yɛde nsɛmpɔw to hɔ ma nnwuma a mprempren yɛwɔ bounties a wɔabue. Titiriw no, wohu eyinom sɛ
+Yɛde nsɛmma nhoma to gua ma nnwuma a mprempren yɛwɔ bounties a wɔabue Memeneda biara. Wubetumi ahyɛ bounties nso ho nyansa! Eyinom titiriw na wohu wɔ ZEC Bounties.
 
-<img width="2768" height="838" alt="Screenshot_2025-11-01_11-13-39" src="https://github.com/user-attachments/assets/dd7dc989-3449-4a12-a919-9333a31cbb5a" />
+![zecbounties a ɛwɔ hɔ](https://github.com/user-attachments/assets/0e4f5109-c0c9-4a0a-8d71-8172e36b9726)
 
 
-[Dework yɛ adwuma](https://app.dework.xyz/zechub-2424)
+
+[ZEC Bounties a wɔde ma](https://bounties.zechub.wiki/)
 
 [ZecHub Github Nsɛmpɔw](https://github.com/ZecHub/zechub/issues)
 

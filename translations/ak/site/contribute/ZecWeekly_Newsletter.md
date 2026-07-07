@@ -4,11 +4,7 @@
 
 # ZecNnawɔtwe Nnawɔtwe Nsɛmma Nhoma
 
-ZecWeekly yɛ nsɛmma nhoma a ɛba Fida anɔpa biara. Ɛka nsɛm a esisii wɔ dapɛn no mu wɔ Zcash abɔdeɛ a nkwa wom mu nyinaa ho.
-
-Mpɔtam hɔfoɔ na wɔhwɛ amanneɛbɔ no so dapɛn biara na wɔde nkitahodiɛ a ɛfa ho nyinaa ka nsɛm ho amanneɛbɔ krataa no ho.
-
-Yɛsrɛ sɛ kyerɛw wo din wɔ nsɛmma nhoma no mu [ha](https://zechub.substack.com/).
+ZecWeekly yɛ nsɛmma nhoma a ɛba Kwasida anɔpa biara. Ɛka nsɛm a esisii wɔ dapɛn no mu wɔ Zcash abɔdeɛ a nkwa wom mu nyinaa ho. Mpɔtam hɔfoɔ na wɔhwɛ amanneɛbɔ no so dapɛn biara na wɔde nkitahodiɛ a ɛfa ho nyinaa ka nsɛm ho amanneɛbɔ krataa no ho. Yɛsrɛ sɛ kyerɛw wo din wɔ nsɛmma nhoma no mu [ha](https://zechub.substack.com/).
 
 ## Boa
 
@@ -18,13 +14,12 @@ Newsletter ntoboa yɛ adwuma yie berɛ a ntoboafoɔ baako siesie nkyerɛaseɛ no
 
 Ansa na wubefi ase akyerɛw:
 
-- Hwɛ [ZecHub GitHub nsɛmpɔw no](https://github.com/ZecHub/zechub/issues) ne [Dework](https://app.dework.xyz/zechub-2424) ama mprempren nsɛmma nhoma adwuma no.
-- Fa da a ɛwɔ nsɛmma nhoma no asɛmti anaa adwuma ho nkyerɛkyerɛmu mu no di dwuma sɛ nokware fibea.
-- Bue asɛm no na hwɛ sɛ ebia ɔdefo foforo aka ho asɛm dedaw, wɔama no adwuma, anaasɛ wabue linked pull request.
-- Hwehwɛ open pull requests ma issue number ne edition date ansa na woafi ase. Sɛ nhwɛso no, hwehwɛ `is:pr is:open "May 30th" repo:ZecHub/zechub`.
-- Sɛ adwuma no mu nna hɔ a, bisa wɔ asɛm no mu, ZecHub Discord no, anaasɛ denam nkrasɛm a wode bɛmena [ZecHub wɔ Twitter so](https://twitter.com/ZecHub) ansa na wɔasiesie nea edi mũ no nyinaa.
+- Hwɛ [ZEC Bounties a ɛwɔ hɔ ](https://bounties.zechub.wiki/) ama mprempren nsɛmma nhoma adwuma no.
+- Twɛn na wɔama wo adwuma
 
-![Bue GitHub nsɛm a wɔasesa ama mprempren ZecWeekly nsɛmma nhoma nnwuma](assets/zecweekly-current-task-search.png)
+![ss](https://github.com/user-attachments/assets/149a802c-b64f-4969-ad89-e83ffecf568e)
+
+
 
 ### 2. Fork akorae no
 
@@ -97,7 +92,8 @@ Fa saa nsɛmma nhoma twetwe abisade ahorow a wɔaka abom yi di dwuma sɛ nhwɛso
 - [Zcash Abɔde a Nkwa Wom Ho Nhyehyɛe Digest | Oforisuo da a ɛtɔ so aduonu nwɔtwe](https://github.com/ZecHub/zechub/pull/1544)
 - [Zcash Abɔde a Nkwa Wom Ho Nhyehyɛe Digest | Ɔpɛpɔn da a ɛtɔ so 14](https://github.com/ZecHub/zechub/pull/1474)
 
-![Merged ZecWeekly nsɛmma nhoma twetwe abisade nhwɛso](assets/zecweekly-example-pr.png)
+
+![Merged ZecWeekly nsɛmma nhoma twetwe abisade nhwɛso](https://github.com/user-attachments/assets/9230d68d-6406-4c8a-992c-df84e0d318d8)
 
 Sɛ wode w’adwuma no toto nhwɛsoɔ bi ho a, fa w’adwene si fael no beaeɛ, asɛmti no nhyehyɛɛ, ɔfa nhyehyɛeɛ, link nkyerɛkyerɛmu, ne sɛ ebia twetwe abisadeɛ no san kɔ adwuma a ɛfata no so anaa.
 
@@ -110,7 +106,7 @@ Sɛ wode w’adwuma no toto nhwɛsoɔ bi ho a, fa w’adwene si fael no beaeɛ, 
 - Dedaw bi a wobɛkyerɛw a worensakra date, link, ne nkyerɛkyerɛmu biara.
 - Link ahorow a efi dapɛn a ɛnteɛ mu a wode bɛka ho.
 - Gyae link a abubu, link a ɛyɛ abien, anaa placeholder nsɛm a efi template no mu.
-- Wobue twe abisade foforo bere a woasan ahwɛ nsɛm a wɔkae akyi sen sɛ wobɛma baa dwumadibea a edi kan no ayɛ foforo.
+- Bue twe adesrɛ foforo bere a wɔasan ahwɛ nsɛm a wɔkae akyi sen sɛ wobɛma baa dwumadibea a edi kan no ayɛ foforo.
 
 ### Nhwehwɛmu a etwa to
 
