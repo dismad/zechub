@@ -4,11 +4,11 @@
 
 # Aidez à construire ZecHub 
 
-Si vous êtes membre de la communauté Zcash et souhaitez contribuer à la construction de ZecHub, il y a quelques actions particulièrement utiles.
+Si vous êtes membre de la communauté Zcash et que vous souhaitez contribuer à la construction de ZecHub, il y a quelques choses qui sont très utiles.
 
 Sélectionnez des liens pour la newsletter et ajoutez-les à la page GitHub de la newsletter : -> [Cliquez ici pour les instructions](https://github.com/ZecHub/zechub/blob/main/site/contribute/ZecWeekly_Newsletter.md)
 
-Vérifiez les faits dans les documents du wiki, suggérez des modifications et proposez de nouvelles pages sur Github
+Vérifiez les faits dans la documentation du wiki, suggérez des modifications et proposez de nouvelles pages sur Github
 
 Créez du contenu vidéo dans les catégories suivantes :
 ```
@@ -17,20 +17,21 @@ Créez du contenu vidéo dans les catégories suivantes :
 * Third-party application demos
 ```
 
-Réalisez des créations comme des affiches/visuels/animations pour l’écosystème Zcash & Privacy 
+Réalisez des designs tels que des affiches/visuels/animations pour l'écosystème Zcash et Privacy 
 
-Traduisez n’importe quelle page existante du wiki.
+Traduisez n'importe laquelle des pages existantes du wiki.
 
 Signaler des bugs
 
 #### Pour plus de détails sur les montants des primes, veuillez consulter notre page de contribution -> [ici](https://zechub.wiki/contribute/contributing-guide#content).
 
-Nous publions des issues pour les tâches pour lesquelles des primes sont actuellement ouvertes. Elles se trouvent principalement ici :
+Nous publions chaque lundi des issues pour les tâches pour lesquelles nous avons actuellement des primes ouvertes. Vous pouvez aussi suggérer des primes ! Elles se trouvent principalement sur ZEC Bounties.
 
-<img width="2768" height="838" alt="Capture d’écran_2025-11-01_11-13-39" src="https://github.com/user-attachments/assets/dd7dc989-3449-4a12-a919-9333a31cbb5a" />
+![zecbounties](https://github.com/user-attachments/assets/0e4f5109-c0c9-4a0a-8d71-8172e36b9726)
 
 
-[Dework](https://app.dework.xyz/zechub-2424)
+
+[ZEC Bounties](https://bounties.zechub.wiki/)
 
 [Issues Github de ZecHub](https://github.com/ZecHub/zechub/issues)
 
@@ -40,13 +41,13 @@ Nous publions des issues pour les tâches pour lesquelles des primes sont actuel
 
 
 
-S’il existe d’autres façons dont vous aimeriez contribuer, veuillez envoyer un message à ZecHub ([@ZecHub](https://twitter.com/zechub)) sur Twitter ou rejoindre notre [Discord](https://discord.gg/zcash).
+S'il existe d'autres façons dont vous aimeriez contribuer, veuillez envoyer un message à ZecHub ([@ZecHub](https://twitter.com/zechub)) sur Twitter ou rejoignez notre [Discord](https://discord.gg/zcash).
 
 ____
 
-**Afin d’effectuer les paiements, ZecHub demande à tous les contributeurs de remplir un formulaire de déclaration avec leur nom et leur adresse blindée :**
+**Afin d'effectuer les paiements, ZecHub demande à tous les contributeurs de remplir un formulaire de déclaration avec leur nom et leur adresse shielded :**
 
-**( Zcash | Namada | Penumbra | Ycash ) address**
+**( Zcash | Namada | Penumbra | Ycash )**
 
 ____
 

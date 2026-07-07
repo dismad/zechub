@@ -1,14 +1,14 @@
 <a href="https://github.com/zechub/zechub/edit/main/site/contribute/Help_build_ZecHub.md" target="_blank">
-  <img src="https://img.shields.io/badge/Edit-blue" alt="تعديل الصفحة"/>
+  <img src="https://img.shields.io/badge/Edit-blue" alt="Edit Page"/>
 </a>
 
-# ساعد في بناء ZecHub
+# ساعد في بناء ZecHub 
 
-إذا كنت عضوًا في مجتمع Zcash، وترغب في المساهمة في بناء ZecHub، فهناك بعض الأمور المفيدة للغاية.
+إذا كنت عضوًا في مجتمع Zcash، وترغب في المساهمة في بناء ZecHub، فهناك بعض الأمور المفيدة جدًا.
 
-نسّق الروابط للنشرة الإخبارية وأضفها إلى صفحة GitHub الخاصة بالنشرة: -> [انقر هنا للحصول على التعليمات](https://github.com/ZecHub/zechub/blob/main/site/contribute/ZecWeekly_Newsletter.md)
+قيّم الروابط الخاصة بالنشرة الإخبارية وأضفها إلى صفحة GitHub الخاصة بالنشرة: -> [انقر هنا للحصول على التعليمات](https://github.com/ZecHub/zechub/blob/main/site/contribute/ZecWeekly_Newsletter.md)
 
-تحقق من صحة معلومات وثائق الويكي، واقترح تعديلات، وقدم صفحات جديدة على Github
+تحقق من صحة معلومات وثائق الويكي، واقترح تعديلات، وقدّم صفحات جديدة على Github
 
 أنشئ محتوى فيديو ضمن الفئات التالية:
 ```
@@ -17,20 +17,21 @@
 * Third-party application demos
 ```
 
-أنتج تصاميم مثل الملصقات/الرسومات/الرسوم المتحركة لمنظومة Zcash والخصوصية
+أنتج تصاميم مثل الملصقات/الرسومات/الرسوم المتحركة لمنظومة Zcash والخصوصية 
 
-ترجم أيًا من صفحات الويكي الحالية.
+ترجم أي صفحة من صفحات الويكي الحالية.
 
 الإبلاغ عن الأخطاء
 
-#### للاطلاع على تفاصيل مبالغ المكافآت، يُرجى قراءة صفحة المساهمة الخاصة بنا -> [هنا](https://zechub.wiki/contribute/contributing-guide#content).
+#### للاطلاع على تفاصيل مبالغ المكافآت، يرجى قراءة صفحة المساهمة الخاصة بنا -> [هنا](https://zechub.wiki/contribute/contributing-guide#content).
 
-ننشر مشكلات للمهام التي لدينا حاليًا مكافآت مفتوحة لها. وتوجد هذه بشكل أساسي في
+ننشر المشكلات الخاصة بالمهام التي لدينا حاليًا مكافآت مفتوحة لها كل يوم اثنين. يمكنك أيضًا اقتراح مكافآت! توجد هذه بشكل أساسي في ZEC Bounties.
 
-<img width="2768" height="838" alt="لقطة شاشة_2025-11-01_11-13-39" src="https://github.com/user-attachments/assets/dd7dc989-3449-4a12-a919-9333a31cbb5a" />
+![zecbounties](https://github.com/user-attachments/assets/0e4f5109-c0c9-4a0a-8d71-8172e36b9726)
 
 
-[Dework](https://app.dework.xyz/zechub-2424)
+
+[مكافآت ZEC](https://bounties.zechub.wiki/)
 
 [مشكلات ZecHub على Github](https://github.com/ZecHub/zechub/issues)
 
@@ -40,11 +41,11 @@
 
 
 
-إذا كانت هناك طرق أخرى تود المساهمة بها، يُرجى مراسلة ZecHub ([@ZecHub](https://twitter.com/zechub)) على Twitter أو الانضمام إلى [Discord](https://discord.gg/zcash) الخاص بنا.
+إذا كانت هناك طرق أخرى تود المساهمة من خلالها، يُرجى مراسلة ZecHub ([@ZecHub](https://twitter.com/zechub)) على Twitter أو الانضمام إلى [Discord](https://discord.gg/zcash) الخاص بنا.
 
 ____
 
-**لكي يتمكن ZecHub من صرف المدفوعات، فإنه يطلب من جميع المساهمين إكمال نموذج إقرار يتضمن الاسم والعنوان المحمي:**
+**لكي يتمكن ZecHub من إجراء المدفوعات، يجب على جميع المساهمين إكمال نموذج إقرار يتضمن الاسم والعنوان Shielded الخاص بهم:**
 
 **( Zcash | Namada | Penumbra | Ycash ) address**
 
