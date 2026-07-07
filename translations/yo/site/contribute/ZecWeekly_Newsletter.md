@@ -4,11 +4,7 @@
 
 # Ìwé ìròyìn ZecWeekly
 
-ZecWeekly jẹ́ ìwé ìròyìn tí ó máa ń jáde ní àárọ̀ ọjọ́ Friday. Ó ní gbogbo ìròyìn tó ṣẹlẹ̀ láàárín ọ̀sẹ̀ nínú ètò ìṣèdá Zcash.
-
-Àwọn ọmọ ìjọ ló máa ń ṣètò ìròyìn náà lọ́sọ̀ọ̀sẹ̀, gbogbo ìjápọ̀ tó bá sì yẹ ni wọ́n máa ń fi kún ìwé ìròyìn náà.
-
-Jọwọ ṣe alabapin si iwe iroyin [níbí]](https://zechub.substack.com/).
+ZecWeekly is a newsletter that goes out every Sunday morning. It includes all the news that happened during the week in the Zcash ecosystem. The news is curated weekly by community members and all relevant links are added to the newsletter. Please subscribe to the newsletter [here](https://zechub.substack.com/).
 
 ## Ṣètìlẹyìn
 
@@ -18,13 +14,12 @@ Newsletter contributions work best when one contributor prepares the edition for
 
 Kí o tó bẹ̀rẹ̀ sí kọ̀wé:
 
-- Ṣayẹwo awọn [ZecHub GitHub awọn oran](https://github.com/ZecHub/zechub/issues) àti [Dework](https://app.dework.xyz/zechub-2424) fún iṣẹ́ ìwé ìròyìn tó ń lọ lọ́wọ́lọ́wọ́.
-- Lo ọjọ ti o wa ninu akọle ọrọ tabi apejuwe iṣẹ bi orisun otitọ.
-- Ṣii ọrọ naa ki o ṣayẹwo boya alabaṣiṣẹpọ miiran ti sọ asọye tẹlẹ, ti a fi si, tabi ṣii ibeere fifọ asopọ kan.
-- Ṣawari awọn ibeere fifọ ṣiṣi fun nọmba idasilẹ ati ọjọ itẹjade ṣaaju ki o to bẹrẹ. `is:pr is:open "May 30th" repo:ZecHub/zechub`.
-- Bí iṣẹ́ náà kò bá ṣe kedere, béèrè nínú ọ̀rọ̀ náà, ZecHub Discord, tàbí nípa fífi ìsọfúnni ránṣẹ́ [ZecHub on Twitter](https://twitter.com/ZecHub) kí wọ́n tó ṣe ẹ̀dà rẹ̀ ní kíkún.
+- Ṣayẹwo [Awọn ẹbun ZEC ](https://bounties.zechub.wiki/) fún iṣẹ́ ìwé ìròyìn tó ń lọ lọ́wọ́lọ́wọ́.
+- Dúró kí wọ́n tó yàn ọ́
 
-![Ṣí àwọn ọ̀rọ̀ GitHub sílẹ̀ tí wọ́n ti ṣàyẹ̀wò fún àwọn ìgbòkègbodò ìwé ìròyìn ZecWeekly tó wà nísinsìnyí](assets/zecweekly-current-task-search.png)
+![ss](https://github.com/user-attachments/assets/149a802c-b64f-4969-ad89-e83ffecf568e)
+
+
 
 ### 2. Ṣíṣe àtúnṣe sí ibi ìpamọ́ náà
 
@@ -97,7 +92,8 @@ Lo awọn ibeere fifọ iwe iroyin ti o dapọ wọnyi bi awọn apẹẹrẹ ti
 - [Ìsọfúnni Nípa Àyíká Zcash] March 28th](https://github.com/ZecHub/zechub/pull/1544)
 - [Ìsọfúnni Nípa Àyíká Zcash] February 14](https://github.com/ZecHub/zechub/pull/1474)
 
-![Àpẹẹrẹ ìfilọ̀ ìwé ìròyìn ZecWeekly tí a so pọ̀](assets/zecweekly-example-pr.png)
+
+![Àpẹẹrẹ ìfilọ̀ ìwé ìròyìn ZecWeekly tí a so pọ̀](https://github.com/user-attachments/assets/9230d68d-6406-4c8a-992c-df84e0d318d8)
 
 Nigbati o ba ṣe afiwe iṣẹ rẹ pẹlu apẹẹrẹ kan, fojusi lori ipo faili, ọna kika akọle, aṣẹ apakan, awọn apejuwe asopọ, ati boya ibeere fa naa sopọ pada si iṣẹ-ṣiṣe ti o tọ.
 
@@ -119,7 +115,7 @@ Nigbati o ba ṣe afiwe iṣẹ rẹ pẹlu apẹẹrẹ kan, fojusi lori ipo fa
 - Ọjọ́ tí ẹ̀dà tàbí iṣẹ́ náà bá ṣe pàdé fáìlì ìwé ìròyìn rẹ.
 - Ko si ibeere yiyọ ṣiṣi miiran ti o ti bo idaduro kanna tabi atẹjade.
 - Àkọsílẹ̀ náà wà nínú `newsletter` àpamọ́.
-- Àwọn abala àdàkọ ti parí.
+- Àwọn abala àdàkọ ti pé.
 - Gbogbo ìjápọ̀ ń ṣiṣẹ́, ó sì ní àlàyé tó wúlò.
 - Ara ìforúkọsílẹ̀ ìfàsínilọ́wọ́pọ̀ so kókó tí ó tọ́.
 - O wà fún àtúnṣe tí àwọn olùṣàyẹ̀wò bá béèrè fún àyípadà.

@@ -2,7 +2,7 @@
   <img src="https://img.shields.io/badge/Edit-blue" alt="Edit Page"/>
 </a>
 
-# Ran Àwòrán Ilé ZecHub 
+# Ran Àwòrán ZecHub 
 
 Ti o ba jẹ ọmọ ẹgbẹ ti agbegbe Zcash, ati pe o fẹ lati ṣe alabapin si kikọ ZecHub, awọn nkan diẹ wa ti o ṣe iranlọwọ pupọ.
 
@@ -25,12 +25,13 @@ Túmọ̀ èyíkéyìí nínú àwọn ojúewé wiki tó wà.
 
 #### Fun awọn alaye lori awọn iye ẹbun, jọwọ ka oju-iwe wa ti o ṣe alabapin -> [nibi]](https://zechub.wiki/contribute/contributing-guide#content).
 
-We post issues for tasks that we currently have bounties open. Primarily these are found as
+A máa ń gbé àwọn ẹ̀dà jáde fún àwọn iṣẹ́ tí a ní nísinsìnyí. Ẹ̀yin náà lè dá àwọn ẹrù sílẹ̀! Lákọ̀ọ́kọ́, wọ́n wà ní ZEC Bounties.
 
-<img width="2768" height="838" alt="Screenshot_2025-11-01_11-13-39" src="https://github.com/user-attachments/assets/dd7dc989-3449-4a12-a919-9333a31cbb5a" />
+[ìràpadà èrè!](https://github.com/user-attachments/assets/0e4f5109-c0c9-4a0a-8d71-8172e36b9726)
 
 
-[Iṣẹ́ ilé](https://app.dework.xyz/zechub-2424)
+
+[Àwọn owó ìràpadà ZEC](https://bounties.zechub.wiki/)
 
 [Àwọn Ìṣòro ZecHub Github](https://github.com/ZecHub/zechub/issues)
 
