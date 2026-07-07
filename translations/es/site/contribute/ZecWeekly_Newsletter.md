@@ -1,30 +1,26 @@
+---
 <a href="https://github.com/zechub/zechub/edit/main/site/contribute/ZecWeekly_Newsletter.md" target="_blank">
-  <img src="https://img.shields.io/badge/Edit-blue" alt="Editar página"/>
+  <img src="https://img.shields.io/badge/Edit-blue" alt="Edit Page"/>
 </a>
 
 # Boletín ZecWeekly
 
-ZecWeekly es un boletín que se publica cada viernes por la mañana. Incluye todas las noticias que ocurrieron durante la semana en el ecosistema de Zcash.
-
-Las noticias son seleccionadas semanalmente por miembros de la comunidad y todos los enlaces relevantes se añaden al boletín.
-
-Suscríbete al boletín [aquí](https://zechub.substack.com/).
+ZecWeekly es un boletín que se envía todos los domingos por la mañana. Incluye todas las noticias que ocurrieron durante la semana en el ecosistema de Zcash. Las noticias son seleccionadas semanalmente por miembros de la comunidad y todos los enlaces relevantes se añaden al boletín. Por favor, suscríbete al boletín [aquí](https://zechub.substack.com/).
 
 ## Contribuir
 
-Las contribuciones al boletín funcionan mejor cuando una persona colaboradora prepara la edición para la semana correcta, sigue el hilo actual de recompensa o coordinación, y envía el pull request después de que los enlaces semanales estén listos. Por favor, no envíes una edición futura antes de que ZecHub haya publicado o confirmado la fecha de esa edición. Los pull requests enviados con antelación suelen omitir actualizaciones de última hora de la semana, entrar en conflicto con una persona curadora asignada o usar una fecha límite incorrecta.
+Las contribuciones al boletín funcionan mejor cuando una persona colaboradora prepara la edición para la semana correcta, sigue el hilo actual de recompensa o coordinación, y envía el pull request después de que los enlaces semanales estén listos. Por favor, no envíes una edición futura antes de que ZecHub haya publicado o confirmado la fecha para esa edición. Los pull requests anticipados suelen omitir actualizaciones de última hora de la semana, entrar en conflicto con una persona curadora asignada o usar la fecha límite equivocada.
 
 ### 1. Confirma la edición actual
 
 Antes de empezar a escribir:
 
-- Revisa los [issues de GitHub de ZecHub](https://github.com/ZecHub/zechub/issues) y [Dework](https://app.dework.xyz/zechub-2424) para encontrar la tarea actual del boletín.
-- Usa la fecha del título del issue o de la descripción de la tarea como fuente de referencia.
-- Abre el issue y comprueba si otra persona colaboradora ya ha comentado, ha sido asignada o ha abierto un pull request vinculado.
-- Busca pull requests abiertos usando el número del issue y la fecha de la edición antes de empezar. Por ejemplo, busca `is:pr is:open "May 30th" repo:ZecHub/zechub`.
-- Si la tarea no está clara, pregunta en el issue, en el Discord de ZecHub o enviando un mensaje a [ZecHub en Twitter](https://twitter.com/ZecHub) antes de preparar la edición completa.
+- Revisa [ZEC Bounties ](https://bounties.zechub.wiki/) para ver la tarea actual del boletín.
+- Espera a que te asignen la tarea
 
-![Issues abiertos de GitHub filtrados para las tareas actuales del boletín ZecWeekly](assets/zecweekly-current-task-search.png)
+![ss](https://github.com/user-attachments/assets/149a802c-b64f-4969-ad89-e83ffecf568e)
+
+
 
 ### 2. Haz un fork del repositorio
 
@@ -32,8 +28,8 @@ Si eres nuevo en GitHub, usa este flujo de trabajo:
 
 1. Abre el [repositorio de ZecHub](https://github.com/ZecHub/zechub).
 2. Haz clic en **Fork** y crea un fork en tu cuenta de GitHub.
-3. En tu fork, crea una nueva rama para la edición. Un nombre de rama claro es útil, por ejemplo `digest-may-30-2026`.
-4. Asegúrate de que tu pull request tenga como repositorio base `ZecHub/zechub` y como rama base `main`.
+3. En tu fork, crea una nueva rama para la edición. Un nombre de rama claro es útil, como `digest-may-30-2026`.
+4. Asegúrate de que tu pull request apunte a `ZecHub/zechub` como repositorio base y a `main` como rama base.
 
 Si usas la línea de comandos, el mismo flujo de trabajo se ve así:
 
@@ -49,10 +45,10 @@ Usa la [plantilla del boletín](https://github.com/ZecHub/zechub/blob/main/newsl
 
 Al crear el archivo:
 
-- Sigue el formato de nombre de archivo solicitado por el issue o usado por las ediciones aceptadas recientemente.
+- Sigue el formato de nombre de archivo solicitado por el issue o usado por ediciones recientes aceptadas.
 - Mantén el mismo orden de secciones que la plantilla, a menos que la tarea pida un formato diferente.
-- Añade enlaces solo de la semana correspondiente.
-- Escribe una descripción breve y clara para cada enlace, para que las personas lectoras entiendan por qué es importante.
+- Añade enlaces solo de la semana relevante.
+- Escribe una descripción breve y clara para cada enlace para que las personas lectoras entiendan por qué importa.
 - Traduce o resume en inglés las fuentes que no estén en inglés cuando sea necesario.
 - Revisa cada enlace antes de abrir el pull request.
 
@@ -60,12 +56,12 @@ Al crear el archivo:
 
 ZecWeekly normalmente cubre la actividad del ecosistema de Zcash de la semana actual y se publica cerca del final de la semana. El momento más seguro es:
 
-- Empezar a recopilar enlaces después de que se publique el issue o la tarea del boletín actual.
-- Mantener un borrador mientras la semana siga activa.
-- Enviar el pull request cerca de la fecha de entrega solicitada, después de haber comprobado si hubo actualizaciones de última hora durante la semana.
-- No envíes el boletín de una semana futura antes de que exista la tarea para esa fecha o antes de que ZecHub confirme que debes prepararlo.
+- Empezar a recopilar enlaces después de que se publique la edición actual del boletín o la tarea.
+- Mantener un borrador mientras la semana aún esté en curso.
+- Enviar el pull request cerca de la fecha de entrega solicitada, después de haber revisado las actualizaciones de última hora de la semana.
+- No enviar el boletín de una semana futura antes de que exista la tarea para esa fecha o antes de que ZecHub confirme que debes prepararlo.
 
-Si un issue indica que debes enviarlo antes de una fecha específica, sigue esa fecha. Si hay un conflicto entre esta página y un issue actual, sigue el issue actual.
+Si un issue dice que debes enviarlo antes de una fecha específica, sigue esa fecha. Si hay un conflicto entre esta página y un issue actual, sigue el issue actual.
 
 ### 5. Abre el pull request
 
@@ -74,9 +70,9 @@ Cuando tu archivo del boletín esté listo:
 1. Haz commit de tus cambios en tu fork.
 2. Abre un pull request hacia `ZecHub/zechub` en la rama `main`.
 3. Usa un título que coincida con la edición, como `Zcash Ecosystem Digest | May 30th`.
-4. Vincula el issue en el cuerpo del pull request para que las personas revisoras puedan conectar el trabajo con la tarea.
+4. Enlaza el issue en el cuerpo del pull request para que quienes revisan puedan conectar el trabajo con la tarea.
 
-Ejemplo de cuerpo de pull request:
+Ejemplo de cuerpo del pull request:
 
 ```md
 Closes #ISSUE_NUMBER
@@ -87,42 +83,43 @@ Summary:
 - Checks links and descriptions for the requested week.
 ```
 
-Después de abrir el pull request, presta atención a los comentarios de revisión. Si ZecHub solicita cambios, actualiza la misma rama en lugar de abrir un segundo pull request para la misma edición.
+Después de abrir el pull request, presta atención a los comentarios de revisión. Si ZecHub pide cambios, actualiza la misma rama en lugar de abrir un segundo pull request para la misma edición.
 
 ### Ejemplos reales
 
-Usa estos pull requests del boletín ya fusionados como ejemplos de envíos aceptados:
+Usa estos pull requests fusionados del boletín como ejemplos de envíos aceptados:
 
-- [Zcash Ecosystem Digest | April 11th](https://github.com/ZecHub/zechub/pull/1551)
-- [Zcash Ecosystem Digest | March 28th](https://github.com/ZecHub/zechub/pull/1544)
-- [Zcash Ecosystem Digest | February 14th](https://github.com/ZecHub/zechub/pull/1474)
+- [Zcash Ecosystem Digest | 11 de abril](https://github.com/ZecHub/zechub/pull/1551)
+- [Zcash Ecosystem Digest | 28 de marzo](https://github.com/ZecHub/zechub/pull/1544)
+- [Zcash Ecosystem Digest | 14 de febrero](https://github.com/ZecHub/zechub/pull/1474)
 
-![Ejemplo de pull request fusionado del boletín ZecWeekly](assets/zecweekly-example-pr.png)
 
-Al comparar tu trabajo con un ejemplo, céntrate en la ubicación del archivo, el formato del título, el orden de las secciones, las descripciones de los enlaces y si el pull request vuelve a enlazar correctamente con la tarea adecuada.
+![Ejemplo de pull request fusionado del boletín ZecWeekly](https://github.com/user-attachments/assets/9230d68d-6406-4c8a-992c-df84e0d318d8)
+
+Al comparar tu trabajo con un ejemplo, céntrate en la ubicación del archivo, el formato del título, el orden de las secciones, las descripciones de los enlaces y si el pull request se conecta correctamente con la tarea adecuada.
 
 ### Errores comunes que debes evitar
 
 - Abrir un pull request antes de que se confirme la fecha de la edición o la tarea.
-- Trabajar en un issue que ya tiene un pull request vinculado.
+- Trabajar en un issue que ya tiene un pull request enlazado.
 - Enviar el pull request a tu propio fork en lugar de a `ZecHub/zechub`.
 - Usar un nombre de archivo incorrecto o colocar el archivo fuera de la carpeta `newsletter`.
 - Copiar una edición anterior sin actualizar cada fecha, enlace y descripción.
 - Añadir enlaces de la semana equivocada.
-- Dejar enlaces rotos, enlaces duplicados o texto de relleno de la plantilla.
-- Abrir un nuevo pull request después de recibir comentarios de revisión en lugar de actualizar la rama original.
+- Dejar enlaces rotos, enlaces duplicados o texto de marcador de posición de la plantilla.
+- Abrir un nuevo pull request después de comentarios de revisión en lugar de actualizar la rama original.
 
-### Lista de comprobación final
+### Lista de verificación final
 
 Antes de solicitar revisión, confirma que:
 
-- La fecha del issue o de la tarea coincide con tu archivo del boletín.
-- No hay otro pull request abierto que ya cubra el mismo issue o edición.
+- La fecha del issue o la tarea coincide con tu archivo del boletín.
+- Ningún otro pull request abierto ya está cubriendo el mismo issue o edición.
 - El archivo está en la carpeta `newsletter`.
 - Las secciones de la plantilla están completas.
-- Todos los enlaces funcionan y tienen una descripción útil.
+- Cada enlace funciona y tiene una descripción útil.
 - El cuerpo del pull request enlaza el issue correcto.
-- Estás disponible para hacer cambios si las personas revisoras los solicitan.
+- Estás disponible para hacer cambios si quienes revisan los solicitan.
 
 ## Ediciones anteriores
 
