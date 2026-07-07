@@ -8,7 +8,7 @@ Ne ènye Zcash habɔbɔa me tɔ, eye nèdi be yeawɔ akpa aɖe le ZecHub tutu me
 
 Dzra kadodowo ɖo na nyadzɔdzɔgbalẽa eye nàtsɔ wo akpe ɖe nyadzɔdzɔgbalẽa ƒe GitHub axa ŋu: -> [Zi afisia dzi hena mɔfiamewo](https://github.com/ZecHub/zechub/blob/main/site/contribute/ZecWeekly_Newsletter.md)
 
-Nyateƒenya lé ŋku ɖe wiki docs ŋu, do susu ɖa be woatrɔ asi le wo ŋu, eye nàdo axa yeyewo ɖe ŋgɔ le Github me
+Nyateƒenyawo lé ŋku ɖe wiki docs ŋu, do susu ɖa be woatrɔ asi le wo ŋu, eye nàdo axa yeyewo ɖe ŋgɔ le Github me
 
 Wɔ video me nyawo le hatsotso siwo gbɔna me:
 ```
@@ -25,12 +25,13 @@ Nyatakaka tso vodadawo ŋu
 
 #### Ne èdi nyatakaka bubuwo tso nunana ƒe ga homewo ŋu la, taflatse xlẽ míaƒe nudzɔdzɔ ƒe axa -> [le afisia](https://zechub.wiki/contribute/contributing-guide#content).
 
-Míeɖoa nyawo ɖe dɔ siwo míeʋu fifia ƒe nunanawo ta. Vevietɔ wokpɔa esiawo abe
+Míeɖoa tatawo ɖe dɔ siwo míewɔna fifia be bounties ʋuna Memleɖa ɖesiaɖe. Àte ŋu aɖo aɖaŋu le nunanawo hã ŋu! Esiawo koŋue wokpɔna le ZEC Bounties.
 
-<img width="2768" height="838" alt="Screenshot_2025-11-01_11-13-39" src="https://github.com/user-attachments/assets/dd7dc989-3449-4a12-a919-9333a31cbb5a" />
+![zecbounties ƒe agbalẽwo](https://github.com/user-attachments/assets/0e4f5109-c0c9-4a0a-8d71-8172e36b9726)
 
 
-[Dework ƒe dɔwɔwɔ](https://app.dework.xyz/zechub-2424)
+
+[ZEC ƒe Bounties](https://bounties.zechub.wiki/)
 
 [ZecHub Github Nyawo](https://github.com/ZecHub/zechub/issues)
 
