@@ -262,7 +262,7 @@
 - Devices: Web | Desktop
 - Operating System: Browser
 - Pools: Shielded | Transparent
-- Features: Zcash | Browser Extension | Private Beta | Shielded Transactions | Cross-chain Swaps | Lending & Borrowing | DApp Connections | Native ZECFi
+- Features: Browser Extension | Shielded Transactions | Cross-chain Swaps | Lending & Borrowing | DApp Connections | Rhea
 
 ---
 
