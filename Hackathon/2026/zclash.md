@@ -4,7 +4,7 @@
 **Builder:** jerydam  
 **Repo:** https://github.com/jerydam/Zclash  
 **Demo Video:** [VIDEO_LINK — share in #zechub Discord too]  
-**Live App:** https://zclash.vercel.app
+**Live App:** https://zclash.vercel.app  
 **License:** MIT  
 
 ---
