@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
     "dev": "nodemon src/server.ts",
-    "start": "ts-node src/server.ts",
+    "start": "node dist/server.js",
     "seed": "ts-node src/seed.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
