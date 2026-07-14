@@ -14,7 +14,7 @@ ZecGuard is not a deadman switch. It does not custody funds, upload recovery mat
 ## Links
 
 - Repository: https://github.com/Lexiie/ZecGuard
-- Demo video: https://github.com/Lexiie/ZecGuard/blob/main/assets/demo.mp4
+- Demo video: https://cdn.jsdelivr.net/gh/Lexiie/ZecGuard@main/assets/demo.mp4
 - Submission notes: https://github.com/Lexiie/ZecGuard/blob/main/HACKATHON_SUBMISSION.md
 - Threat model: https://github.com/Lexiie/ZecGuard/blob/main/docs/threat-model.md
 - Memo format: https://github.com/Lexiie/ZecGuard/blob/main/docs/memo-format.md
