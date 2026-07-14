@@ -8,6 +8,8 @@ import { Header } from "@/components/Header";
 import { Loader2, ArrowLeft } from "lucide-react";
 import { cn } from "@/lib/utils";
 
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+
 export default function BountyDetailsPage({
   params,
 }: {
@@ -23,7 +25,7 @@ export default function BountyDetailsPage({
   useEffect(() => {
     const fetchBounty = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/bounties/${bountyId}`);
+        const response = await fetch(`${API_BASE}/api/bounties/${bountyId}`);
         if (response.ok) {
           const data = await response.json();
           setBounty(data);

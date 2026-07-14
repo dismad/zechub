@@ -31,9 +31,11 @@ export default function CreateBountyPage() {
       setIsSubmitting(false);
       return;
     }
+
+    const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
     
     try {
-      const response = await fetch("http://localhost:5000/api/bounties", {
+      const response = await fetch(`${API_BASE}/api/bounties`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -53,7 +55,7 @@ export default function CreateBountyPage() {
       const newBounty = await response.json();
       
       // Simulate the funding API call right after creation
-      await fetch(`http://localhost:5000/api/bounties/${newBounty._id}/fund`, {
+      await fetch(`${API_BASE}/api/bounties/${newBounty._id}/fund`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

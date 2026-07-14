@@ -7,6 +7,8 @@ import { BountyCard } from "@/components/BountyCard";
 import { Loader2 } from "lucide-react";
 import Link from "next/link";
 
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+
 export default function CompletedPage() {
   const [bounties, setBounties] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -14,7 +16,7 @@ export default function CompletedPage() {
   useEffect(() => {
     const fetchBounties = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/bounties");
+        const response = await fetch(`${API_BASE}/api/bounties`);
         if (response.ok) {
           const data = await response.json();
           // Filter to show Completed claims

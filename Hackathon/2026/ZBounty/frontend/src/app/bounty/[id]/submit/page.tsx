@@ -6,6 +6,8 @@ import { useRouter } from "next/navigation";
 import { Header } from "@/components/Header";
 import { Loader2 } from "lucide-react";
 
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+
 export default function BountySubmissionPage({
   params,
 }: {
@@ -28,7 +30,7 @@ export default function BountySubmissionPage({
   useEffect(() => {
     const fetchBounty = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/bounties/${bountyId}`);
+        const response = await fetch(`${API_BASE}/api/bounties/${bountyId}`);
         if (response.ok) {
           const data = await response.json();
           setBounty(data);
@@ -52,7 +54,7 @@ export default function BountySubmissionPage({
     setIsSubmitting(true);
     
     try {
-      const response = await fetch(`http://localhost:5000/api/bounties/${bountyId}/submit`, {
+      const response = await fetch(`${API_BASE}/api/bounties/${bountyId}/submit`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -6,6 +6,8 @@ import { Header } from "@/components/Header";
 import { BountyCard } from "@/components/BountyCard";
 import { SearchX, Loader2 } from "lucide-react";
 
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+
 export default function ExplorePage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState("All");
@@ -17,7 +19,7 @@ export default function ExplorePage() {
   useEffect(() => {
     const fetchBounties = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/bounties");
+        const response = await fetch(`${API_BASE}/api/bounties`);
         if (response.ok) {
           const data = await response.json();
           setBounties(data);
