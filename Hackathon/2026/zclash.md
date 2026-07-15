@@ -172,8 +172,8 @@ GROQ_API_KEY=
 | | |
 |---|---|
 | GitHub | https://github.com/jerydam/Zclash |
-| Live App | https://app.zclash.io |
-| Leaderboard | https://app.zclash.io/ranks |
-| Demo Video | [VIDEO_LINK] |
-| Community | https://t.me/ZClashChat |
-| Builder (Discord) | [YOUR_DISCORD_HANDLE] |
+| Live App | https://zclash.vercel.app|
+| Leaderboard | https://zclash.vercel.app/ranks |
+
+
+| Builder (Discord) | [jerydam_0] |
