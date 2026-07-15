@@ -354,7 +354,7 @@ export default function DashboardPage() {
                   Find more work
                 </h4>
                 <p className="font-body-md text-body-md text-on-surface-variant mb-4">
-                  There are currently 42 open bounties matching your skill set.
+                  There are currently open bounties matching your skill set.
                 </p>
                 <Link
                   href="/explore"
