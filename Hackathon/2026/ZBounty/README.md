@@ -6,6 +6,14 @@ ZBounty is a privacy-first bounty marketplace powered by Zcash Mainnet. It allow
 
 The platform introduces the **Privacy Score**, a metric from 0-100 that evaluates how privately a bounty was funded and paid, gamifying privacy and showcasing the real-world utility of Zcash shielded transactions.
 
+## Zcash Mainnet Integration
+
+ZBounty leverages the Zcash Mainnet to facilitate secure and private transactions. Our integration features:
+
+- **Shielded Transactions**: Payouts are executed as shielded transactions (z-to-z) ensuring the privacy of both the bounty creator and the recipient.
+- **Zingo CLI & Lightwalletd**: In production mode (`USE_MOCK_ZCASH=false`), the backend interacts with the Zcash network via Zingo CLI and a connected lightwalletd server, enabling fast synchronization and reliable transaction broadcasting.
+- **Real-Time Balances**: Using gRPC connections, the platform queries active light nodes (like Zcash Zebra) to fetch accurate, real-time balances for transparent and shielded addresses down to 8 decimal places (Zatoshis).
+
 ## Tech Stack
 - **Frontend**: Next.js 15, React, TypeScript, TailwindCSS, Shadcn UI, Framer Motion
 - **Backend**: Node.js, Express, TypeScript, MongoDB Atlas
@@ -65,14 +73,6 @@ ZBounty provides an end-to-end workflow for creating and fulfilling privacy-focu
 4. **Submit Work**: Navigate to the Bounty Details page and submit a link to your work (e.g., GitHub URL).
 5. **Shielded Payout**: As the bounty creator, select the winning submission from your Dashboard and trigger a shielded payout. 
 6. **Privacy Score**: Watch the Privacy Score animate to `100/100` and unlock the **"Privacy Champion"** gold badge!
-
-## Zcash Mainnet Integration
-
-ZBounty leverages the Zcash Mainnet to facilitate secure and private transactions. Our integration features:
-
-- **Shielded Transactions**: Payouts are executed as shielded transactions (z-to-z) ensuring the privacy of both the bounty creator and the recipient.
-- **Zingo CLI & Lightwalletd**: In production mode (`USE_MOCK_ZCASH=false`), the backend interacts with the Zcash network via Zingo CLI and a connected lightwalletd server, enabling fast synchronization and reliable transaction broadcasting.
-- **Real-Time Balances**: Using gRPC connections, the platform queries active light nodes (like Zcash Zebra) to fetch accurate, real-time balances for transparent and shielded addresses down to 8 decimal places (Zatoshis).
 
 ## API Documentation
 
