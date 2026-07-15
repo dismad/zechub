@@ -50,6 +50,17 @@ sealed end-to-end with X25519 → HKDF → XChaCha20-Poly1305, so the relay stay
 To our knowledge, a first for Zcash. This is the path to "your key lives on your phone, the
 platform never has access."
 
+## Shared-custody safety: recovery + inheritance
+
+A real shared vault must survive a lost device and an absent owner. Both are built on the same
+FROST + blind-relay foundation and proven by tests:
+
+- **Social recovery** — a **quorum rebuilds a lost member's share** (Repairable Threshold
+  Scheme); the group key is untouched, no share is revealed, and the repaired share is
+  byte-identical to the lost one (it then signs a verifying 2-of-3).
+- **Inheritance / dead-man's-switch** — signed proof-of-life heartbeats; on a lapse past the
+  window (plus a cancellable grace period), the quorum may **release** the vault to a named heir.
+
 ## Built on the Zcash Foundation's tools (no crypto reimplemented)
 
 `frostd` · `frost-client` · `zcash-sign` (frost-tools), the reference `frost` crate,
