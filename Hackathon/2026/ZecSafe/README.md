@@ -12,7 +12,7 @@ wallet or secret material.
 - **License:** MIT
 - **Live site:** https://zecsafe.vercel.app/
 - **Proof route:** https://zecsafe.vercel.app/proof
-- **Demo video:** https://github.com/cyberrockng/zecsafe/releases/download/zecsafe-demo-2026-07-15/zecsafe-demo-2026-07-15.webm
+- **Demo video:** https://youtu.be/B16fPtEGfnY
 
 ## Verify it yourself in 60 seconds
 
@@ -45,7 +45,7 @@ Recorded status: CONFIRMED
 Recorded height: 3409837
 Threshold: 2 of 3, with 1 participant unavailable
 Proof bundle hash: sha256:e4684eb1df7bbf48fda46ce4353968640f664c306b097e868e3b2ba780351b8d
-Submission commit: 10abee6f73cab5f20f3b82b58eea481e5a89cac5
+Submission commit: fdd0587715fb65014d83b9695c1a1b3e9dd261bc
 ```
 
 Explorer:
@@ -112,7 +112,7 @@ runs browser-side proof verification.
 | Working prototype | Done - deployed product site and proof route |
 | Setup and usage docs | Done - README, DEMO, SUBMISSION, docs |
 | Open-source license | MIT |
-| Video demo | Done - WebM linked above |
+| Video demo | Done - YouTube demo linked above |
 | Respect privacy and security | Public proof excludes secret material; limitations are explicit |
 
 ## Honest limits
