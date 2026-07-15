@@ -1,6 +1,6 @@
 # zk.poker — trustless heads-up hold'em on Zcash
 
-**Live:** https://zkbtc.org · **Tracks:** FROST · Gaming
+**Live:** https://zkbtc.org · **Demo video:** https://www.youtube.com/watch?v=xwmEUOXYE24 · **Code:** https://github.com/rotkonetworks/zeratul/tree/master/crates · **Tracks:** FROST · Gaming
 
 Heads-up No-Limit Hold'em where **the operator never sees a card and never holds the pot.**
 Cards are dealt by a mental-poker ceremony between the two players; the server is a
