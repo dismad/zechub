@@ -1,38 +1,80 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Sidebar } from "@/components/Sidebar";
 import { Header } from "@/components/Header";
 import { cn, formatZec } from "@/lib/utils";
 import { useAuth } from "@/context/AuthContext";
+import { useRouter } from "next/navigation";
+
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
 
 export default function DashboardPage() {
   const { user, balance, balanceLoading } = useAuth();
+  const router = useRouter();
+  const [bounties, setBounties] = useState<any[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
-  const activeClaims = [
-    {
-      id: "claim-2",
-      bountyId: "B-8944",
-      title: "Design system documentation update",
-      description: "Audit current Figma files and update the developer handoff documentation for the new 'Warm Fintech' theme components.",
-      status: "In Progress",
-      rewardZec: 3.0,
-      rewardUsd: 120,
-      progress: 20,
-      timeLeft: "Due in 12 days",
-    },
-  ];
+  useEffect(() => {
+    if (user) {
+      if (user.role === 'Creator') {
+        router.replace('/sponsor');
+      } else if (user.role === 'Admin') {
+        router.replace('/admin');
+      }
+    }
+  }, [user, router]);
 
-  const pendingReviews = [
-    {
-      id: "review-1",
-      bountyId: "B-8802",
-      title: "Optimize landing page load speed",
-      reviewer: "Sarah T.",
-      rewardZec: 5.5,
-      submittedText: "Submitted 2 days ago",
-    },
-  ];
+  useEffect(() => {
+    const fetchBounties = async () => {
+      try {
+        const response = await fetch(`${API_BASE}/api/bounties`);
+        if (response.ok) {
+          const data = await response.json();
+          setBounties(data);
+        }
+      } catch (error) {
+        console.error("Failed to fetch dashboard data:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    fetchBounties();
+  }, []);
+
+  const activeClaims = bounties
+    .filter(
+      (b: any) =>
+        b.status.toLowerCase() === "in progress" &&
+        (b.contributorId === user?._id || (b.contributorId && b.contributorId._id === user?._id))
+    )
+    .map((b: any) => ({
+      id: b._id,
+      bountyId: b._id.substring(18),
+      title: b.title,
+      description: b.description,
+      status: b.status,
+      rewardZec: b.reward,
+      rewardUsd: b.reward * 40,
+      progress: 40,
+      timeLeft: "Due in 14 days",
+    }));
+
+  const pendingReviews = bounties
+    .filter(
+      (b: any) =>
+        b.status.toLowerCase() === "in review" &&
+        (b.contributorId === user?._id || (b.contributorId && b.contributorId._id === user?._id))
+    )
+    .map((b: any) => ({
+      id: b._id,
+      bountyId: b._id.substring(18),
+      title: b.title,
+      reviewer: "Admin Reviewer",
+      rewardZec: b.reward,
+      submittedText: "Submitted recently",
+    }));
 
   return (
     <div className="bg-surface text-on-surface font-body-md antialiased min-h-screen flex">
@@ -121,11 +163,13 @@ export default function DashboardPage() {
                   work
                 </span>
                 <h3 className="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">
-                  Active Claim
+                  Active Claims
                 </h3>
               </div>
               <div className="flex items-baseline gap-2">
-                <span className="font-display text-4xl md:text-5xl font-bold text-on-surface">1</span>
+                <span className="font-display text-4xl md:text-5xl font-bold text-on-surface">
+                  {activeClaims.length}
+                </span>
               </div>
               <div className="mt-6 flex gap-1.5">
                 <div className="h-1 flex-1 bg-primary-container rounded-full"></div>
@@ -135,27 +179,45 @@ export default function DashboardPage() {
             </div>
 
             {/* Rank Card */}
-            <div className="bg-surface-container-lowest rounded-xl border border-outline-variant p-stack-lg card-shadow card-hover transition-all duration-300 relative overflow-hidden">
-              <div className="absolute right-0 bottom-0 opacity-10 pointer-events-none">
-                <span className="material-symbols-outlined" style={{ fontSize: "120px", fontVariationSettings: "'FILL' 1" }}>
-                  workspace_premium
-                </span>
-              </div>
-              <div className="flex items-center gap-3 mb-stack-sm relative z-10">
-                <span className="material-symbols-outlined text-secondary bg-surface-variant p-2 rounded-lg">
-                  workspace_premium
-                </span>
-                <h3 className="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">
-                  Current Rank
-                </h3>
-              </div>
-              <div className="flex items-baseline gap-2 relative z-10">
-                <span className="font-display text-4xl md:text-5xl font-bold text-on-surface">Silver</span>
-              </div>
-              <div className="mt-5 font-label-sm text-label-sm text-on-surface-variant relative z-10">
-                4 more completed bounties to Gold
-              </div>
-            </div>
+            {(() => {
+              const completedCount = user?.reputation?.tasksCompleted || 0;
+              let rank = "Beginner";
+              let nextRankInfo = "Complete 1 bounty to reach Bronze";
+              if (completedCount >= 10) {
+                rank = "Gold";
+                nextRankInfo = "Maximum Rank Reached";
+              } else if (completedCount >= 5) {
+                rank = "Silver";
+                nextRankInfo = `${10 - completedCount} more completed bounties to Gold`;
+              } else if (completedCount >= 1) {
+                rank = "Bronze";
+                nextRankInfo = `${5 - completedCount} more completed bounties to Silver`;
+              }
+
+              return (
+                <div className="bg-surface-container-lowest rounded-xl border border-outline-variant p-stack-lg card-shadow card-hover transition-all duration-300 relative overflow-hidden">
+                  <div className="absolute right-0 bottom-0 opacity-10 pointer-events-none">
+                    <span className="material-symbols-outlined" style={{ fontSize: "120px", fontVariationSettings: "'FILL' 1" }}>
+                      workspace_premium
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-3 mb-stack-sm relative z-10">
+                    <span className="material-symbols-outlined text-secondary bg-surface-variant p-2 rounded-lg">
+                      workspace_premium
+                    </span>
+                    <h3 className="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">
+                      Current Rank
+                    </h3>
+                  </div>
+                  <div className="flex items-baseline gap-2 relative z-10">
+                    <span className="font-display text-4xl md:text-5xl font-bold text-on-surface">{rank}</span>
+                  </div>
+                  <div className="mt-5 font-label-sm text-label-sm text-on-surface-variant relative z-10">
+                    {nextRankInfo}
+                  </div>
+                </div>
+              );
+            })()}
 
           </section>
 

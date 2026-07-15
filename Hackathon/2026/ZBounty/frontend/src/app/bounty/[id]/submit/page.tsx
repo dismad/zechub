@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Header } from "@/components/Header";
 import { Loader2 } from "lucide-react";
+import { useAuth } from "@/context/AuthContext";
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
 
@@ -13,6 +14,7 @@ export default function BountySubmissionPage({
 }: {
   params: Promise<{ id: string }>;
 }) {
+  const { user } = useAuth();
   const router = useRouter();
   const unwrappedParams = use(params);
   const bountyId = unwrappedParams.id;
@@ -44,10 +46,37 @@ export default function BountySubmissionPage({
     fetchBounty();
   }, [bountyId]);
 
+  useEffect(() => {
+    if (bounty && user) {
+      // Block if THIS user's submission is still actively in review (Submitted status)
+      const myContributorId = bounty.contributorId?._id || bounty.contributorId;
+      const isMineInReview =
+        bounty.status.toLowerCase() === "in review" &&
+        myContributorId?.toString() === user._id?.toString();
+
+      const alreadyCompleted =
+        bounty.status.toLowerCase() === "completed" ||
+        bounty.status.toLowerCase() === "paid";
+
+      if (isMineInReview) {
+        alert("Your solution is already submitted and pending review.");
+        router.push(`/bounty/${bountyId}`);
+      } else if (alreadyCompleted) {
+        alert("This bounty has already been completed.");
+        router.push("/explore");
+      }
+    }
+  }, [bounty, user, router, bountyId]);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!summary || !prLink || !zcashAddress) {
       alert("Please fill out all required fields.");
+      return;
+    }
+
+    if (!user) {
+      alert("You must be logged in to submit a solution.");
       return;
     }
 
@@ -62,7 +91,7 @@ export default function BountySubmissionPage({
         body: JSON.stringify({
           link: prLink,
           notes: summary,
-          contributorId: "60c72b2f9b1d8b2bad18a222", // Mock user ID or use AuthContext
+          contributorId: user._id,
         }),
       });
 

@@ -143,6 +143,7 @@ export default function ExplorePage() {
                       status={bounty.status}
                       deadline={bounty.deadline}
                       creatorName={bounty.creatorId?.username || "Anonymous"}
+                      contributorId={bounty.contributorId}
                     />
                   ))}
                 </div>

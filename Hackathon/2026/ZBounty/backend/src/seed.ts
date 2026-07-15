@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import User from "./models/User";
 import Bounty from "./models/Bounty";
+import { hashPassword } from "./utils/crypto";
 
 dotenv.config();
 
@@ -24,8 +25,35 @@ const seedDatabase = async () => {
 
     // 1. Create Mock Users
     console.log("Creating mock users...");
+    
+    const admin = new User({
+      username: "admin",
+      email: "admin@zbounty.org",
+      password: hashPassword("admin123"),
+      role: "Admin",
+      bio: "Administrator for the ZBounty platform review portal.",
+      avatar: "https://api.dicebear.com/7.x/identicon/svg?seed=admin",
+      reputation: {
+        bountiesFunded: 0,
+        completionRate: 0,
+        tasksCompleted: 0,
+        totalRewardsEarned: 0,
+        successRate: 0,
+      },
+      privacyScore: {
+        average: 100,
+        highest: 100,
+        championCount: 0,
+        totalShieldedEarnings: 0,
+      },
+    });
+    await admin.save();
+
     const sponsor = new User({
       username: "Zcash Foundation",
+      email: "sponsor@zcash.org",
+      password: hashPassword("sponsor123"),
+      role: "Creator",
       walletAddress: "zs1zcashfoundationaddress1234567890abcdefghijklmnopqrstuvwxyz",
       bio: "Sponsoring privacy-preserving technologies and cryptographic research on Zcash.",
       avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuDw39ScrxNa3ZgzehfSnq_YoRqJofZus71SLW3Bb7uZtGBzNwV55CayP5mje1Trt7rMVRtD5X-a74dAPHwUlq3MqhfX7flwAvqOgzv3ovfQJh_UZWcxifC0HJEMI5w9ijaNf9_U_9MlKEHHY85-PRy3DXq2P5WARiDSltoNf1_7QsxWWcaIevld4uD7XoV1Zhm581DkNtbo-FrRbPxihGvZVVlg-nUvq9FcP1tOkfAYu7gueTu3PRLBVBROwBxxllhyJ6i_0BhBGw",
@@ -44,27 +72,6 @@ const seedDatabase = async () => {
       },
     });
     await sponsor.save();
-
-    const freelancer = new User({
-      username: "Alex",
-      walletAddress: "zs1freelanceralexaddress1234567890abcdefghijklmnopqrstuvwxyz",
-      bio: "Full Stack Blockchain Developer specializing in Zero-Knowledge proofs and Rust protocol development.",
-      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuB8YnqVnDjR9GUOzl2vhJglDTH9vnktrFimXIvz4YIcakxOlv1ivOXaD-2Qk8H3Z2FDbosfcTZhV1_dYzqfPbDrIfeF2J3k3XZ7FRp2rlxW0Nvb8VVZoOXfN5YceG1QjhPBrOz_B8bBnh3_380IOBTUE5dOeKFBgjNFTtJxmt71fUC8Iivyfaoz6jnkVdPWp7p0rE-xRQtYVt3rQvmWx-AYQpUnkRFnAstFZpIzYYfqq7QjIQ89sOJoULa_6FwbTIabXT-ImDy0ow",
-      reputation: {
-        bountiesFunded: 1,
-        completionRate: 100,
-        tasksCompleted: 12,
-        totalRewardsEarned: 45.2,
-        successRate: 4.9,
-      },
-      privacyScore: {
-        average: 85,
-        highest: 100,
-        championCount: 2,
-        totalShieldedEarnings: 38.5,
-      },
-    });
-    await freelancer.save();
 
     // 2. Create Mock Bounties
     console.log("Creating mock bounties...");
@@ -102,7 +109,7 @@ const seedDatabase = async () => {
         },
       },
       {
-        creatorId: freelancer._id, // Posted by freelancer as developer initiative
+        creatorId: sponsor._id, // Set to sponsor instead of freelancer
         title: "Revamp Dashboard UI/UX",
         description: "Redesign and restructure the freelancer portal user interface to follow sunlit warm fintech design systems.",
         reward: 20.0,

@@ -10,6 +10,7 @@ import { LoginModal } from "@/components/LoginModal";
 export default function Home() {
   const { user, logout } = useAuth();
   const [showLoginModal, setShowLoginModal] = useState(false);
+  const [loginModalInitialIsSignUp, setLoginModalInitialIsSignUp] = useState(false);
 
   return (
     <div className="flex flex-col min-h-screen relative overflow-hidden">
@@ -44,18 +45,20 @@ export default function Home() {
                   Connect Wallet
                 </Link>
               )}
-              <Link 
-                href="/create"
-                className="px-5 py-2.5 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 text-sm font-bold transition-all focus-visible:ring-2 focus-visible:ring-ring outline-none hidden sm:block"
-              >
-                Create Bounty
-              </Link>
+              {user.role === "Creator" && (
+                <Link 
+                  href="/create"
+                  className="px-5 py-2.5 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 text-sm font-bold transition-all focus-visible:ring-2 focus-visible:ring-ring outline-none hidden sm:block"
+                >
+                  Create Bounty
+                </Link>
+              )}
               
               <Link href="/dashboard" className="w-9 h-9 rounded-full border border-border overflow-hidden hover:opacity-80 transition-opacity shrink-0">
                 <img
                   alt="User profile"
                   className="w-full h-full object-cover"
-                  src={user.avatar || "https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y"}
+                  src={user.avatar || "https://lh3.googleusercontent.com/aida-public/AB6AXuDw39ScrxNa3ZgzehfSnq_YoRqJofZus71SLW3Bb7uZtGBzNwV55CayP5mje1Trt7rMVRtD5X-a74dAPHwUlq3MqhfX7flwAvqOgzv3ovfQJh_UZWcxifC0HJEMI5w9ijaNf9_U_9MlKEHHY85-PRy3DXq2P5WARiDSltoNf1_7QsxWWcaIevld4uD7XoV1Zhm581DkNtbo-FrRbPxihGvZVVlg-nUvq9FcP1tOkfAYu7gueTu3PRLBVBROwBxxllhyJ6i_0BhBGw"}
                 />
               </Link>
 
@@ -69,12 +72,24 @@ export default function Home() {
             </div>
           </>
         ) : (
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
             <button
-              onClick={() => setShowLoginModal(true)}
-              className="px-5 py-2.5 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 text-sm font-bold transition-all focus-visible:ring-2 focus-visible:ring-ring outline-none"
+              onClick={() => {
+                setLoginModalInitialIsSignUp(false);
+                setShowLoginModal(true);
+              }}
+              className="px-5 py-2.5 rounded-md bg-secondary hover:bg-secondary/80 text-sm font-medium transition-colors border border-border focus-visible:ring-2 focus-visible:ring-ring outline-none cursor-pointer"
             >
               Sign In
+            </button>
+            <button
+              onClick={() => {
+                setLoginModalInitialIsSignUp(true);
+                setShowLoginModal(true);
+              }}
+              className="px-5 py-2.5 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 text-sm font-bold transition-all focus-visible:ring-2 focus-visible:ring-ring outline-none cursor-pointer"
+            >
+              Sign Up
             </button>
           </div>
         )}
@@ -181,6 +196,7 @@ export default function Home() {
       <LoginModal 
         isOpen={showLoginModal} 
         onClose={() => setShowLoginModal(false)} 
+        initialIsSignUp={loginModalInitialIsSignUp}
       />
     </div>
   );

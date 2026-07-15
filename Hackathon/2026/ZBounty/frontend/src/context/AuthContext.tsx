@@ -4,13 +4,28 @@ import React, { createContext, useContext, useState, useEffect, useCallback } fr
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
 
-interface User {
+export interface User {
   _id: string;
   username: string;
   email?: string;
+  role: 'Freelancer' | 'Creator' | 'Admin';
   walletAddress?: string;
-  avatar?: string;
   bio?: string;
+  avatar?: string;
+  reputation?: {
+    bountiesFunded: number;
+    completionRate: number;
+    tasksCompleted: number;
+    totalRewardsEarned: number;
+    successRate: number;
+  };
+  privacyScore?: {
+    average: number;
+    highest: number;
+    championCount: number;
+    totalShieldedEarnings: number;
+  };
+  createdAt: string;
 }
 
 interface AuthContextType {
@@ -19,6 +34,8 @@ interface AuthContextType {
   balance: number;
   balanceLoading: boolean;
   isLoading: boolean;
+  signup: (username: string, email: string, password: string, role?: string) => Promise<boolean>;
+  login: (email: string, password: string, role?: string) => Promise<{ needsWallet: boolean; user: User }>;
   loginWithGoogle: (email: string, name: string, picture: string, credential?: string) => Promise<{ needsWallet: boolean; user: User }>;
   linkWallet: (walletAddress: string) => Promise<boolean>;
   updateProfile: (data: { username?: string; bio?: string; avatar?: string }) => Promise<boolean>;
@@ -79,6 +96,69 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       setBalance(0.0);
     }
   }, [user?.walletAddress, refreshBalance]);
+
+  const signup = async (username: string, email: string, password: string, role?: string) => {
+    try {
+      const response = await fetch(`${API_BASE}/api/auth/signup`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username, email, password, role }),
+      });
+
+      if (!response.ok) {
+        let errMsg = "Signup failed";
+        try {
+          const errData = await response.json();
+          errMsg = errData.error || errMsg;
+        } catch {
+          errMsg = `Signup failed with status code ${response.status}: ${response.statusText || "Internal Server Error"}`;
+        }
+        throw new Error(errMsg);
+      }
+
+      const data = await response.json();
+      setUser(data.user);
+      setToken(data.token);
+      localStorage.setItem("zb_user", JSON.stringify(data.user));
+      localStorage.setItem("zb_token", data.token);
+      return true;
+    } catch (error) {
+      console.error("Signup Error:", error);
+      throw error;
+    }
+  };
+
+  const login = async (email: string, password: string, role?: string) => {
+    try {
+      const response = await fetch(`${API_BASE}/api/auth/login`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password, role }),
+      });
+
+      if (!response.ok) {
+        let errMsg = "Login failed";
+        try {
+          const errData = await response.json();
+          errMsg = errData.error || errMsg;
+        } catch {
+          errMsg = `Login failed with status code ${response.status}: ${response.statusText || "Internal Server Error"}`;
+        }
+        throw new Error(errMsg);
+      }
+
+      const data = await response.json();
+      setUser(data.user);
+      setToken(data.token);
+      localStorage.setItem("zb_user", JSON.stringify(data.user));
+      localStorage.setItem("zb_token", data.token);
+
+      return { needsWallet: data.needsWallet, user: data.user };
+    } catch (error) {
+      console.error("Login Error:", error);
+      throw error;
+    }
+  };
 
   const loginWithGoogle = async (
     email: string,
@@ -198,6 +278,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         balance,
         balanceLoading,
         isLoading,
+        signup,
+        login,
         loginWithGoogle,
         linkWallet,
         updateProfile,

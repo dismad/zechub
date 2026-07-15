@@ -11,38 +11,69 @@ export function Sidebar() {
 
   if (!user) return null;
 
-  const navItems = [
-    {
-      name: "Dashboard",
-      href: "/dashboard",
-      icon: "dashboard",
-      active: pathname === "/dashboard",
-    },
-    {
-      name: "Open Bounties",
-      href: "/explore",
-      icon: "work",
-      active: pathname === "/explore" || pathname.startsWith("/bounty"),
-    },
-    {
-      name: "In Progress",
-      href: "/in-progress",
-      icon: "pending_actions",
-      active: pathname === "/in-progress",
-    },
-    {
-      name: "Completed",
-      href: "/completed",
-      icon: "task_alt",
-      active: pathname === "/completed",
-    },
-    {
-      name: "Settings",
-      href: "/settings",
-      icon: "settings",
-      active: pathname === "/settings",
-    },
-  ];
+  const navItems = [];
+
+  if (user.role === 'Creator') {
+    navItems.push(
+      {
+        name: "Open Bounties",
+        href: "/explore",
+        icon: "work",
+        active: pathname === "/explore" || pathname.startsWith("/bounty"),
+      },
+      {
+        name: "Sponsor Portal",
+        href: "/sponsor",
+        icon: "shield",
+        active: pathname === "/sponsor",
+      }
+    );
+  } else if (user.role === 'Admin') {
+    navItems.push(
+      {
+        name: "Admin Portal",
+        href: "/admin",
+        icon: "shield",
+        active: pathname === "/admin",
+      }
+    );
+  } else {
+    // Freelancer/Default
+    navItems.push(
+      {
+        name: "Dashboard",
+        href: "/dashboard",
+        icon: "dashboard",
+        active: pathname === "/dashboard",
+      },
+      {
+        name: "Open Bounties",
+        href: "/explore",
+        icon: "work",
+        active: pathname === "/explore" || pathname.startsWith("/bounty"),
+      },
+      {
+        name: "In Progress",
+        href: "/in-progress",
+        icon: "pending_actions",
+        active: pathname === "/in-progress",
+      },
+      {
+        name: "Completed",
+        href: "/completed",
+        icon: "task_alt",
+        active: pathname === "/completed",
+      }
+    );
+  }
+
+  // Settings is common to everyone
+  navItems.push({
+    name: "Settings",
+    href: "/settings",
+    icon: "settings",
+    active: pathname === "/settings",
+  });
 
   return (
     <>
@@ -52,7 +83,7 @@ export function Sidebar() {
           <img
             alt="Freelancer Avatar"
             className="w-16 h-16 rounded-full object-cover mb-stack-sm shadow-sm border border-outline-variant"
-            src={user?.avatar || "https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y"}
+            src={user?.avatar || "https://lh3.googleusercontent.com/aida-public/AB6AXuDw39ScrxNa3ZgzehfSnq_YoRqJofZus71SLW3Bb7uZtGBzNwV55CayP5mje1Trt7rMVRtD5X-a74dAPHwUlq3MqhfX7flwAvqOgzv3ovfQJh_UZWcxifC0HJEMI5w9ijaNf9_U_9MlKEHHY85-PRy3DXq2P5WARiDSltoNf1_7QsxWWcaIevld4uD7XoV1Zhm581DkNtbo-FrRbPxihGvZVVlg-nUvq9FcP1tOkfAYu7gueTu3PRLBVBROwBxxllhyJ6i_0BhBGw"}
           />
           <h2 className="font-headline-md text-primary font-bold text-lg leading-tight">
             {user?.username || "Guest Portal"}

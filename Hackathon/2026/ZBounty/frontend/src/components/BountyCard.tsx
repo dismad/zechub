@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useMemo } from "react";
 import { cn, formatZec } from "@/lib/utils";
+import { useAuth } from "@/context/AuthContext";
 
 interface BountyCardProps {
   id: string;
@@ -14,6 +15,7 @@ interface BountyCardProps {
   status: string;
   deadline?: string | Date;
   creatorName?: string;
+  contributorId?: any;
 }
 
 export function BountyCard({
@@ -24,7 +26,23 @@ export function BountyCard({
   tags,
   status,
   deadline,
+  contributorId,
 }: BountyCardProps) {
+  const { user } = useAuth();
+
+  // Determine current status relative to user:
+  // If in review, only show "In Review" to the user who submitted it.
+  const displayStatus = useMemo(() => {
+    if (status.toLowerCase() === "in review") {
+      const isMine =
+        user &&
+        (contributorId === user._id ||
+          (contributorId && contributorId._id === user._id));
+      return isMine ? "In Review" : "Open";
+    }
+    return status;
+  }, [status, contributorId, user]);
+
   // Determine Category Tag (default to first tag or "Development")
   const categoryTag = tags && tags.length > 0 ? tags[0] : "Development";
 
@@ -46,18 +64,18 @@ export function BountyCard({
 
   // Determine Progress Percentage
   const progressPercent = useMemo(() => {
-    const s = status.toLowerCase();
+    const s = displayStatus.toLowerCase();
     if (s === "completed" || s === "paid") return 100;
     if (s === "in review") return 85;
     if (s === "in progress") return 60;
     if (title.includes("ZSA Support")) return 15; // match mockup Card 1
     return 0; // Open or Draft
-  }, [status, title]);
+  }, [displayStatus, title]);
 
-  const isOpen = status.toLowerCase() === "open";
-  const isInProgress = status.toLowerCase() === "in progress";
-  const isCompleted = status.toLowerCase() === "completed" || status.toLowerCase() === "paid";
-  const isInReview = status.toLowerCase() === "in review";
+  const isOpen = displayStatus.toLowerCase() === "open";
+  const isInProgress = displayStatus.toLowerCase() === "in progress";
+  const isCompleted = displayStatus.toLowerCase() === "completed" || displayStatus.toLowerCase() === "paid";
+  const isInReview = displayStatus.toLowerCase() === "in review";
 
   return (
     <Link href={`/bounty/${id}`} className="block">
@@ -76,7 +94,7 @@ export function BountyCard({
               isInReview && "bg-[#f0fdf4] text-[#16a34a]"
             )}
           >
-            {status}
+            {displayStatus}
           </span>
         </div>
 

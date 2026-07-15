@@ -4,7 +4,7 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
-import { setupInMemoryDb } from './models/mockDb';
+
 
 // Routes
 import authRoutes from './routes/auth.routes';
@@ -29,17 +29,13 @@ if (!mongoUri) {
   process.exit(1);
 }
 
-// Disable Mongoose command buffering so queries fail immediately (or use mock) instead of waiting for timeout
-mongoose.set('bufferCommands', false);
 
-// Setup in-memory mock db immediately because Atlas is not whitelisted in this local env
-setupInMemoryDb();
-
+// Connect to MongoDB
 mongoose.connect(mongoUri)
   .then(() => console.log('Connected to MongoDB'))
   .catch((err) => {
-    // Only log the message to avoid verbose stack trace on expected connection failure
-    console.warn('MongoDB connection failed, running in mock in-memory mode:', err.message);
+    console.error('MongoDB connection failed:', err.message);
+    process.exit(1);
   });
 
 // Routes

@@ -6,12 +6,26 @@ import { Header } from "@/components/Header";
 import { BountyCard } from "@/components/BountyCard";
 import { Loader2, SearchX } from "lucide-react";
 import Link from "next/link";
+import { useAuth } from "@/context/AuthContext";
+import { useRouter } from "next/navigation";
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
 
 export default function InProgressPage() {
+  const { user } = useAuth();
+  const router = useRouter();
   const [bounties, setBounties] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    if (user) {
+      if (user.role === 'Creator') {
+        router.replace('/sponsor');
+      } else if (user.role === 'Admin') {
+        router.replace('/admin');
+      }
+    }
+  }, [user, router]);
 
   useEffect(() => {
     const fetchBounties = async () => {
@@ -19,11 +33,11 @@ export default function InProgressPage() {
         const response = await fetch(`${API_BASE}/api/bounties`);
         if (response.ok) {
           const data = await response.json();
-          // Filter to show In Progress or In Review claims
+          // Filter to show In Progress or In Review claims specifically for this user
           const activeClaims = data.filter(
             (b: any) =>
-              b.status.toLowerCase() === "in progress" ||
-              b.status.toLowerCase() === "in review"
+              (b.status.toLowerCase() === "in progress" || b.status.toLowerCase() === "in review") &&
+              (b.contributorId === user?._id || (b.contributorId && b.contributorId._id === user?._id))
           );
           setBounties(activeClaims);
         }
@@ -82,6 +96,7 @@ export default function InProgressPage() {
                     status={bounty.status}
                     deadline={bounty.deadline}
                     creatorName={bounty.creatorId?.username || "Anonymous"}
+                    contributorId={bounty.contributorId}
                   />
                 ))}
               </div>

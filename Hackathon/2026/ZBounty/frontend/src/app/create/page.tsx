@@ -7,9 +7,25 @@ import { Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/context/AuthContext";
 
+import Link from "next/link";
+
 export default function CreateBountyPage() {
   const router = useRouter();
   const { user } = useAuth();
+
+  if (user && user.role !== "Creator") {
+    return (
+      <div className="bg-surface min-h-screen pt-24 flex flex-col items-center text-on-surface-variant space-y-4">
+        <span className="material-symbols-outlined text-[48px] text-error">lock</span>
+        <h3 className="text-lg font-bold font-headline-md text-on-surface">Access Denied</h3>
+        <p>Only Creators are authorized to create new bounties.</p>
+        <Link href="/explore" className="text-primary hover:underline mt-4">
+          Return to Explore
+        </Link>
+      </div>
+    );
+  }
+
   const [fundingMethod, setFundingMethod] = useState<"Transparent" | "Shielded">("Shielded");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState("");

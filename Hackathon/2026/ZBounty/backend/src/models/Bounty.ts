@@ -2,6 +2,7 @@ import mongoose, { Schema, Document } from 'mongoose';
 
 export interface IBounty extends Document {
   creatorId: mongoose.Types.ObjectId;
+  contributorId?: mongoose.Types.ObjectId;
   title: string;
   description: string;
   reward: number; // in ZEC
@@ -22,6 +23,7 @@ export interface IBounty extends Document {
 
 const BountySchema: Schema = new Schema({
   creatorId: { type: Schema.Types.ObjectId, ref: 'User', required: true },
+  contributorId: { type: Schema.Types.ObjectId, ref: 'User' },
   title: { type: String, required: true },
   description: { type: String, required: true },
   reward: { type: Number, required: true },

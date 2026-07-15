@@ -81,17 +81,19 @@ export function Header({
                   >
                     Explore
                   </Link>
-                  <Link
-                    href="/dashboard"
-                    className={cn(
-                      "font-label-md text-label-md transition-all py-1.5 px-2 rounded",
-                      isDashboard
-                        ? "text-primary font-bold border-b-2 border-primary rounded-none"
-                        : "text-on-surface-variant hover:text-primary hover:bg-surface-container-low"
-                    )}
-                  >
-                    My Claims
-                  </Link>
+                  {user.role === 'Freelancer' && (
+                    <Link
+                      href="/dashboard"
+                      className={cn(
+                        "font-label-md text-label-md transition-all py-1.5 px-2 rounded",
+                        isDashboard
+                          ? "text-primary font-bold border-b-2 border-primary rounded-none"
+                          : "text-on-surface-variant hover:text-primary hover:bg-surface-container-low"
+                      )}
+                    >
+                      My Claims
+                    </Link>
+                  )}
                   <Link
                     href="#"
                     className="text-on-surface-variant hover:text-primary font-label-md text-label-md hover:bg-surface-container-low transition-colors px-2 py-1.5 rounded"
@@ -107,12 +109,14 @@ export function Header({
         <div className="flex items-center gap-stack-md">
           {user ? (
             <>
-              <Link
-                href="/create"
-                className="hidden sm:block px-4 py-2 bg-primary-container text-on-primary-container font-label-md text-label-md font-bold rounded-lg hover:bg-inverse-primary transition-colors text-center"
-              >
-                Post Bounty
-              </Link>
+              {user.role === "Creator" && (
+                <Link
+                  href="/create"
+                  className="hidden sm:block px-4 py-2 bg-primary-container text-on-primary-container font-label-md text-label-md font-bold rounded-lg hover:bg-inverse-primary transition-colors text-center"
+                >
+                  Post Bounty
+                </Link>
+              )}
               <button
                 onClick={() => setIsLinkWalletOpen(true)}
                 className="text-on-surface-variant hover:text-primary transition-colors w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-low"
@@ -128,9 +132,13 @@ export function Header({
               </button>
               <img
                 alt="User profile"
-                onClick={() => router.push("/dashboard")}
+                onClick={() => {
+                  if (user.role === 'Creator') router.push("/sponsor");
+                  else if (user.role === 'Admin') router.push("/admin");
+                  else router.push("/dashboard");
+                }}
                 className="w-8 h-8 rounded-full border border-outline-variant object-cover cursor-pointer hover:opacity-85 transition-opacity"
-                src={user.avatar || "https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y"}
+                src={user.avatar || "https://lh3.googleusercontent.com/aida-public/AB6AXuDw39ScrxNa3ZgzehfSnq_YoRqJofZus71SLW3Bb7uZtGBzNwV55CayP5mje1Trt7rMVRtD5X-a74dAPHwUlq3MqhfX7flwAvqOgzv3ovfQJh_UZWcxifC0HJEMI5w9ijaNf9_U_9MlKEHHY85-PRy3DXq2P5WARiDSltoNf1_7QsxWWcaIevld4uD7XoV1Zhm581DkNtbo-FrRbPxihGvZVVlg-nUvq9FcP1tOkfAYu7gueTu3PRLBVBROwBxxllhyJ6i_0BhBGw"}
               />
             </>
           ) : (
