@@ -45,7 +45,7 @@ Recorded status: CONFIRMED
 Recorded height: 3409837
 Threshold: 2 of 3, with 1 participant unavailable
 Proof bundle hash: sha256:e4684eb1df7bbf48fda46ce4353968640f664c306b097e868e3b2ba780351b8d
-Submission commit: ed49975c3b778ac9bfc0d28a846db39f81501220
+Submission commit: 10abee6f73cab5f20f3b82b58eea481e5a89cac5
 ```
 
 Explorer:
