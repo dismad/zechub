@@ -5,7 +5,7 @@
 **Track:** FROST
 **Team:** Ridwan ([GitHub: Ridwannurudeen](https://github.com/Ridwannurudeen))
 **Repository:** https://github.com/Ridwannurudeen/zecvault
-**Demo video:** VIDEO_URL_PLACEHOLDER
+**Demo video:** https://youtu.be/elSUBGYcma8
 
 ---
 
