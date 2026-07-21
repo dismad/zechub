@@ -1,4 +1,4 @@
----
+
 [![ページを編集](https://img.shields.io/badge/Edit-blue)](https://github.com/Zechub/zechub/edit/main/site/Zcash_Community/Community_Blogs.md)
 
 # コミュニティブログ
