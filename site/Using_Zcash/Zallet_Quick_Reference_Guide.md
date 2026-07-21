@@ -450,4 +450,3 @@ zallet rpc z_viewtransaction '"<txid>"'
 | Parameter | Type   | Required | Description     |
 |-----------|--------|----------|-----------------|
 | txid      | string | yes      | Transaction ID  |
-```
