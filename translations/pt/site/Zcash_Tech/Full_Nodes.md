@@ -119,3 +119,7 @@ Isso traz a vantagem adicional de permitir que outros usuários se conectem de f
 Leia a [Documentação de Suporte](https://zcash.readthedocs.io/en/latest/)
 
 Entre no nosso [Servidor do Discord](https://discord.gg/zcash) ou fale conosco no [twitter](https://twitter.com/ZecHub)
+
+---
+
+**Protected terms (keep in English):** `Zaino` `Zallet`

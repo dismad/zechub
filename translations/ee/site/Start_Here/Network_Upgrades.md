@@ -21,3 +21,7 @@ Le ƒe siwo va yi me la, Zcash to tɔtrɔ gãwo kple ŋgɔyiyiwo vɛ le ɖoɖow�
 
 
 [NU6:](https://zips.z.cash/zip-0253) NU6 wɔ Zcash ŋgɔyiyi ƒe ga yeye aɖe (Hybrid Deferred Dev Fund si le tɔtrɔm yi gadodo ƒe kpɔɖeŋu si menye tẽ o dzi) eye emegbe woaɖo gaxɔ si me woadzra ga si woaɖe ɖe go ƒe akpa aɖe ɖo na gakpekpeɖeŋu ɖesiaɖe si woatsɔ awɔ dɔe le etsɔme. Mɔnu aɖe si Zcash habɔbɔa atso nya me le etsɔme koe akpɔ ga siawo ƒe dodo dzi. NU6 ƒe dɔdeasie nye be wòaɖe block subsidy dzi akpɔtɔ eye wòaɖo gadodo ƒe ɖoɖo si woɖe ɖe vovo to lockbox mɔnu dzi be woakpɔ egbɔ be wowɔ nu le gaglãgbe nyuie wu esime wole ŋusẽ dom ame ŋutɔ ƒe nyatakakawo.
+
+---
+
+**Protected terms (keep in English):** `Orchard` `zcashd`

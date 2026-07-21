@@ -15,3 +15,7 @@ Negli anni, Zcash ha introdotto cambiamenti e miglioramenti significativi al pro
 [NU5:](https://electriccoin.co/blog/nu5-proposed-features/) Attivato al blocco 1687104, minato il 31 maggio 2022. Vale la pena menzionare che Zcash Network Upgrade 5 segna l'alba di una pietra miliare importante per la criptovaluta sin dal suo inizio nel 2016. Essendo il sesto aggiornamento principale per Zcash, NU5 ha introdotto il orchard shielded protocol, gli unified addresses, e il sistema di prova Halo. L'aggiornamento NU5 di Zcash è un'evoluzione continua dello stack tecnologico zk-SNARK costruito per eliminare il trusted setup e aggiornare la sicurezza crittografica sottostante del protocollo. NU5 è anche sostenuto da ECC e dalla Zcash Foundation.
 
 [NU6:](https://zips.z.cash/zip-0253) NU6 ha implementato un nuovo Zcash development fund (Hybrid Deferred Dev Fund che transita verso un modello di finanziamento non diretto) e poi istituirà una lockbox dove una percentuale dell'emissione sarà riservata per qualsiasi futuro finanziamento decentralizzato di sovvenzioni. Il rilascio di questi fondi sarà governato esclusivamente da un meccanismo determinato dalla comunità Zcash in futuro. La missione di NU6 è ridurre il sussidio di blocco e stabilire un modello di finanziamento decentralizzato tramite un meccanismo di lockbox per garantire una maggiore trasparenza rafforzando al contempo la privacy.
+
+---
+
+**Protected terms (keep in English):** `Orchard` `zcashd`

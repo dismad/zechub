@@ -119,3 +119,7 @@ Zebra هو تنفيذ مستقل لعقدة كاملة لبروتوكول Zcash 
 اقرأ [وثائق الدعم](https://zcash.readthedocs.io/en/latest/)
 
 انضم إلى [خادم Discord](https://discord.gg/zcash) الخاص بنا أو تواصل معنا على [twitter](https://twitter.com/ZecHub)
+
+---
+
+**Protected terms (keep in English):** `Zaino` `Zallet`

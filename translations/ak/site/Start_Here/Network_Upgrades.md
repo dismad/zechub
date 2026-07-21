@@ -21,3 +21,7 @@ Mfeɛ pii mu no, Zcash de nsakraeɛ ne nkɔsoɔ kɛseɛ aba protocol no mu, na �
 
 
 [NU6:](https://zips.z.cash/zip-0253) NU6 de Zcash nkɔsoɔ sikakorabea foforɔ (Hybrid Deferred Dev Fund a ɛredan akɔ sikasɛm nhyehyɛeɛ a ɛnyɛ tẽẽ so) dii dwuma na afei wɔbɛhyehyɛ lockbox a wɔde sika a wɔde bɛma no fã bi bɛsie ama daakye decentralized grants sika biara. Saa sika yi a wɔbɛyi no adi no, ɔkwan bi a Zcash mpɔtam hɔfoɔ bɛkyerɛ daakye no nko ara na ɛbɛhwɛ so. NU6 adwuma ne sɛ ɛbɛtew block subsidy so na wɔde sika a wɔde ma wɔ decentralized funding model besi hɔ denam lockbox mechanism a ɛbɛma wɔahwɛ ahu sɛ wɔbɛma nneɛma a ɛda adi kɛse bere a wɔhyɛ kokoam nsɛm mu den.
+
+---
+
+**Protected terms (keep in English):** `Orchard` `zcashd`

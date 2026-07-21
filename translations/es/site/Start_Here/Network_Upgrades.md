@@ -21,3 +21,7 @@ A lo largo de los años, Zcash ha introducido cambios y mejoras significativos e
 
 
 [NU6:](https://zips.z.cash/zip-0253) NU6 implementó un nuevo fondo de desarrollo de Zcash (Hybrid Deferred Dev Fund en transición hacia un modelo de financiación no directa) y luego establecerá una lockbox donde se reservará una proporción de la emisión para cualquier futura financiación descentralizada de subvenciones. La liberación de estos fondos estará regida únicamente por un mecanismo determinado por la comunidad de Zcash en el futuro. La misión de NU6 es reducir la subvención por bloque y establecer un modelo de financiación descentralizado mediante un mecanismo de lockbox para garantizar una mayor transparencia mientras se fortalece la privacidad.
+
+---
+
+**Protected terms (keep in English):** `zcashd`

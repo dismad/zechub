@@ -119,3 +119,7 @@ Bunun ek bir avantajı da diğer kullanıcıların node'unuzun .onion adresine g
 [Destek Dokümantasyonu](https://zcash.readthedocs.io/en/latest/)'nu okuyun
 
 [Discord Sunucumuza](https://discord.gg/zcash) katılın veya [twitter](https://twitter.com/ZecHub) üzerinden bize ulaşın
+
+---
+
+**Protected terms (keep in English):** `Zaino` `Zallet`

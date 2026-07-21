@@ -122,3 +122,7 @@ Jikọọ anyị [Discord Sever]](https://discord.gg/zcash) maọbụ kpọtụr
 
 
 
+
+---
+
+**Protected terms (keep in English):** `Zaino` `Zallet`

@@ -119,3 +119,7 @@ Dies hat den zusätzlichen Vorteil, dass andere Nutzer sich privat mit der .onio
 Lies die [Support-Dokumentation](https://zcash.readthedocs.io/en/latest/)
 
 Tritt unserem [Discord-Server](https://discord.gg/zcash) bei oder kontaktiere uns auf [twitter](https://twitter.com/ZecHub)
+
+---
+
+**Protected terms (keep in English):** `Zaino` `Zallet`

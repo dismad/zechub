@@ -38,3 +38,7 @@ ____
 - نشر تعليقات على Free2Z باستخدام واجهة Zenith CLI
 
 [![صورة مصغرة للفيديو](https://img.youtube.com/vi/HtorP8TJ5vk/hqdefault.jpg)](https://www.youtube.com/watch?v=HtorP8TJ5vk)
+
+---
+
+**Protected terms (keep in English):** `Zallet`

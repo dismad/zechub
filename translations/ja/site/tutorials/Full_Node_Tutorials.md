@@ -38,3 +38,7 @@ ____
 - Zenith CLI を使って Free2Z にコメントを投稿する方法
 
 [![ビデオサムネイル](https://img.youtube.com/vi/HtorP8TJ5vk/hqdefault.jpg)](https://www.youtube.com/watch?v=HtorP8TJ5vk)
+
+---
+
+**Protected terms (keep in English):** `Zallet`
