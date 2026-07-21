@@ -1,4 +1,3 @@
----
 # Penumbra 
 
 Penumbra, Cosmos ekosisteminde yarışan, son teknoloji ürünü ve tamamen shielded bir layer-1 ağ olmak için var. Kullanıcılarının on-chain metadata’larını ifşa etmeden güvenli biçimde işlem yapmasını, stake etmesini, token swap etmesini ve market making yapmasını sağlar. Tamamen shielded bir blockchain olarak, gizlilikten veya merkeziyetsizlikten ödün vermeden web üzerinde de shielded işlemler sunar — Penumbra’da gizlilik varsayılandır; şeffaf işlemler veya şeffaf değer havuzu yoktur.

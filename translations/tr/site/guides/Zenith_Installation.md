@@ -1,4 +1,3 @@
----
 # Zenith GUI Tam Düğüm Cüzdan Kurulumu  
 
 ## Video Eğitimi

@@ -1,4 +1,3 @@
----
 # Zcash Duvar Kağıdı Galerisi
 
 <div class="my-12 flex flex-col items-center gap-6 bg-card border border-border rounded-3xl p-10 text-center">

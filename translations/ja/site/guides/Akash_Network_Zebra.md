@@ -1,4 +1,3 @@
----
 # Akashネットワーク上でZebraを実行する方法
 
 [Akash Console](https://console.akash.network)を使用して、ZcashフルノードとしてのZebraノードを展開するためのステップバイステップガイド。

@@ -1,4 +1,3 @@
----
 # 有限体: 暗号が生きる数の体系
 ##### [Annkkitaaa](https://github.com/Annkkitaaa)によるオリジナル研究
 

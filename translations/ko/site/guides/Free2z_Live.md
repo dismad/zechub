@@ -1,4 +1,3 @@
----
 [![페이지 편집](https://img.shields.io/badge/Edit-blue)](https://github.com/zechub/zechub/edit/main/site/guides/Free2z_Live.md)
 
 # Free2Z: 계정 설정 + 라이브 스트리밍 튜토리얼

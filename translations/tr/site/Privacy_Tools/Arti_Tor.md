@@ -1,4 +1,3 @@
----
 ![Tor logo](https://gitlab.torproject.org/uploads/-/system/appearance/header_logo/1/purple.svg)
 
 # **Arti: Rust ile Yeni Nesil Tor İstemcisi**

@@ -1,4 +1,3 @@
----
 ZCASH ECOSYSTEM DIGEST | 2024년 7월 6일
 
 Zebra 1.8.0 최신 릴리스, FROST 발표, Zooko가 새로운 Zcash 프로젝트 시작 및 Maya 프로토콜에서 Shielded Swaps 테스트 진행 중 

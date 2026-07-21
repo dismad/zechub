@@ -1,4 +1,3 @@
----
 # Zcash Fonlama ve Yönetişim Genel Bakışı
 
 Zcash'in zincir üstü fonlama modeli, blok ödülü mekanikleri ve başlıca kuruluşların rolleri

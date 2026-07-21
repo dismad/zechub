@@ -1,4 +1,3 @@
----
 <!-- Create a container for the gallery -->
 <div class="infographics">
 

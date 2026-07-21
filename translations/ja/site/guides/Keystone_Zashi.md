@@ -1,4 +1,3 @@
----
 # ケーストーン Zashi ユーザー・ガイド
 
 ツイッター・ガイド:  => [Zashi x Keystone ハードウェアウォレット統合ツイッター・ガイド](https://x.com/zashi_app/status/1869793574880973144) 

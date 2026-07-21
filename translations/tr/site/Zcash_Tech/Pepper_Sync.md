@@ -1,4 +1,3 @@
----
 # Zingo 2.0 - Pepper Sync
 
 ## GİRİŞ

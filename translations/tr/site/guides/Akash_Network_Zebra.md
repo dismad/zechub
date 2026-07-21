@@ -1,4 +1,3 @@
----
 # Akash Network üzerinde Zebra nasıl çalıştırılır
 
 [Akash Console](https://console.akash.network) kullanarak bir Zebra Zcash full node dağıtmak için adım adım rehber.

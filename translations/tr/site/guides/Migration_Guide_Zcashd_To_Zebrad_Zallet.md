@@ -1,4 +1,3 @@
----
 # Geçiş Rehberi: zcashd'den Zebrad/Zallet'e
 
 Zcash ekosistemi gelişiyor. *Electric Coin Company (ECC)* / *Zodl* tarafından sürdürülen geleneksel Zcashd tam düğümü, kademeli olarak Zebra ve Zallet ile değiştiriliyor.

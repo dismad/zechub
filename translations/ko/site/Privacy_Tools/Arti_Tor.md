@@ -1,4 +1,3 @@
----
 ![Tor 로고](https://gitlab.torproject.org/uploads/-/system/appearance/header_logo/1/purple.svg)
 
 # **아르티: Rust로 작성된 차세대 Tor 클라이언트**

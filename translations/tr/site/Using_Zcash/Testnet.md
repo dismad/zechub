@@ -1,4 +1,3 @@
----
 # Zcash Testneti
 
 ## Zcash Testneti Nedir?

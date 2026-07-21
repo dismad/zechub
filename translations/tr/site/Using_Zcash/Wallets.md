@@ -1,4 +1,3 @@
----
 ## [ZODL](https://zodl.com)
 ![logo](https://github.com/user-attachments/assets/198608b2-9059-4cb7-aeb8-9354971376fd "ZODL")
 - Cihazlar: Mobil

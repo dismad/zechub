@@ -1,4 +1,3 @@
----
 # Sıfırdan Sıfır Bilgiye: CryptoNote Protokolü
 
 **Seri:** Sıfırdan Sıfır Bilgiye

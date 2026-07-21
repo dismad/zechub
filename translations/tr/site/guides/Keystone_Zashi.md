@@ -1,4 +1,3 @@
----
 # Keystone Zashi Kullanım Kılavuzu
 
 Twitter Rehberi:  => [Zashi x Keystone Donanım Cüzdanı Entegrasyonu Twitter Rehberi](https://x.com/zashi_app/status/1869793574880973144) 

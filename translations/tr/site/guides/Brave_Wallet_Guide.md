@@ -1,4 +1,3 @@
----
 # Brave Wallet ile Shielded Zcash (ZEC) Gönderme ve Alma: Adım Adım Gizlilik Rehberi
 
 Brave Wallet, doğrudan Brave tarayıcısına entegre edilmiş güvenli ve yerel bir kripto cüzdanıdır - uzantı gerekmez.

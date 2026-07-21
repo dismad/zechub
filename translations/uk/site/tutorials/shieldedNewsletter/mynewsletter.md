@@ -1,4 +1,3 @@
----
 ДАЙДЖЕСТ ЕКОСИСТЕМИ ZCASH | 6 ЛИПНЯ
 
 Останній реліз Zebra 1.8.0, FROST опубліковано, Zooko починає новий проєкт Zcash і тест Shielded swaps на Maya Protocol 

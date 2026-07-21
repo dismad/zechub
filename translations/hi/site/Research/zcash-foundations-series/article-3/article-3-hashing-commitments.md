@@ -1,4 +1,3 @@
----
 # Hashing और Commitments: जादुई सीलबंद लिफाफा
 ##### [Annkkitaaa](https://github.com/Annkkitaaa) का मूल शोध
 

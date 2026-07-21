@@ -1,4 +1,3 @@
----
 # Sıkça Sorulan Sorular
 
 Zcash hakkında en yaygın soruların bir listesi. Zcash istemcisinde sorun giderme için lütfen [resmî sorun giderme kılavuzuna](https://zcash.readthedocs.io/en/latest/rtd_pages/troubleshooting_guide.html) bakın.

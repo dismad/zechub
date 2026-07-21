@@ -1,4 +1,3 @@
----
 # よくある質問
 
 Zcashに関する最もよく寄せられる質問の一覧です。Zcashクライアントのトラブルシューティングについては、[公式のトラブルシューティングガイド](https://zcash.readthedocs.io/en/latest/rtd_pages/troubleshooting_guide.html)をご参照ください。

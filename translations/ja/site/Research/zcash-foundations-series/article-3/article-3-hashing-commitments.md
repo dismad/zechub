@@ -1,4 +1,3 @@
----
 # ハッシュとコミットメント：魔法の封筒
 ##### [Annkkitaaa](https://github.com/Annkkitaaa)によるオリジナル研究
 

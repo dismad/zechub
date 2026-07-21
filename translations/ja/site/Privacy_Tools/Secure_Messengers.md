@@ -1,4 +1,3 @@
----
 [![ページを編集](https://img.shields.io/badge/Edit-blue)](https://github.com/zechub/zechub/edit/main/site/Privacy_Tools/Secure_Messengers.md)
 
 # セキュアメッセンジャーアプリ

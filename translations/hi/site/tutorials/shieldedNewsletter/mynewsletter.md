@@ -1,4 +1,3 @@
----
 ZCASH ECOSYSTEM DIGEST | 6 जुलाई
 
 Zebra 1.8.0 नवीनतम रिलीज़, FROST प्रकाशित हो गया है, Zooko ने नया Zcash प्रोजेक्ट शुरू किया & Maya Protocol पर Shielded Swaps का परीक्षण

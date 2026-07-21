@@ -1,4 +1,3 @@
----
 # Sıfırdan Sıfır Bilgiye: Trusted Execution Environments (TEEs)
 
 **Seri:** Sıfırdan Sıfır Bilgiye

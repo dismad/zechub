@@ -1,4 +1,3 @@
----
 [![ページを編集](https://img.shields.io/badge/Edit-blue)](https://github.com/zechub/zechub/edit/main/site/Using_Zcash/Recovering_Funds.md)
 
 # Zcashウォレット資金の回復

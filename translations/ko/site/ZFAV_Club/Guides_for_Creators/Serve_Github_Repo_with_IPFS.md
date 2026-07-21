@@ -1,4 +1,3 @@
----
 <a href="https://github.com/Zechub/zechub/edit/main/site/ZFAV_Club/Guides_for_Creators/Serve_Github_Repo_with_IPFS.md" target="_blank">
   <img src="https://img.shields.io/badge/Edit-blue" alt="페이지 편집"/>
 </a>

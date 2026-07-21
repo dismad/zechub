@@ -1,4 +1,3 @@
----
 # 타원 곡선: Zcash의 키와 커밋먼트가 태어나는 곳
 ##### 원문 출처: [Annkkitaaa](https://github.com/Annkkitaaa)
 

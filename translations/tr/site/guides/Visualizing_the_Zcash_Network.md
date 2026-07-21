@@ -1,4 +1,3 @@
----
 <a href="https://github.com/zechub/zechub/edit/main/site/guides/Visualizing_the_Zcash_Network.md" target="_blank">
   <img src="https://img.shields.io/badge/Edit-blue" alt="Sayfayı Düzenle"/>
 </a>

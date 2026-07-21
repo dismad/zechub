@@ -1,4 +1,3 @@
----
 ZCASH EKOSİSTEM ÖZETİ | 6 TEMMUZ
 
 Zebra 1.8.0 En Son Sürüm, FROST Yayınlandı, Zooko Yeni bir Zcash Projesi Başlatıyor ve Maya Protocol üzerinde Shielded Swap Testi

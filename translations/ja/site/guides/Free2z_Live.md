@@ -1,4 +1,3 @@
----
 [![ページを編集](https://img.shields.io/badge/Edit-blue)](https://github.com/zechub/zechub/edit/main/site/guides/Free2z_Live.md)
 
 # Free2Z: アカウントの作成＋ライブ配信チュートリアル

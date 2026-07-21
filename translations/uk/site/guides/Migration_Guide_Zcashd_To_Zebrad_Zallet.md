@@ -1,4 +1,3 @@
----
 # Посібник з міграції: від zcashd до Zebrad/Zallet
 
 Екосистема Zcash розвивається. Традиційний повний вузол Zcashd, який підтримується *Electric Coin Company (ECC)* / *Zodl*, поступово замінюється на Zebra і Zallet.

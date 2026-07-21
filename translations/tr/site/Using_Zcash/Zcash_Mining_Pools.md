@@ -1,4 +1,3 @@
----
 # Zcash Madencilik Havuzları
 
 ## Zcash Madencilik Havuzları nedir?

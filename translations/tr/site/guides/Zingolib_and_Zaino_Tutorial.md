@@ -1,4 +1,3 @@
----
 # Z3: (zebrad)(zaino)(zingo-cli)
 
 **zebrad**    : zcash full node

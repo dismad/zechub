@@ -1,4 +1,3 @@
----
 <a href="https://github.com/Zechub/zechub/edit/main/site/Zcash_Community/Zcon_Vozes.md" target="_blank">
   <img src="https://img.shields.io/badge/Edit-blue" alt="편집 페이지"/>
 </a>

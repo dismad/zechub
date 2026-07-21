@@ -1,4 +1,3 @@
----
 # Zcash Madencilik Rehberi: Kişisel Donanımla Bir Madencilik Havuzuna Katılmak
 
 ## Giriş

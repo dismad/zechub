@@ -1,4 +1,3 @@
----
 # Merkle Ağaçları: Blockchain Her Notu Nasıl Hatırlar?
 ##### Özgün araştırma: [Annkkitaaa](https://github.com/Annkkitaaa)
 

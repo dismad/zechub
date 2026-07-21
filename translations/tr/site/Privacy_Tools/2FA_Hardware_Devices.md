@@ -1,4 +1,3 @@
----
 [![Sayfayı Düzenle](https://img.shields.io/badge/Edit-blue)](https://github.com/zechub/zechub/edit/main/site/Privacy_Tools/2FA_Hardware_Devices.md)
 
 # 2FA Donanım Cihazları
