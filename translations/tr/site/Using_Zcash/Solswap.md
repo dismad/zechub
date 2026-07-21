@@ -1,4 +1,3 @@
----
 # **Phantom Wallet'ta ZEC ile Nasıl Takas Yapılır**
 
 

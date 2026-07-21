@@ -1,4 +1,3 @@
----
 [![페이지 편집](https://img.shields.io/badge/Edit-blue)](https://github.com/zechub/zechub/edit/main/site/Using_Zcash/Recovering_Funds.md)
 
 # Zcash 지갑 자금 복구

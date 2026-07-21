@@ -1,4 +1,3 @@
----
 # <img src="https://raw.githubusercontent.com/amochuko/zechub/82d2046091b73a626d818571a978fcaffdc7ebf4/assets/icons/send-svgrepo-com.svg" width="24" height="24" alt="Journalist icon"/> Kimliğinizi Bağlantılandırmadan Para Gönderin
 
 <span className="inline-flex items-center gap-[6px]"><span className="inline-block w-[12px] h-[12px] bg-green-500 rounded-full"></span>Orta Seviye - 7 dk</span>

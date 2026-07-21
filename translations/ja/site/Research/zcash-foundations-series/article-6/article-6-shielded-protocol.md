@@ -1,4 +1,3 @@
----
 # シールドプロトコル、端から端まで
 ##### [Annkkitaaa](https://github.com/Annkkitaaa)によるオリジナル研究
 

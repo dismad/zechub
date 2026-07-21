@@ -1,4 +1,3 @@
----
 <a href="https://github.com/zechub/zechub/edit/main/site/contribute/Build_on_Zcash.md" target="_blank">
   <img src="https://img.shields.io/badge/Edit-blue" alt="Редагувати сторінку"/>
 </a>

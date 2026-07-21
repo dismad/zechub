@@ -1,4 +1,3 @@
----
 # Sıfırdan Sıfır Bilgiye: Hash Fonksiyonları
 
 **Seri Girişi**  

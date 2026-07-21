@@ -1,4 +1,3 @@
----
 # 해싱과 커밋먼트: 마법 같은 봉인된 편지
 ##### 원문 출처: [Annkkitaaa](https://github.com/Annkkitaaa)
 

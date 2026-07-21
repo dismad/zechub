@@ -1,4 +1,3 @@
----
 ![Torロゴ](https://gitlab.torproject.org/uploads/-/system/appearance/header_logo/1/purple.svg)
 
 # **Arti: Rustで構築された次世代のTorクライアント**

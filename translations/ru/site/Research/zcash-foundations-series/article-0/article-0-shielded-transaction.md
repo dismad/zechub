@@ -1,4 +1,3 @@
----
 # Как на самом деле работает shielded-транзакция Zcash
 ##### Оригинальное исследование от [Annkkitaaa](https://github.com/Annkkitaaa)
 

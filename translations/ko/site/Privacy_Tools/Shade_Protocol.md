@@ -1,4 +1,3 @@
----
 [![페이지 편집](https://img.shields.io/badge/Edit-blue)](https://github.com/zechub/zechub/edit/main/site/Privacy_Tools/Shade_Protocol.md)
 
 # Shade Protocol

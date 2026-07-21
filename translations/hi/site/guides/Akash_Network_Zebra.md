@@ -1,4 +1,3 @@
----
 # Akash Network पर Zebra कैसे चलाएँ
 
 [Akash Console](https://console.akash.network) का उपयोग करके Zebra Zcash full node deploy करने के लिए चरण-दर-चरण मार्गदर्शिका।

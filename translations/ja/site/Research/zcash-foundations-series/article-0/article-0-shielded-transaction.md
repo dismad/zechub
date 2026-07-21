@@ -1,4 +1,3 @@
----
 # シールドされたZcash取引の実際の仕組み
 ##### [Annkkitaaa](https://github.com/Annkkitaaa)によるオリジナル研究
 

@@ -1,4 +1,3 @@
----
 # Sıfırdan Sıfır Bilgiye: Transparent vs Shielded İşlemler ve Unified Address
 
 **Seri:** Sıfırdan Sıfır Bilgiye

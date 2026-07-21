@@ -1,4 +1,3 @@
----
 # 零知識証明: 正しいことを示すにもかかわらず、理由を言わない方法
 ##### 元の研究は[Annkkitaaa](https://github.com/Annkkitaaa)による
 

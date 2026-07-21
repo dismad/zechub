@@ -1,4 +1,3 @@
----
 # Maya Merkeziyetsiz Borsası
 
 ---

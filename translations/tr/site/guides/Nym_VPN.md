@@ -1,4 +1,3 @@
----
 # Nym VPN 
 
 Nym, kullanıcı meta verilerini maskeleyen ve kaynak ile hedef IP adreslerini ayıran, gizlilik için bir bilgisayar ağı altyapısı türü olan gelişen bir mix network'tür (mixnet). Mesajlaşma, dosya transferleri, ödeme işlemleri ve temel web sitelerinde gezinme dahil olmak üzere çeşitli iletişim türlerini anonimleştirir. Proje, özgür ve açık kaynaklı yazılım üzerine kuruludur ve dünya çapında bağımsız düğümlerden oluşan dağıtık bir yapı tarafından merkeziyetsiz şekilde sürdürülür. Nym VPN & Mixnet, shielded ZEC ile ödemeyi kabul eder! 

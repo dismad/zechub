@@ -1,4 +1,3 @@
----
 <a href="https://github.com/zechub/zechub/edit/main/site/Start_Here/Zcash_Monetary_Policy.md" target="_blank">
   <img src="https://img.shields.io/badge/Edit-blue" alt="페이지 편집"/>
 </a>

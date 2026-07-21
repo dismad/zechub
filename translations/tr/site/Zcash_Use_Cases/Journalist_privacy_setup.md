@@ -1,4 +1,3 @@
----
 # <img src="https://raw.githubusercontent.com/amochuko/zechub/68acdb6f311bff85fe8ded7b47b2e362d7712474/assets/icons/journalist-host-profession-interview-svgrepo-com.svg" width="24" height="24" alt="Journalist icon"/> Zcash ile Gazeteci Gizlilik Kurulumu
 
 <span className="inline-flex items-center gap-[6px]">

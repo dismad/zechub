@@ -1,4 +1,3 @@
----
 # Zero'dan Sıfır Bilgiye: Anımsatıcı Tohum İfadeleri
 
 **Seri:** Zero to Zero Knowledge

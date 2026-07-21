@@ -1,4 +1,3 @@
----
 <!-- ギャラリーのコンテナを作成 -->
 <div class="infographics">
 

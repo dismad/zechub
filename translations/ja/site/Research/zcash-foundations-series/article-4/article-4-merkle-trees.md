@@ -1,4 +1,3 @@
----
 # マーチェルツリー: ブロックチェーンがノートをすべて記憶する仕組み  
 ##### [Annkkitaaa](https://github.com/Annkkitaaa)によるオリジナル研究  
 

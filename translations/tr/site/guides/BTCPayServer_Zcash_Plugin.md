@@ -1,4 +1,3 @@
----
 # Zcash Desteği ile BTCPay Server: Tam Kurulum ve Entegrasyon Rehberi
 
 BTCPay Server, çevrimiçi işletmelerin aracı veya saklayıcı kullanmadan doğrudan kripto para ödemeleri kabul etmesini sağlar. Bu rehber, BTCPay Server'ı Zcash shielded ödemeleri için yerel destekle kurma sürecinin tamamında size adım adım yol gösterir.

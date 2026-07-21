@@ -1,4 +1,3 @@
----
 # 楕円曲線: Zcashの鍵とコミットメントが生まれる場所
 ##### [Annkkitaaa](https://github.com/Annkkitaaa)によるオリジナル研究
 

@@ -1,4 +1,3 @@
----
 # İçerik Üreticileri için Zcash Araçları: Bahşiş ve Profil Platformları
 
 > **İçerik üreticileri, cypherpunklar ve gizliliğe önem veren topluluk için Zcash üzerine inşa edilmiş, gizliliği koruyan bahşiş ve profil araçlarına dair kapsamlı bir rehber.**

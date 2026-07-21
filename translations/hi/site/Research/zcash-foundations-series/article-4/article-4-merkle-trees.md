@@ -1,4 +1,3 @@
----
 # Merkle Trees: blockchain हर नोट को कैसे याद रखता है
 ##### [Annkkitaaa](https://github.com/Annkkitaaa) का मूल शोध
 

@@ -1,4 +1,3 @@
----
 <a href="https://github.com/zechub/zechub/edit/main/site/Zcash_Social_Media/Zero_to_Zero-knowledge.md" target="_blank">
   <img src="https://img.shields.io/badge/Edit-blue" alt="ページを編集"/>
 </a>
