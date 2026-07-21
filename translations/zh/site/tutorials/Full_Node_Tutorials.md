@@ -38,3 +38,7 @@ ____
 - 使用 Zenith CLI 在 Free2Z 上发表评论
 
 [![视频缩略图](https://img.youtube.com/vi/HtorP8TJ5vk/hqdefault.jpg)](https://www.youtube.com/watch?v=HtorP8TJ5vk)
+
+---
+
+**Protected terms (keep in English):** `Zallet`

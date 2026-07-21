@@ -119,3 +119,7 @@ Zcashd माइनिंग को छिपे हुए कॉइनबेस
 [समर्थन दस्तावेज़ पढ़ें](https://zcash.readthedocs.io/en/latest/)
 
 हमारे [डिस्कॉर्ड सर्वर](https://discord.gg/zcash) में शामिल हों या हमसे [ट्विटर पर](https://twitter.com/ZecHub) संपर्क करें
+
+---
+
+**Protected terms (keep in English):** `Zaino` `Zallet`

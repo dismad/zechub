@@ -122,3 +122,7 @@ Kɔka yɛn [Discord Sever](https://discord.gg/zcash) anaa fa wo nsa kɔ yɛn nky
 
 
 
+
+---
+
+**Protected terms (keep in English):** `Zaino` `Zallet`

@@ -21,3 +21,7 @@ N'ime afọ ndị a, Zcash ewebatala mgbanwe na ndozi dị mkpa na usoro ahụ, 
 
 
 [NU6:](https://zips.z.cash/zip-0253) NU6 implemented a new Zcash development fund (Hybrid Deferred Dev Fund transitioning to a non-direct funding model) and then will set up a lockbox where a proportion of issuance will be reserved for any future decentralized grants funding. The release of these funds will be solely governed by a mechanism determined by the Zcash community in the future. NU6's mission is to reduce block subsidy and to establish a decentralized funding model via a lockbox mechanism for ensuring enhanced transparency while strengthening privacy.
+
+---
+
+**Protected terms (keep in English):** `Orchard` `zcashd`

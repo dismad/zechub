@@ -122,3 +122,7 @@ Wɔ ɖeka kple míaƒe [Masɔmasɔ Sever](https://discord.gg/zcash) alo nàdo as
 
 
 
+
+---
+
+**Protected terms (keep in English):** `Zaino` `Zallet`

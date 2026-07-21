@@ -122,3 +122,7 @@ Kujiunga yetu [Discord Sever](https://discord.gg/zcash) au wasiliana nasi kwenye
 
 
 
+
+---
+
+**Protected terms (keep in English):** `Zaino` `Zallet`

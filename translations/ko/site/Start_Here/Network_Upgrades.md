@@ -15,3 +15,7 @@
 [NU5:](https://electriccoin.co/blog/nu5-proposed-features/) 블록 1687104에서 활성화되어 2022년 5월 31일에 채굴되었습니다. Zcash 네트워크 업그레이드 5는 2016년 창설 이후 암호화폐의 중요한 마일스톤을 표시하는 것으로 주목할 만합니다. Zcash의 여섯 번째 주요 업그레이드인 NU5는 Orchard 보호 프로토콜, 통합된 주소 및 Halo 증명 시스템을 특징으로 합니다. Zcash NU5 업그레이드는 신뢰 설정을 제거하고 프로토콜의 기초 암호학적 보안을 개선하기 위해 구축된 zk-SNARK 기술 스택의 지속적인 진화입니다. NU5는 ECC와 Zcash Foundation의 후원을 받고 있습니다.
 
 [NU6:](https://zips.z.cash/zip-0253) NU6는 새로운 Zcash 개발 기금(Hybrid Deferred Dev Fund가 비직접 자금 지원 모델로 전환)을 구현하고, 이후 미래 분산형 장학금 자금을 위해 일정 부분의 발행량이 예약된 락박스를 설정할 것입니다. 이러한 자금의 배분은 향후 Zcash 커뮤니티가 결정하는 메커니즘에 의해 완전히 관리될 것입니다. NU6의 목적은 블록 보조금을 줄이고, 락박스 메커니즘을 통해 분산형 자금 지원 모델을 구축하여 투명성을 강화하고 개인정보 보호를 강화하는 것입니다.
+
+---
+
+**Protected terms (keep in English):** `zcashd`

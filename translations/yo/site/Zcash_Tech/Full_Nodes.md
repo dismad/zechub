@@ -122,3 +122,7 @@ Ka [Àwọn Àkọsílẹ̀ Ìtìlẹyìn]](https://zcash.readthedocs.io/en/lates
 
 
 
+
+---
+
+**Protected terms (keep in English):** `Zaino` `Zallet`

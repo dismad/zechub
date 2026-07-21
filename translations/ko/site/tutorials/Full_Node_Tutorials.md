@@ -38,3 +38,7 @@ ____
 - Zenith CLI로 Free2Z에 댓글 달기
 
 [![영상 썸네일](https://img.youtube.com/vi/HtorP8TJ5vk/hqdefault.jpg)](https://www.youtube.com/watch?v=HtorP8TJ5vk)
+
+---
+
+**Protected terms (keep in English):** `Zallet`

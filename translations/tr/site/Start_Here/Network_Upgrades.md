@@ -21,3 +21,7 @@ Yıllar içinde Zcash, protokole önemli değişiklikler ve iyileştirmeler geti
 
 
 [NU6:](https://zips.z.cash/zip-0253) NU6, yeni bir Zcash development fund uygulamaya koydu (Hybrid Deferred Dev Fund'dan doğrudan olmayan bir finansman modeline geçiş) ve ardından, gelecekteki herhangi bir merkeziyetsiz hibe finansmanı için ihraç edilen miktarın bir kısmının ayrılacağı bir lockbox kuracaktır. Bu fonların serbest bırakılması, gelecekte Zcash topluluğu tarafından belirlenecek bir mekanizma tarafından tamamen yönetilecektir. NU6'nın misyonu, blok sübvansiyonunu azaltmak ve daha fazla şeffaflık sağlarken gizliliği güçlendirmek için lockbox mekanizması aracılığıyla merkeziyetsiz bir finansman modeli oluşturmaktır.
+
+---
+
+**Protected terms (keep in English):** `zcashd`

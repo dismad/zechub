@@ -39,3 +39,7 @@ ____
 
 [![Video ƒe Nɔnɔmetata Sue](https://img.youtube.com/vi/HtorP8TJ5vk/hqdefault.jpg)](https://www.youtube.com/watch?v=HtorP8TJ5vk)
 
+
+---
+
+**Protected terms (keep in English):** `Zallet`
